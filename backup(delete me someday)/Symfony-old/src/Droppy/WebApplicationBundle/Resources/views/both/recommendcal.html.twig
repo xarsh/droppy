@@ -1,0 +1,242 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<link type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet">
+<link rel="stylesheet" href="../css/ui.reveal.css" type="text/css" media="all">
+<link rel="stylesheet" href="../css/ui.tabs.css" type="text/css" media="all">
+<link rel="stylesheet" href="../css/import.css" type="text/css" media="all">
+<link rel="shortcut icon" type="image/x-icon" href="../favicon.ico">
+<title>Droppy｜ソーシャルスケジューリングサービス</title>
+<!--[if IE]>
+<link rel="stylesheet" type="text/css" href="../css/ie.css">
+<![endif]-->
+<!--[if IE 7]>
+<link rel="stylesheet" type="text/css" href="../css/ie7.css">
+<![endif]-->
+<!--[if IE 6]>
+<link rel="stylesheet" type="text/css" href="../css/ie6.css">
+<![endif]-->
+<script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="../js/jquery.reveal.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
+<script type="text/javascript" src="../js/ui.core.js"></script>
+<script type="text/javascript" src="../js/ui.tabs.js"></script>
+<script type="text/javascript" src="../js/ui.dropdown.js"></script>
+<script type="text/javascript" src="../js/ui.change.item.js"></script>
+<script type="text/javascript" src="../js/footerFixed.js"></script>
+</head>
+
+<body>
+<div id="header">
+<div id="header_body">
+<div class="inner_l">
+<div><a href="#"><img src="../images/common/header_logo.gif" alt="Droppy"></a></div>
+<h1>ソーシャルスケジューリングサービス</h1>
+</div>
+<div class="inner_r">
+<ul id="dulldown">
+	<li><a href="#" class="recommend_2">おすすめ</a><a href="#" class="search_eve line_r">イベント・スケジュール検索</a><span>ログイン</span>
+	<div>
+	<ul>
+		<li class="login_droppy"><a href="#">Droppy IDでログイン</a></li>
+		<li class="login_fb"><a href="#">facebook IDでログイン</a></li>
+	</ul>
+	<br class="clear">
+	</div>
+	</li>
+</ul>
+</div>
+<br class="clear">
+</div><!-- // #header_body -->
+</div><!-- // #header -->
+<div id="container">
+<div id="content">
+<div class="genre_search">
+<form action="" method="post">
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+    	<th>ジャンル</th>
+        <td>
+        <select name="">
+        <option value="" selected>指定なし</option>
+        <option value="">ジャンル1</option>
+        <option value="">ジャンル2</option>
+        <option value="">ジャンル3</option>
+        </select>
+        </td>
+    </tr>
+</table>
+</form>
+</div><!-- // .genre_search -->
+<div class="ttl">
+<h2>人気スケジュール</h2>
+<p>&raquo;&nbsp;<a href="#">もっと見る</a></p>
+<br class="clear">
+</div><!-- // .ttl -->
+<div class="cal_list">
+<ul>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+</ul>
+<br class="clear">
+</div><!-- // .cal_list -->
+<div class="ttl">
+<h2>公式スケジュール</h2>
+<p>&raquo;&nbsp;<a href="#">もっと見る</a></p>
+<br class="clear">
+</div><!-- // .ttl -->
+<div class="cal_list">
+<ul>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+</ul>
+<br class="clear">
+</div><!-- // .cal_list -->
+<div class="ttl">
+<h2>新着スケジュール</h2>
+<p>&raquo;&nbsp;<a href="#">もっと見る</a></p>
+<br class="clear">
+</div><!-- // .ttl -->
+<div class="cal_list">
+<ul>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+    <li><img src="../images/toppage/dammy_photo_127x127.jpg" alt=""><br>
+	<a href="#">テキスト</a></li>
+</ul>
+<br class="clear">
+</div><!-- // .cal_list -->
+
+</div><!-- // #content -->
+<div id="sidebar">
+<div class="popular_box">
+<h3>人気のタグ</h3>
+<div class="popular_box_body">
+<table border="0" cellpadding="0" cellspacing="0">
+    <tr>
+        <th><p>1位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>2位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>3位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>4位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>5位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>6位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>7位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>8位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>9位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>10位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>11位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>12位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>13位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>14位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>15位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>16位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>17位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>18位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr>
+        <th><p>19位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+    <tr class="last">
+        <th><p>20位</p></th>
+        <td><p><a href="#">タグ名が入ります</a></p></td>
+    </tr>
+</table>
+</div><!-- // .popular_box_body -->
+</div><!-- // .popular_box -->
+</div><!-- // #sidebar -->
+<br class="clear">
+</div><!-- // #container -->
+<div id="footer">
+<div id="footer_body">
+<address>Droppy &copy; 2011</address>
+<ul>
+	<li><a href="#">運営会社</a>｜</li>
+	<li><a href="#">プライバシーポリシー</a>｜</li>
+	<li><a href="#">利用規約</a>｜</li>
+	<li><a href="#">運営者からのお知らせ</a></li>
+</ul>
+</div><!-- // #footer_body -->
+</div><!-- // #footer -->
+</body>
+</html>

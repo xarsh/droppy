@@ -1,0 +1,72 @@
+
+.event_details_summary {
+	padding:0 20px;
+	margin:0;
+	position:relative;
+	min-height:130px
+}
+.event_details_summary img.event_picture {
+	position:absolute;
+	top:50%;
+	margin-top:-64px;
+}
+.event_details_summary .ym-col1 {
+	width:140px;
+}
+.event_details_summary .ym-col3 {
+	margin-left:140px;
+	margin-right:0;
+}
+#event_details {
+	padding-top:20px;
+}
+.event_details_summary .event_title {
+	font-size:20px;
+	font-weight:bold;
+	vertical-align:middle;
+}
+.event_details_summary .event_details_unique_name a {
+	color:#0483be;
+	text-decoration:none;
+}
+.event_details_summary .event_username {
+    cursor:pointer;
+    margin-bottom:20px;
+}
+.event_details_summary .event_username:hover {
+    text-decoration:underline;
+}
+.event_details_buttons {
+	padding-left:20px;
+}
+.event_details_body {
+	padding:10px 20px;
+}
+.event_details_body .event_details_unique_name {
+	color:#555555;
+	font-size:13px;
+	margin-left:5px;
+}
+.event_details_body .event_details_unique_name a:hover {
+	text-decoration:underline;
+}
+.event_details_body .hash_symbol {
+	color:#08adfa;
+	padding-right:3px;
+}
+.event_details_body .event_details_tag {
+	color:#2d2d2d;
+	margin-right:15px;
+	text-decoration:underline;
+}
+.event_details_body .event_details {
+	padding-left:20px;
+}
+.event_details_body tr {
+	height:40px
+}
+.event_details_body th {
+	width:auto;
+	padding-right:40px;
+}
+	

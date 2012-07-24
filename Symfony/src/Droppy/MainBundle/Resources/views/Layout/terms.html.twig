@@ -1,0 +1,18 @@
+{% extends 'DroppyMainBundle::layout.html.twig' %}
+
+{% block css %}
+<link href="{{ asset('css/import_static_pages.css') }}" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="{{ asset('css/patches/static_pages.css') }}" rel="stylesheet" type="text/css" />
+<![endif]-->
+{% endblock %}
+
+{% block body%}
+<div id="main">
+    {% include 'DroppyMainBundle:Includes:terms.html.twig' %}
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include 'DroppyMainBundle:Includes:footer.html.twig' %}
+{% endblock %}

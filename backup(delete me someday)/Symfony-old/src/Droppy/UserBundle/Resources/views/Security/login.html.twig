@@ -1,0 +1,43 @@
+{% extends "DroppyUserBundle::layout.html.twig" %}
+
+{% block header %}
+{% include 'DroppyWebApplicationBundle:Includes:unlogged_header.html.twig' 
+	with {'action': 'registration.register_short' | trans({}, 'DroppyUserBundle') ,
+		 'action_name': 'registration.register' | trans({}, 'DroppyUserBundle'), 
+			'facebook_action_path': 'droppy_general_index', 
+			'droppy_action_path': 'fos_user_registration_register'} %}
+{% endblock %}
+
+{% block fos_user_content %}
+<div id="container">
+	<div class="login_box">
+		<h2 class="droppy"><strong>{{ 'login.title'|trans({}, 'DroppyUserBundle') }}</strong></h2>
+		{% if error %}
+		    <span class="error_msg">{{ 'error.login' | trans({}, 'DroppyUserBundle') }}</span>
+		{% endif %}
+		
+		<form name="login_form" action="{{ path("fos_user_security_check") }}" method="post">
+		    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr>
+				    	<th><label for="username">{{ 'infos.name'|trans({}, 'DroppyUserBundle') }}</label></th>
+				    	<td><input type="text" id="username" name="_username" value="{{ last_username }}" /></td>
+				    </tr>
+				    <tr>
+				    	<th><label for="password">{{ 'infos.password'|trans({}, 'DroppyUserBundle') }}</label></th>
+					    <td><input type="password" id="password" name="_password" /></td>
+					</tr>
+				</table>
+			
+			    <p class="auto_login">
+			    	<input type="checkbox" id="remember_me" name="_remember_me" value="on" />
+			    	<label for="remember_me">{{ 'login.remember_me'|trans({}, 'DroppyUserBundle') }}</label>
+			    </p>
+				<p class="btn_style1">
+					<a href="#" onclick="login_form.submit();">{{ 'login.login' | trans({}, 'DroppyUserBundle')}}</a>
+				</p>
+		    </table>
+		</form>
+	</div>
+</div>
+{% endblock fos_user_content %}

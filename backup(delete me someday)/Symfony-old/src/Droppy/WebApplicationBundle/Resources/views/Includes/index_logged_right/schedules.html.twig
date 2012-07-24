@@ -1,0 +1,24 @@
+{% for schedule in schedules %}
+<div class="cal_list">
+  <div class="photo">
+    {% if schedule.iconSet.uploaded %}
+    <img src="{{ asset(schedule.iconSet.thumbnailPath) }}" alt="" width="45" height="45">
+    {% else %}
+    <img src="{{ asset('images/common/dammy_photo_45x45.gif') }}" alt="">
+    {% endif %}
+  </div>
+  {% set dropped = schedule in app.user.droppedSchedulesEntities %}
+  <div class="txt">
+    <p>{{ schedule.name }}</p>
+      <a class="button" onFocus="this.blur();" schedule_id="{{ schedule.id }}">
+	<strong class="{% if dropped %}drop_btn_style1_o{% else %}drop_btn_style1{% endif %}">
+	  <span>
+	    {% if dropped %}{{ 'drop_status.dropping' | trans({}, 'DroppyWebApplicationBundle')}}
+	    {% else %}{{ 'drop_status.drop_action' | trans({}, 'DroppyWebApplicationBundle') }} {% endif %}
+	  </span>
+	</strong>
+      </a>
+  </div>
+  <br class="clear">
+</div>
+{% endfor %}

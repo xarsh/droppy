@@ -1,0 +1,43 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="droppy_event.tag.form.type" 
+                class="Droppy\EventBundle\Form\Type\TagFormType">
+            <tag name="form.type" alias="tag_selector" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
+        </service>
+        
+        <service id="droppy_event.tag.date_time.type" 
+                class="Droppy\EventBundle\Form\Type\DateTimeFormType">
+            <tag name="form.type" alias="date_time_selector" />
+        </service>
+        
+        <service id="droppy_event.default_date.form.type"
+                class="Droppy\EventBundle\Form\Type\DefaultDateFormType">
+            <tag name="form.type" alias="date_selector" />
+        </service>
+  
+        <service id="droppy_event.default_time.form.type"
+                class="Droppy\EventBundle\Form\Type\DefaultTimeFormType">
+            <tag name="form.type" alias="time_selector" />
+        </service>
+        
+        <service id="droppy_event.location.form.type"
+                class="Droppy\EventBundle\Form\Type\LocationFormType">
+            <tag name="form.type" alias="location_form_type" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
+        </service>
+        
+        <service id="droppy_event.genre.form.type"
+                class="Droppy\EventBundle\Form\Type\GenreFormType">
+            <tag name="form.type" alias="genre_selector" />
+        </service>
+        
+
+    </services>
+
+</container>

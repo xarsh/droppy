@@ -1,0 +1,17 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="droppy_main.s3_path">https://s3-ap-northeast-1.amazonaws.com</parameter>
+    </parameters>
+
+    <services>
+        <service id="twig.extension.droppy_main" class="Droppy\MainBundle\Twig\Extension\MainBundleExtension" public="false">
+            <argument>%droppy_main.s3_path%</argument>
+            <tag name="twig.extension" />
+        </service>
+    </services>
+</container>

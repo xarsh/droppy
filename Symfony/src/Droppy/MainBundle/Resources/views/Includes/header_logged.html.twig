@@ -1,0 +1,26 @@
+<div id="header" class="clearfix">
+	<div class="logo">
+		<img src="{{ asset('img/logo.png') }}" class="logo" alt="logo">
+	</div>
+	<div class="tools">
+
+		<div class="pulldown header_link">
+			<span class="icon"> <img src="{{ asset('img/config.png') }}" alt="config_icon">
+			</span>
+			<div id="pulldown_items">
+				<!-- a onFocus="this.blur()" href="#">
+								<p class="pulldown_item">他のサービスと同期</p>
+							</a -->
+				<a onFocus="this.blur()" href="{{ path('droppy_user_personal_datas') }}">
+					<p class="pulldown_item">{{ 'settings.settings' | trans({}, 'DroppyMainBundle')}}</p>
+				</a> <a onFocus="this.blur()" href="{{ path('fos_user_security_logout') }}">
+					<p class="pulldown_item">{{ 'login.logout' | trans({}, 'DroppyMainBundle') }}</p>
+				</a>
+			</div>
+		</div>
+
+		<span class="search_form"> <input type="text" name="" value="" class="search_txt" 
+			placeholder="{{ 'search.artist' | trans({}, 'DroppyMainBundle')}}">
+		</span>
+	</div>
+</div>

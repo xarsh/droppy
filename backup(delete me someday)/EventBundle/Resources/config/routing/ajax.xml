@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    
+    <route id="droppy_event_ajax_event_in" pattern="/in/{id}">
+        <default key="_controller">DroppyEventBundle:AJAXRequest:setEventIn</default>
+        <default key="id">-1</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_event_out" pattern="/out/{id}">
+        <default key="_controller">DroppyEventBundle:AJAXRequest:setEventOut</default>
+        <default key="id">-1</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_like_event" pattern="/like/{id}">
+        <default key="_controller">DroppyEventBundle:AJAXRequest:likeEvent</default>
+        <default key="id">-1</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_unlike_event" pattern="/unlike/{id}">
+        <default key="_controller">DroppyEventBundle:AJAXRequest:unlikeEvent</default>
+        <default key="id">-1</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_get_event" pattern="/get/{id}">
+        <default key="_controller">DroppyEventBundle:AJAXRequest:getEventInfos</default>
+        <default key="id">-1</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_calendar_events" pattern="/calendar-events">
+        <default key="_controller">DroppyEventBundle:AJAXRequest:getEventsInInterval</default>
+        <requirement key="_format">json|xml</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_timeline_events" pattern="/timeline-events">
+        <default key="_controller">DroppyEventBundle:AJAXRequest:getTimelineEvents</default>
+        <requirement key="_format">json|xml</requirement>
+    </route>
+
+</routes>

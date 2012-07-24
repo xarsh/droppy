@@ -1,0 +1,19 @@
+@charset "utf-8";
+@media screen, projection
+{
+  body { overflow-y:scroll;}
+  body, textarea { font-family: "メイリオ", "ＭＳ Ｐゴシック", sans-serif; }
+  input, select { font-family: Arial, "ＭＳ Ｐゴシック", sans-serif; }
+  .page_margins { margin: 0 auto; }
+  .page_margins { width: 100%; background: #fff; }
+  #header { padding: 45px 2em 1em 20px; color: #000; background: #2d2d2d; }
+  #main { width:960px; margin: 10px auto; background: #fff; }
+  #footer { width:960px; margin:0 auto; padding: 10px 20px; color:#666; background: #f9f9f9; border-top: 5px #efefef solid; }
+  #header_inner { width:960px; margin:0 auto;}
+  
+  #col1 { float: left; width: 600px}
+  #col2 { display:none}
+  #col3 { width: auto; margin: 0 0 0 600px}
+  #col1_content { padding: 0 10px 0 20px }
+  #col3_content { padding: 0 20px 0 10px }
+}

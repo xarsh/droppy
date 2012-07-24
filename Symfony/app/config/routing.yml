@@ -1,0 +1,20 @@
+DroppyMainBundle:
+    resource: "@DroppyMainBundle/Resources/config/routing/routing.xml"
+    type:     xml
+    prefix:   /
+
+DroppyEventBundle:
+    resource: "@DroppyEventBundle/Resources/config/routing/routing.xml"
+    type:     xml
+    prefix:   /event
+
+DroppyUserBundle:
+    resource: "@DroppyUserBundle/Resources/config/routing/routing.xml"
+    type:     xml
+    prefix:   /user
+
+fos_js_routing:
+    resource: "@FOSJsRoutingBundle/Resources/config/routing/routing.xml"
+
+_bazinga_exposetranslation:
+    resource: "@BazingaExposeTranslationBundle/Resources/config/routing/routing.yml"

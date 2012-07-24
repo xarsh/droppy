@@ -1,0 +1,29 @@
+<div id="user_profile" class="ym-column">
+    <div class="ym-col1">
+        <div class="ym-cbox">
+            <img width="48" height="48" alt="" src="<%= Assetics.asset(appUser.get('personalDatas').iconSet.icon) %>" />
+        </div>
+    </div>
+    <div class="ym-col3">
+        <div class="ym-cbox">
+            <p class="display_name">
+            <%= appUser.get('personalDatas').displayedName %>
+            </p>
+            <p class="unique_name">&gt;<%= appUser.get('username') %></p>
+        </div>
+    </div>
+</div>
+<div class="account_counter">
+    <ul>
+        <li class="eventnumber">
+            <span><%= ExposeTranslation.get('event.public_events') %><strong><%= appUser.get('createdEventsNumber') %></strong></span>
+        </li>
+        <li class="dropnumber">
+            <span><%= ExposeTranslation.get('droppy.droppings') %><strong><%= appUser.get('droppingUsersNumber') %></strong></span>
+        </li>
+        <li class="droppernumber">
+            <span><%= ExposeTranslation.get('droppy.droppers') %><strong><%= appUser.get('droppersNumber') %></strong></span>
+        </li>
+    </ul>
+</div>
+

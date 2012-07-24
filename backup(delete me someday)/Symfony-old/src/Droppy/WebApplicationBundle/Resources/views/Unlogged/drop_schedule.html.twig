@@ -1,0 +1,68 @@
+{% extends "DroppyWebApplicationBundle::layout.html.twig" %}
+
+{% block javascript %}
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".btn_style1").hide();
+    $("a.button").click(function(){
+	var id = $(this).attr("id");
+        var strong=$(this).children("strong");
+      if(strong.attr('class')=="drop_btn_style1"){
+        $.ajax({
+          type: "POST",
+          url: "{{ path('droppy_schedule_drop') }}",
+          data: "schedule_id=" + id,
+          success: function(){
+            strong.removeClass("drop_btn_style1");
+            strong.addClass("drop_btn_style1_o");
+	    if($(".drop_btn_style1_o").size() >= 3){
+              $(".btn_style1").show();
+	    }
+          }
+        });
+      } else if(strong.attr('class')=="drop_btn_style1_o"){
+       $.ajax({
+          type: "POST",
+          url: "{{ path('droppy_schedule_undrop') }}",
+          data: "schedule_id=" + id,
+          success: function(){
+            strong.removeClass("drop_btn_style1_o");
+            strong.addClass("drop_btn_style1");
+	    if($(".drop_btn_style1_o").size() < 3){
+              $(".btn_style1").hide();
+	    }
+          }
+        });
+      }
+    });
+});
+</script>
+{% endblock %}
+ 
+{% block body %} 
+<div id="container">
+    <h2 class="ttl_step"><img src="{{ asset('images/account/img_step_2nd.gif') }}" 
+                              alt="2.{{ 'wizard.drop_schedule' | trans({}, 'DroppyWebApplicationBundle') }}"></h2>
+    <div class="cal_drop_box">
+    <h3>{{ 'wizard.3schedules' | trans({}, 'DroppyWebApplicationBundle') }}</h3>
+    <form action="" method="post">
+    <div class="cal_list">
+    <p><strong>{{ 'schedule.type.popular' | trans({}, 'DroppyWebApplicationBundle') }}</strong></p>
+	{% for schedule in schedules %}
+	    {% if loop.index % 7 == 0 %}
+	   		<div>
+	    {% endif %}
+	    {% include 'DroppyWebApplicationBundle:Includes:schedule-drop.html.twig'
+	    	with {'schedule' : schedule} %}
+	    {% if loop.index + 1 % 7 == 0 or loop.index == loop.last %}
+	    	<br class="clear">
+	    	</div>	
+	    {% endif %}
+	{% endfor %}
+    <!-- calender list end -->
+   </div><!-- // .cal_list -->
+    <p class="btn_style1"><a href="#">{{ 'wizard.next' | trans({}, 'DroppyWebApplicationBundle') }}</a></p>
+    </form>
+    </div><!-- // .cal_drop_box -->
+</div>
+{% endblock %}

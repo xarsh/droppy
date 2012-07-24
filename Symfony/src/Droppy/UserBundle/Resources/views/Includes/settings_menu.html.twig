@@ -1,0 +1,11 @@
+<nav class="ym-vlist" id="settings_menu">
+<h6 class="ym-vtitle">{{ 'settings.setting' | trans({}, 'DroppyMainBundle') }}</h6>
+<ul>
+	<li class="{{ class[0] }}">
+        <a href="{{ path('droppy_user_personal_datas') }}">{{ 'settings.account.label' | trans({}, 'DroppyMainBundle') }}</a>
+    </li>
+	<li class="{{ class[1] }}"><a href="{{ path('droppy_user_settings') }}">{{ 'settings.droppy.label' | trans({}, 'DroppyMainBundle') }}</a></li>
+	<li class="{{ class[2] }}"><a href="{{ path('fos_user_change_password') }}">{{ 'settings.password.label' | trans({}, 'DroppyMainBundle') }}</a></li>
+	<li class="{{ class[3] }}"><a href="{{ path('droppy_user_deactivate') }}">{{ 'deactivation.deactivate' | trans({}, 'DroppyMainBundle') }}</a></li>
+</ul>
+</nav>

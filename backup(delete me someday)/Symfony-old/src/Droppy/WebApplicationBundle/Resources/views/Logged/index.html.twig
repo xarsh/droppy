@@ -1,0 +1,107 @@
+{% extends "DroppyWebApplicationBundle::layout.html.twig" %}
+
+{% block javascript %}
+<script type="text/javascript">
+/**
+ * Get necessary arguments to make AJAX request 
+ * to drop or undrop schedule and change tags.
+ *
+ * @param boolean isDropAction
+ * @return array
+ */
+function getDropUndropArguments(isDropAction) {
+    classToAdd = (isDropAction) ? "drop_btn_style1_o" : "drop_btn_style1";
+    classToRemove = (isDropAction) ? "drop_btn_style1" : "drop_btn_style1_o";
+    newStatus = (isDropAction) ? "{{ 'drop_status.dropping' | trans({}, 'DroppyWebApplicationBundle')}}"
+                            : "{{ 'drop_status.drop_action' | trans({}, 'DroppyWebApplicationBundle')}}";
+    return {'toAdd' : classToAdd, 'toRemove' : classToRemove, 'status' : newStatus};
+}
+
+/**
+ * Get path to drop or undrop
+ *
+ * @param boolean isDropAction
+ * @param boolean isSchedule
+ * @return string
+ */
+function getDropUndropPath(isDropAction, isSchedule) {
+	if(isSchedule) {
+		return (isDropAction) ? "{{ path('droppy_schedule_drop') }}" : "{{ path('droppy_schedule_undrop') }}";
+	} 
+	//event path here.
+}
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+        $(".repeat_section").css("display", "none");
+        $('.repeat_section_check :checkbox').click(function(){
+            var idname = this.value;
+            $("tr[id^=" + idname + "]").each(function(){
+                $(this).toggle();
+                });
+        });
+        
+        //jQuery('#content_3column').containedStickyScroll();
+
+    function calendarLink(){ 
+        $("a.to_other_schedule").click(function(){
+            var date = $(this).attr("id");
+            $.ajax({
+              type: "GET",
+              url: "{{ path('droppy_schedule_get_main_schedule') }}" + "/" + date,
+              success: function(html){
+                $(".main_cal_box").replaceWith(html);
+                calendarLink();
+              }
+            });
+        });
+    }
+    calendarLink();
+
+    $("a.make_schedule").click(function(){
+        var date = $(this).attr("id");
+        $.ajax({
+          type: "POST",
+          url: "{#{ path('make_event') }#}",
+          data: "date=" + date,
+          success: function(html){
+            
+          }
+        });
+    });
+});
+</script>
+<script type="text/javascript">
+$(function(){
+    $('#ui-tab > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+    $('#ui-tab-2 > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+    
+    $(".datepicker").datepicker();
+});
+</script>
+<script type="text/javascript" src="{{ asset('js/index_scripts/ui.drop-undrop-buttons.js') }}"></script>
+{% endblock %}
+
+{% block body %}
+<div id="main">
+
+  {% include 'DroppyWebApplicationBundle:Includes/index_logged_left:pane.html.twig' 
+      with {'user' : user,
+            'personal_datas' : personal_datas,
+            'drop_events' : drop_events,
+            'drop_schedules' : drop_schedules,
+            'my_schedules' : my_schedules} %}
+
+  {% include 'DroppyWebApplicationBundle:Includes/index_logged_center:pane.html.twig' 
+      with {'schedule_information' : schedule_information} %}
+
+  {% include 'DroppyWebApplicationBundle:MakeEvent:make_event_include.html.twig' %}
+
+  {% include 'DroppyWebApplicationBundle:Includes/index_logged_right:pane.html.twig'
+      with {'popular_schedules' : popular_schedules,
+            'recommended_schedules' : recommended_schedules,
+            'official_schedules' : official_schedules} %}
+
+<br class="clear">
+</div><!-- // #main -->
+{% endblock %}

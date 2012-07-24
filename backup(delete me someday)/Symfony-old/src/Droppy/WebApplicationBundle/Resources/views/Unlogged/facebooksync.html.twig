@@ -1,0 +1,20 @@
+{% extends "DroppyWebApplicationBundle::layout.html.twig" %}
+
+{% block body %}
+<div id="container">
+    <h2 class="ttl_step"><img src="../images/facebook/img_step_2nd.gif" alt="2.{{ 'wizard.sync.sync' | trans({}, 'DroppyWebApplicationBundle') }}"></h2>
+    <div class="cal_sync_box">
+    <h3>{{ 'wizard.sync.schedule' | trans({}, 'DroppyWebApplicationBundle') }}</h3>
+    <form action="" method="post">
+    <ul>
+            <li class="gcal"><label><input type="checkbox" name="" value="">{{ 'wizard.sync.google' | trans({}, 'DroppyWebApplicationBundle') }}</label></li>
+        <li class="mcal"><label><input type="checkbox" name="" value="">{{ 'wizard.sync.mixi' | trans({}, 'DroppyWebApplicationBundle') }}</label></li>
+        <li class="ical"><label><input type="checkbox" name="" value="">{{ 'wizard.sync.ical' | trans({}, 'DroppyWebApplicationBundle') }}</label></li>
+        <li class="ocal"><label><input type="checkbox" name="" value="">{{ 'wizard.sync.outlook' | trans({}, 'DroppyWebApplicationBundle') }}</label></li>
+        <li class="scal"><label><input type="checkbox" name="" value="">{{ 'wizard.sync.cybozu' | trans({}, 'DroppyWebApplicationBundle') }}</label></li>
+    </ul>
+    <p class="btn_style1"><a href="#">{{ 'wizard.sync.next' | trans({}, 'DroppyWebApplicationBundle') }}</a></p>
+    </form>
+    </div><!-- // .cal_sync_box -->
+</div>
+{% endblock %}

@@ -1,0 +1,49 @@
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER
+        ROLE_SUPER_ADMIN: [ROLE_USER, ROLE_ADMIN, ROLE_ALLOWED_TO_SWITCH]
+
+    providers:
+        fos_user_bundle:
+            id: fos_user.user_manager
+        in_memory:
+            users:
+                user:  { password: userpass, roles: [ 'ROLE_USER' ] }
+                admin: { password: adminpass, roles: [ 'ROLE_ADMIN' ] }
+    factories:
+      - "%kernel.root_dir%/../src/Droppy/UserBundle/Resources/config/security_factories.xml"
+
+    firewalls:
+        dev:
+            pattern:  ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+        public_api:
+            pattern: ^/.*/public-api/*
+            security: false
+        wsse_secured:
+            pattern: ^/.*/api/
+            wsse: true
+        main:
+            pattern: ^/
+            form_login:
+                provider: fos_user_bundle
+                login_path: /
+                check_path: /user/login_check
+                default_target_path: /
+                failure_path: /
+                remember_me: true
+            remember_me:
+                key: %secret%
+            logout:
+                path: /user/logout
+                target: /
+            anonymous: true
+
+    access_control:
+        - { path: ^/$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/(privacy|terms)$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/user/(login$|register|resetting), roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/, roles: ROLE_USER }

@@ -1,0 +1,102 @@
+<div class="search">
+	<div class="buttons">
+	<span class="button_big white" onclick="backToCalendar()">{{ 'common.back' | trans({}, 'DroppyMainBundle') }}</span>
+</div>
+
+	<div id="search_result">
+		<div id="search_type_tab">
+			<ul>
+				<li class="event_tab"><a href="#event_tab">
+					<span>{{ 'event.recommended_events' | trans({}, 'DroppyMainBundle') }}</span>
+				</a></li>
+				<li class="user_tab"><a href="#user_tab">
+					<span>{{ 'user.recommended_users' | trans({}, 'DroppyMainBundle') }}</span>
+				</a></li>
+			</ul>
+		</div>
+		<div id="event_tab">
+
+			<div class="ym-column event">
+				<div class="ym-col1">
+					<div class="ym-cbox">
+						<img src="http://placehold.it/64x64" width="64" height="64" />
+					</div>
+				</div>
+				<div class="ym-col2">
+					<div class="ym-cbox">
+						<span class="button_small like">
+							<img src="{{ asset('img/like.png') }}" />{{ 'button.like' | trans({}, 'DroppyMainBundle') }}
+						</span>
+						<span class="button_small out">
+							<img src="{{ asset('img/out.png') }}" />{{ 'button.out' | trans({}, 'DroppyMainBundle') }}
+						</span>
+						<div class="link to_details">
+							{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}
+						</div>
+					</div>
+				</div>
+				<div class="ym-col3 ym-clearfix">
+					<div class="ym-cbox">
+						<p class="date">2012年 4月 31日</p>
+						<p class="user"><a href="#">takao naito</a></p>
+						<p class="title">第二十五回 ギネスビール試飲会 in 早稲田大学</p>
+					</div>
+				</div>
+			</div>
+			<hr class="gradation" />
+			<div class="ym-column event">
+				<div class="ym-col1">
+					<div class="ym-cbox">
+						<img src="http://placehold.it/64x64" width="64" height="64" />
+					</div>
+				</div>
+				<div class="ym-col2">
+					<div class="ym-cbox">
+						<span class="button_small like clicked">
+							<img src="{{ asset('img/like.png') }}" />{{ 'button.like' | trans({}, 'DroppyMainBundle') }}
+						</span>
+						<span class="button_small in">
+							<img src="{{ asset('img/in.png') }}" />{{ 'button.in' | trans({}, 'DroppyMainBundle') }}
+						</span>
+						<div class="link to_details">
+							{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}
+						</div>
+					</div>
+				</div>
+				<div class="ym-col3 ym-clearfix">
+					<div class="ym-cbox">
+						<p class="date">2012年 5月 20日</p>
+						<p class="user"><a href="#">佐藤 巧</a></p>
+						<p class="title">留年慰労会</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="user_tab">
+
+			<div class="ym-column user">
+				<div class="ym-col1">
+					<div class="ym-cbox">
+						<img src="http://placehold.it/64x64" width="64" height="64" />
+					</div>
+				</div>
+				<div class="ym-col2">
+					<div class="ym-cbox">
+						<span class="button_small like">
+							<img src="{{ asset('img/drop.png') }}" />{{ 'button.drop' | trans({}, 'DroppyMainBundle') }}
+						</span>
+						<div class="link to_details">
+							{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}
+						</div>
+					</div>
+				</div>
+				<div class="ym-col3 ym-clearfix">
+					<div class="ym-cbox">
+						<p class="user"><a href="#">佐藤 巧</a></p>
+						<p class="description">理科大の学生です。みなさんよろしくね。</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

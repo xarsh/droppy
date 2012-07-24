@@ -1,0 +1,132 @@
+header:
+    unlogged:
+        title: Social scheduling service
+        has_account: Already registered?
+        login: Login
+        login_droppy: Login with Droppy
+        login_fb: Login with Facebook
+    logged:
+        search: Search
+        search_event: Search
+        recommended: Recommendations
+        setting: Settings
+        feature: Help
+        logout: Logout
+        
+unlogged_index:
+    title:  Let's share our schedules!
+    message: |
+        In Droppy, you can share the schedule you are
+        <br>
+        interested in with people around you!
+    new_registration: Register
+        
+schedule:
+    name: Schedule
+    author: Author
+    schedule: Schedule
+    icon: Icon
+    details: Details
+    privacy: Privacy settings
+    creation:
+        create_schedule: Create a schedule
+        create: Create
+        privacy_settings: Privacy settings
+        author_display: Display author
+        name_already_used: A schedule with the same name already exists.
+    type: 
+        official: Official schedules
+        recommended: Recommended schedules
+        new: New schedules
+        popular: Popular schedules
+        private: My schedule
+        dropped: Dropped schedules
+        created: Created schedules
+    
+event:  
+    title: Event
+    start_date_time: Start time
+    end_date_time: End time
+    details: Details
+    place: Place
+    icon: Icon
+    tag: Tags
+    url: URL
+    creation:
+        make_event: Create an event
+        make: Create
+        more: Add details
+        size_format: Maximum size: --KB. Supported formats: GIF, JPG, PNG.
+        repeat: Recurrence
+        add_date: Add a date
+    type:
+        dropped: Dropped events
+        all: All events
+        
+genre:
+    name: Genre
+    by_genre: By genre
+    all_genre: All genres
+    
+tag:
+    name: Tags
+    add: Add tags
+    
+icon:
+    name: Icon
+    
+privacy_policy:
+    settings: Privacy settings
+    public: Public
+    private: Private
+    protected: Personalized
+    show: Show
+    hide: Hide
+    
+wizard:
+    login_fb: Login with Facebook
+    signin_fb: Facebook authentification
+    signup_fb: Register with Facebook
+    fb_button: Sign in with Facebook
+    drop_schedule: Drop schedules
+    3schedules: Let's try dropping three schedules
+    next: Let's go next!
+    sync: 
+        sync: Synchronization
+        schedule: Schedules to synchronize
+        google: Google Calendar
+        mixi: mixi Calendar
+        ical: iCal
+        outlook: Outlook Calendar
+        cybozu: Cyboze Calendar
+        next: Next
+        
+drop_status:
+    drop_action: Drop
+    dropping: Dropping
+    undrop: Undrop
+
+form:
+    required: Required
+    
+time:
+    mon: Monday
+    tue: Tuesday
+    wed: Wednesday
+    thu: Thursday
+    fri: Friday
+    sat: Saturday
+    sun: Sunday
+    today: Today
+    this_month: This month
+    every_day: Every day
+    every_week: Every week
+    every_month: Every month
+    months: '{1} January | {2} February | {3} March | {4} April | {5} May | {6} June | {7} July | {8} August | {9} September | {10} October | {11} November | {12} December'
+    date: %month% %year%
+    
+common:
+    all: All
+    see_more: See more
+    add_details: Add details
+    close: Close

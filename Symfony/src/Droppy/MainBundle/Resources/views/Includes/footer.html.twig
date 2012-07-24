@@ -1,0 +1,12 @@
+<div id="footer">
+<div class="footer_inner">
+	<address>Droppy &copy; {{ "now" | date('Y') }}</address>
+	<ul>
+		<li><a href="http://aetel.jp/">{{ 'footer.aboutus' | trans({}, 'DroppyMainBundle') }}</a></li>
+		<li><a href="{{ path('droppy_main_privacy') }}">{{ 'footer.privacypolicy' | trans({}, 'DroppyMainBundle') }}</a></li>
+		<li><a href="{{ path('droppy_main_terms') }}">{{ 'footer.rule' | trans({}, 'DroppyMainBundle') }}</a></li>
+		{#<li><a href="#">{{ 'footer.news' | trans({}, 'DroppyMainBundle') }}</a></li>#}
+	</ul>
+</div>
+</div>
+

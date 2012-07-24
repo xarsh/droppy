@@ -1,0 +1,22 @@
+infos:
+    name: Username
+    password: Password
+    email: Mail address
+    gender:
+        gender: Gender
+        male: Male
+        female: Female
+        other: Corporation
+    
+login:
+    login: Login
+    title: Create a Droppy account
+    remember_me: Remember me
+
+registration:
+    register: Register
+    register_short: Register
+    password: Password
+    password_confirmation: Password(confirmation)
+    
+

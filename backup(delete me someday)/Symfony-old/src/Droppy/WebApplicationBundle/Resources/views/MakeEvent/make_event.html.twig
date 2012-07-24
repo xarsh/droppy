@@ -1,0 +1,45 @@
+{% extends 'DroppyWebApplicationBundle::layout.html.twig' %}
+{% form_theme form 'DroppyWebApplicationBundle:MakeEvent:widgets_theme.html.twig' %}
+
+{% block javascript %}
+<script type="text/javascript">
+$(function(){
+    $(".datepicker").datepicker();
+});
+</script>
+{% endblock javascript %}
+
+{% block body %}
+<div id="container">
+  <div class="make_cal_box">
+    <form name="make_event_form" action="{{ path('droppy_webapp_make_event') }}" method="post" {{ form_enctype(form) }}>
+      <h3>
+        <strong>{{ 'event.creation.make_event' | trans({}, 'DroppyWebApplicationBundle') }}</strong>
+      </h3>
+      <table border="0" cellspacing="0" cellpadding="0">
+	{{ form_row(form.name) }}
+        {{ form_row(form.schedule) }}
+	{{ form_row(form.start_date_time) }}
+	{{ form_row(form.end_date_time) }}
+
+      {#<p class="add_sche">{{ 'event.creation.add_date' | trans({}, 'DroppyWebApplicationBundle') }}</p>
+      <div class="add_sche_ymd">
+	{{ form_row(form.add_date) }}
+      </div><!-- // .add_sche_ymd -->#}
+
+	{{ form_row(form.details) }}
+	{{ form_row(form.location) }}
+	{{ form_row(form.iconSet.file) }}
+	{{ form_row(form.tags) }}
+	{{ form_row(form.url) }}
+	{{ form_row(form.privacySettings.visibility) }}
+        {{ form_rest(form) }}
+      </table>
+
+      <p class="btn_style5"><a href="#" onclick="make_event_form.submit()">
+	  {{ 'event.creation.make' | trans({}, 'DroppyWebApplicationBundle') }}
+      </a></p>
+    </form>
+  </div><!-- // .make_cal_box -->
+</div><!-- // #container -->
+{% endblock body %}

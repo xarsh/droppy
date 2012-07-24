@@ -1,0 +1,117 @@
+<div class="event_lists">
+
+	<div id="timeline-tab">
+
+		<ul>
+			<li class="ui-tab-1"><a href="#date_tab">
+				<span>{{ 'timeline.date' | trans({}, 'DroppyMainBundle') }}</span>
+			</a></li>
+			<li class="ui-tab-2"><a href="#new_tab">
+				<span>{{ 'timeline.new' | trans({}, 'DroppyMainBundle') }}</span>
+			</a></li>
+			<li class="ui-tab-3"><a href="#like_tab">
+				<span>{{ 'timeline.like' | trans({}, 'DroppyMainBundle') }}</span>
+			</a></li>
+		</ul>
+
+		<div id="date_tab" class="change_eve_detail">
+			<p class="day_bar">{{ 'timeline.after_this_month' | trans({}, 'DroppyMainBundle') }}</p>
+			<div class="event ym-column">
+				<div class="event_picture ym-col1">
+					<div class="ym-cbox">
+						<img src="http://placehold.it/48x48" alt="" width="48" height="48" />
+					</div>
+				</div>
+				<div class="event_text ym-col3">
+					<div class="event_text ym-cbox">
+						<p class="ymd"><strong>4月31日</strong></p>
+						<p class="user_name">Jorte</p>
+						<p class="title">倒産</p>
+					</div>
+				</div>
+				<div class="event_option ym-column">
+					<div class="ym-col1">
+						<span class="button_small like clicked">
+							<img src="{{ asset('img/like.png') }}" />{{ 'button.like' | trans({}, 'DroppyMainBundle') }}
+						</span>
+					</div>
+					<div class="ym-col2">
+						<span class="button_small in clicked">
+							<img src="{{ asset('img/in.png') }}" />{{ 'button.in' | trans({}, 'DroppyMainBundle') }}
+						</span>
+					</div>
+					<div class="ym-col3">
+						<span class="link to_details">{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}</span>
+					</div>
+				</div>
+			</div>
+			<div class="event ym-column">
+				<div class="event_picture ym-col1">
+					<div class="ym-cbox">
+						<img src="http://placehold.it/48x48" alt="" width="48" height="48" />
+					</div>
+				</div>
+				<div class="event_text ym-col3">
+					<div class="event_text ym-cbox">
+						<p class="ymd"><strong>4月31日</strong></p>
+						<p class="user_name">Jorte</p>
+						<p class="title">倒産</p>
+					</div>
+				</div>
+				<div class="event_option ym-column">
+					<div class="ym-col1">
+						<span class="button_small like">
+							<img src="{{ asset('img/like.png') }}" />{{ 'button.like' | trans({}, 'DroppyMainBundle') }}
+						</span>
+					</div>
+					<div class="ym-col2">
+						<span class="button_small in">
+							<img src="{{ asset('img/in.png') }}" />{{ 'button.in' | trans({}, 'DroppyMainBundle') }}
+						</span>
+					</div>
+					<div class="ym-col3">
+						<span class="link to_details">{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}</span>
+					</div>
+				</div>
+			</div>
+			<div class="event ym-column">
+				<div class="event_picture ym-col1">
+					<div class="ym-cbox">
+						<img src="http://placehold.it/48x48" alt="" width="48" height="48" />
+					</div>
+				</div>
+				<div class="event_text ym-col3">
+					<div class="event_text ym-cbox">
+						<p class="ymd"><strong>4月31日</strong></p>
+						<p class="user_name">Jorte</p>
+						<p class="title">倒産</p>
+					</div>
+				</div>
+				<div class="event_option ym-column">
+					<div class="ym-col1">
+						<span class="button_small like">
+							<img src="{{ asset('img/like.png') }}" />{{ 'button.like' | trans({}, 'DroppyMainBundle') }}
+						</span>
+					</div>
+					<div class="ym-col2">
+						<span class="button_small in">
+							<img src="{{ asset('img/in.png') }}" />{{ 'button.in' | trans({}, 'DroppyMainBundle') }}
+						</span>
+					</div>
+					<div class="ym-col3">
+						<span class="link to_details">{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}</span>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div id="new_tab">
+			<!-- events here -->
+		</div>
+
+		<div id="like_tab">
+			<!-- events here -->
+		</div>
+
+	</div>
+</div>

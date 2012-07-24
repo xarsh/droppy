@@ -1,0 +1,29 @@
+<div class="box">
+    <div class="ym-column event">
+    	<div class="ym-col1">
+    		<div class="ym-cbox user_icon">
+    			<img width="64" height="64" />
+    		</div>
+    	</div>
+    	<div class="ym-col2">
+    		<div class="ym-cbox">
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+    			<span class="button_small drop drop_button">
+    				<img />
+    				<span></span>
+    			</span>
+    			{% endif %}
+    		</div>
+    	</div>
+    	<div class="ym-col3 ym-clearfix">
+    		<div class="ym-cbox user_infos">
+    			<div class="user_link">
+    			<p class="user"><a href="#"></a></p>
+    			<p class="username"></p>
+    			</div>
+    			<p class="description"></p>
+    			
+    		</div>
+    	</div>
+    </div>
+</div>

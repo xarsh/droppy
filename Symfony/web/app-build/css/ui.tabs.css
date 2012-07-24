@@ -1,0 +1,115 @@
+
+@media projection, screen { 
+    .ui-tabs-hide {
+        display: none;
+    }
+}
+@media print {
+    .ui-tabs-nav {
+        display: none;
+    }
+}
+.ui-tabs-nav, .ui-tabs-panel {
+    font-family: "Trebuchet MS", Trebuchet, Verdana, Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+.ui-tabs-nav {
+    list-style: none;
+    margin: 0;
+	height:29px;
+   
+}
+.ui-tabs-nav:after { 
+    display: block;
+    clear: both;
+    content: " ";
+}
+.ui-tabs-nav li {
+    float: left;
+   
+}
+.ui-tabs-nav a, .ui-tabs-nav a span {
+    display: block;
+   
+}
+.ui-tabs-nav a {
+    margin: 1px 0 0; 
+    padding-left: 0;
+    color: #27537a;
+    line-height: 1.2;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;     
+    outline: 0; 
+}
+.ui-tabs-nav .ui-tabs-selected a {
+    position: relative;
+    top: 1px;
+    z-index:0;
+    margin-top: 0;
+    color: #000;
+}
+*>.ui-tabs-nav a span { 
+    width: auto;
+    height: auto;
+}
+#userdetails-tab ul .ui-tabs-selected a, #userdetails-tab ul a:hover, #userdetails-tab ul a:focus, #userdetails-tab ul a:active {
+    background-color:#c1c1c1;
+    color:#666;
+}
+#userdetails-tab ul a, #userdetails-tab ul .ui-tabs-disabled a:hover, #userdetails-tab ul .ui-tabs-disabled a:focus, #userdetails-tab ul .ui-tabs-disabled a:active {
+    background-color:#c1c1c1;
+    color:#666;
+}
+#userdetails-tab ul a:hover span {
+	background-color:#dddddd;
+	color:#000000;
+}
+#userdetails-tab ul .ui-tabs-selected a span,#userdetails-tab ul a:focus span, #userdetails-tab ul a:active span {
+    background-color:#fff;
+    color:#000;
+}
+#userdetails-tab ul a span, #userdetails-tab ul .ui-tabs-disabled a:hover span, #userdetails-tab ul .ui-tabs-disabled a:focus span, #userdetails-tab ul .ui-tabs-disabled a:active span {
+    background-color:#c1c1c1;
+    color:#666;
+}
+#userdetails-tab ul .ui-tabs-selected a:link, #userdetails-tab ul .ui-tabs-selected a:visited, #usedetails-tab ul .ui-tabs-disabled a:link, #userdetails-tab ul .ui-tabs-disabled a:visited { 
+    cursor: text;
+}
+#timeline-tab ul .ui-tabs-selected a, #timeline-tab ul a:hover, #timeline-tab ul a:focus, #timeline-tab ul a:active {
+    background-color:#c1c1c1;
+    color:#666;
+}
+#timeline-tab ul a, #timeline-tab ul .ui-tabs-disabled a:hover, #timeline-tab ul .ui-tabs-disabled a:focus, #timeline-tab ul .ui-tabs-disabled a:active {
+    background-color:#c1c1c1;
+    color:#666;
+}
+#timeline-tab ul a:hover span {
+	background-color:#dddddd;
+	color:#000000;
+}
+#timeline-tab ul .ui-tabs-selected a span,#timeline-tab ul a:focus span, #timeline-tab ul a:active span {
+    background-color:#fff;
+    color:#000;
+}
+#timeline-tab ul a span, #timeline-tab ul .ui-tabs-disabled a:hover span, #timeline-tab ul .ui-tabs-disabled a:focus span, #timeline-tab ul .ui-tabs-disabled a:active span {
+    background-color:#c1c1c1;
+    color:#666;
+}
+#timeline-tab ul .ui-tabs-selected a:link, #timeline-tab ul .ui-tabs-selected a:visited, #timeline-tab ul .ui-tabs-disabled a:link, #timeline-tab ul .ui-tabs-disabled a:visited { 
+    cursor: text;
+}
+.ui-tabs-nav a:hover, .ui-tabs-nav a:focus, .ui-tabs-nav a:active,
+.ui-tabs-nav .ui-tabs-deselectable a:hover, .ui-tabs-nav .ui-tabs-deselectable a:focus, .ui-tabs-nav .ui-tabs-deselectable a:active { 
+    cursor: pointer;
+}
+.ui-tabs-disabled {
+    opacity: .4;
+    filter: alpha(opacity=40);
+}
+* html .ui-tabs-nav { 
+    display: inline-block;
+}
+*:first-child+html .ui-tabs-nav  { 
+    display: inline-block;
+}

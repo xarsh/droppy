@@ -1,0 +1,55 @@
+div#header {
+	padding:35px 1px 1px 20px;
+	font-size:12px;
+}
+div#header_inner {
+	margin-top:-35px;
+}
+div#header a {
+	color:#bbbbbb;
+	text-decoration:none;
+}
+div#header a:hover {
+	color:#ffffff;
+	background:none;
+}
+div.logo {
+	float:left;
+	padding:3px 0 0 15px;
+}
+div.header_search_form {
+	float:right;
+	width:212px;
+	height:23px;
+	margin:6px 6px 0;
+	position:relative;
+	background:#969696 url(img/icon_search.gif) 7px center no-repeat;
+	-moz-border-radius:10px;/*for Firefox*/
+	-webkit-border-radius:10px;/*for Safari and chrome*/
+	border-radius:10px;/*CSS3*/
+}
+.header_search_txt {
+	width:180px;
+	height:23px;
+	position:absolute;
+	color:#dddddd;
+	left:25px;
+	top:0;
+	border:none;
+	background-color:transparent;
+}
+div.setting {
+	float:right;
+	padding:10px 20px 0 10px;
+}
+div.recommend {
+	float:right;
+	margin:8px 10px 0 10px;
+	padding:2px 15px 0 15px;
+	border-left:1px solid #555555;
+	border-right:1px solid #555555;
+}
+div.recommend img {
+	vertical-align:middle;
+	margin-right:5px;
+}

@@ -1,0 +1,40 @@
+<div class="setting_items">
+    <h3>{{ 'settings.droppy.label' | trans({}, 'DroppyMainBundle') }}</h3>
+	<form name="change_settings" action="{{ path('droppy_user_settings') }}" {{ form_enctype(form) }} method="POST">
+		<table>
+			<tbody>
+				<tr>
+					<th>{{ 'privacy_policy.setting' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.privacySettings.visibility) }}</td>
+				</tr>
+				<tr>
+					<th>{{ 'settings.droppy.first_day_of_week.label' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.firstDayOfWeek) }}</td>
+				</tr>
+				<tr>
+					<th>{{ 'settings.droppy.timezone' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.timezone) }}</td>
+				</tr>
+				{#<tr>
+					<th>{{ 'settings.droppy.event_default_color' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.color) }}</td>
+				</tr>#}
+				<tr>
+					<th>{{ 'settings.droppy.language' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.language) }}</td>
+				</tr>
+			</tbody>
+		</table>
+		{{ form_rest(form) }}
+		<div class="button">
+			<span class="button_big light_blue" onclick="change_password.submit()">
+				{{ 'settings.apply'|trans({}, 'DroppyMainBundle') }}
+			</span>
+			<span class="button_big white" onclick='location.href="{{ path('droppy_main_index') }}"'>
+				{{ 'common.cancel'|trans({}, 'DroppyMainBundle') }}
+			</span>
+		</div>
+	</form>
+</div>
+
+

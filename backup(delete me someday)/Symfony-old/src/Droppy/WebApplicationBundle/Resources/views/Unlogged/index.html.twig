@@ -1,0 +1,35 @@
+{% extends "DroppyWebApplicationBundle::layout.html.twig" %}
+
+{% block body %}
+<div id="container">
+	<div id="content">
+		<h2>
+			<img src="{{ asset('images/toppage/img_cal_drop.gif') }}" 
+			alt="{{ 'unlogged_index.title' | trans({}, 'DroppyWebApplicationBundle') }}">
+		</h2>
+		<p class="toppage_lead">
+			<strong>{{ 'unlogged_index.message' | trans({}, 'DroppyWebApplicationBundle') | raw }}</strong>
+		</p>
+		{% include 'DroppyWebApplicationBundle:Includes/index_unlogged_left:schedules-list.html.twig' 
+			with {'name': 'schedule.type.official', 'schedules': official_schedules } %}
+		{% include 'DroppyWebApplicationBundle:Includes/index_unlogged_left:schedules-list.html.twig' 
+			with {'name': 'schedule.type.recommended', 'schedules': recommended_schedules } %}
+		{% include 'DroppyWebApplicationBundle:Includes/index_unlogged_left:schedules-list.html.twig' 
+			with {'name': 'schedule.type.new', 'schedules': new_schedules } %}
+		{% include 'DroppyWebApplicationBundle:Includes/index_unlogged_left:tags-cloud.html.twig' 
+			with {'name': 'schedule.type.popular', 'schedules': tags } %}
+	</div> 
+	<div id="sidebar">
+		<p class="btn_style2">
+			<a href="{{ path('fos_user_registration_register') }}">
+			  {{ 'unlogged_index.new_registration' | trans({}, 'DroppyWebApplicationBundle') }}
+			</a>
+		</p>
+		{% include 'DroppyWebApplicationBundle:Includes/index_unlogged_right:likebox.html.twig' %}
+		{% include 'DroppyWebApplicationBundle:Includes/index_unlogged_right:twitter_box.html.twig' %}
+		{% include 'DroppyWebApplicationBundle:Includes/index_unlogged_right:genre_box.html.twig' 
+			with {'genres': genres } %}
+	</div> 
+	<br class="clear">
+</div>	
+{% endblock %}

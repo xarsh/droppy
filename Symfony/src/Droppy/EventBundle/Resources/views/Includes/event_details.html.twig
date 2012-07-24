@@ -1,0 +1,63 @@
+<div id="event_details">
+	<p class="head_title event_details_title">
+				<span class="csssprite icon_details">icon_details</span>
+    {{ 'event.details_long' | trans({}, 'DroppyMainBundle')}}</p>
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+	<span class="head_button">
+		<button class="button_big white" onclick="backToCalendar();">{{ 'common.back_to_calendar' | trans({}, 'DroppyMainBundle')}}</button>
+		<span class="event_details_buttons">
+			<span class="button_small like">
+				<span class="csssprite button_like">button_like</span>
+				<span>{{ 'button.like' | trans({}, 'DroppyMainBundle') }}</span>
+			</span>
+			<span class="button_small in">
+				<span class="csssprite button_in">button_in</span>
+				<span>{{ 'button.in' | trans({}, 'DroppyMainBundle') }}</span>
+			</span>
+		</span>
+	</span>
+	{% endif %}
+	<div class="event_details_summary">
+		<div class="ym-column">
+			<div class="ym-col1">
+                <span class="csssprite dummy00_128">dummy00_128</span>        
+			</div>
+			<div class="ym-col3">
+            <p class="event_title ellipsis">
+            </p>
+            <div class="event_username">
+            <p>{{ 'user.username' | trans({}, 'DroppyMainBundle') }}<span class="event_details_displayed_name"></span></p>
+            <span class="event_details_unique_name">(<a href="#" class="unique_name"></a>)</span>
+            </div>
+            </div>
+		</div>
+	</div>
+	<div class="event_details_body">
+		<table>
+			<tbody>
+				<tr class="event_timedate">
+					<th>{{ 'time.date' | trans({}, 'DroppyMainBundle') }}</th>
+					<td class="event_timedate_text"></td>
+				</tr>
+				<tr class="event_place">
+					<th>{{ 'event.place' | trans({}, 'DroppyMainBundle') }}</th>
+					<td class="event_place_text"></td>
+				</tr>
+				<tr class="event_address">
+					<th>{{ 'event.address' | trans({}, 'DroppyMainBundle') }}</th>
+					<td class="event_address_text"></td>
+				</tr>
+				<tr class="event_tags">
+					<th>{{ 'event.tag.label' | trans({}, 'DroppyMainBundle') }}</th>
+					<td></td>
+				</tr>
+				<tr class="event_details_container">
+					<th>{{ 'event.details' | trans({}, 'DroppyMainBundle') }}:</th>
+					<td>&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="event_details event_details_container event_details_text">
+		</div>
+	</div>
+</div>

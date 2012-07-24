@@ -1,0 +1,6 @@
+@import url(yaml/core/base.css);
+@import url(yaml/screen/content.css);
+@import url(yaml/screen/basemod/static_pages.css);
+@import url(header.css);
+@import url(footer.css);
+@import url(csssprite.css);

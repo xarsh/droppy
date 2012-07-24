@@ -1,0 +1,21 @@
+<div class="sidebar_left_body">
+	<div id="settingmenu">
+		<ul>
+			<li>
+			<a href="{{ path('droppy_user_personal_datas') }}">
+				{{ 'settings.account.label' | trans({}, 'DroppyMainBundle') }}
+			</a>
+			</li>
+			<li>
+			<a href="{{ path('droppy_user_settings') }}">
+				{{ 'settings.droppy.label' | trans({}, 'DroppyMainBundle') }}
+			</a>
+			</li>
+			<li>
+			<a href="{{ path('fos_user_change_password') }}">
+				{{ 'settings.password.label' | trans({}, 'DroppyMainBundle') }}
+			</a>
+			</li>
+		</ul> 
+	</div>
+</div>

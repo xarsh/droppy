@@ -1,0 +1,32 @@
+@charset "utf-8";
+@media screen, projection
+{
+  body { font-family: "メイリオ", "ＭＳ Ｐゴシック", sans-serif; }
+  .page_margins { margin: 0 auto; }
+
+  .page_margins { width: 100%; background: #fff; }
+  #header { padding: 45px 2em 1em 20px; color: #000; background: #2d2d2d; }
+  #main { width:800px; margin: 10px auto; background: #fff; }
+  #footer { width:720px; margin:0 auto; padding: 10px 20px; color:#666; background: #f9f9f9; border-top: 5px #efefef solid; }
+  #header_inner { width:960px; margin:0 auto;}
+
+  h2 {
+      margin-bottom:5px;
+      font-size:24px;
+  }
+
+  h3 {
+      margin:10px 0 5px;
+      font-size:20px;
+  }
+
+  p {
+      margin: 0 0 15px;
+      font-size:13px;
+      line-height:18px;
+      padding-left:3em; 
+  }
+  ul {list-style:decimal;}
+  ol {list-style:disc;}
+  li {text-size:13px;margin-left:5em;}
+}

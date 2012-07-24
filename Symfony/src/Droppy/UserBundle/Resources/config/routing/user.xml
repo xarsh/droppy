@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+   
+    <route id="droppy_user_user_information" pattern="/{id}">
+        <default key="_controller">DroppyUserBundle:UserInformation:getUserInformation</default>
+        <default key="id">-1</default>
+        <requirement key="id">\d+</requirement>
+    </route>
+    
+    <route id="droppy_user_deactivate" pattern="/deactivate">
+        <default key="_controller">DroppyUserBundle:UserLock:lockUser</default>
+    </route>
+    
+</routes>

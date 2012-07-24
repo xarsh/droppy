@@ -1,0 +1,294 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[pdftex]{hyperref}
+\usepackage{listings}
+\hypersetup{
+  hidelinks
+}
+\usepackage{enumerate}
+\usepackage[margin=2cm]{geometry}
+\newcommand{\content}[1]{\begin{minipage}{10cm}\vspace{2mm}#1\vspace{2mm}\end{minipage}}
+\setlength{\tabcolsep}{1cm}
+\renewcommand{\arraystretch}{1.5}
+\begin{document}
+      
+  \subsection*{GET {\tt /event/public-api/latest-events}}
+  Descprition
+  \begin{itemize}
+  \item Requires authentification: no
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://beta.droppy.jp/event/public-api/latest-events}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{date} & \content{Description. }
+      \\
+      Optional & Defaults to \_today\\
+      \hline
+      \textbf{offset} & \content{Description. }
+      \\
+      Optional & Defaults to 0\\
+      \hline
+      \textbf{max\_results} & \content{Description. max: 50, min: 3}
+      \\
+      Optional & Defaults to 20\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /event/api/dropped-events}}
+  Descprition
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://beta.droppy.jp/event/api/dropped-events}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{user\_id} & \content{Description. }
+      \\
+      Optional & Defaults to \_current\_user\\
+      \hline
+      \textbf{date} & \content{Description. }
+      \\
+      Optional & Defaults to \_today\\
+      \hline
+      \textbf{offset} & \content{Description. }
+      \\
+      Optional & Defaults to 0\\
+      \hline
+      \textbf{max\_results} & \content{Description. max: 50, min: 3}
+      \\
+      Optional & Defaults to 20\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /event/api/created-events}}
+  Descprition
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://beta.droppy.jp/event/api/created-events}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{user\_id} & \content{Description. }
+      \\
+      Optional & Defaults to \_current\_user\\
+      \hline
+      \textbf{offset} & \content{Description. }
+      \\
+      Optional & Defaults to 0\\
+      \hline
+      \textbf{max\_results} & \content{Description. max: 50, min: 3}
+      \\
+      Optional & Defaults to 20\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /event/api/in-interval}}
+  Descprition
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://beta.droppy.jp/event/api/in-interval}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{user\_id} & \content{Description. }
+      \\
+      Optional & Defaults to \_current\_user\\
+      \hline
+      \textbf{start} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \textbf{end} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \textbf{max\_results} & \content{Description. max: 200, min: 3}
+      \\
+      Optional & Defaults to 100\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{POST {\tt /event/api/update-event}}
+  Descprition
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: POST
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://beta.droppy.jp/event/api/update-event}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{event\_datas} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /event/api/timeline}}
+  Descprition
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://beta.droppy.jp/event/api/timeline}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{user\_id} & \content{Description. }
+      \\
+      Optional & Defaults to \_current\_user\\
+      \hline
+      \textbf{type} & \content{Description. }
+      \\
+      Optional & Defaults to new\\
+      \hline
+      \textbf{offset} & \content{Description. }
+      \\
+      Optional & Defaults to 0\\
+      \hline
+      \textbf{max\_results} & \content{Description. max: 50, min: 3}
+      \\
+      Optional & Defaults to 20\\
+      \hline
+      \textbf{from} & \content{Description. }
+      \\
+      Optional & Defaults to \_today\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{POST {\tt /event/api/remove-event}}
+  Descprition
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: POST
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://beta.droppy.jp/event/api/remove-event}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{event\_id} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{POST {\tt /event/api/event-in}}
+  Descprition
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: POST
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://beta.droppy.jp/event/api/event-in}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{event\_id} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{POST {\tt /event/api/event-out}}
+  Descprition
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: POST
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://beta.droppy.jp/event/api/event-out}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{event\_id} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+\end{document}

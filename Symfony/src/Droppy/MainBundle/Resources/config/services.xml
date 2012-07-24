@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <parameters>
+        <parameter key="droppy_main.encoding_format">json</parameter>
+        <parameter key="droppy_main.icon_uploader.class">Droppy\MainBundle\Util\IconUploader</parameter>
+        <parameter key="droppy_main.data_checker.class">Droppy\MainBundle\Util\DataChecker</parameter>
+        <parameter key="droppy_main.thumbnail_file_name">icon_thumbnail</parameter>
+        <parameter key="droppy_main.smallicon_file_name">icon_small</parameter>
+        <parameter key="droppy_main.bin_path">/usr/bin</parameter>
+        <parameter key="droppy_main.api_settings.file_path">Resources/config/api_settings.xml</parameter>
+    </parameters>
+
+    <services>
+        <service id="droppy_main.icon_uploader" class="%droppy_main.icon_uploader.class%">
+            <argument>%droppy_main.thumbnail_file_name%</argument>
+            <argument>%droppy_main.smallicon_file_name%</argument>
+            <argument>%droppy_main.bin_path%</argument>
+        </service>
+        
+        <service id="droppy_main.data_checker" class="%droppy_main.data_checker.class%">
+            <argument type="service" id="security.context" />
+        </service>
+        
+        <service id="droppy_main.api_settings_parser" class="Droppy\MainBundle\Util\ApiSettingsParser">
+            <argument type="service" id="security.context" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
+            <argument>%droppy_main.api_settings.file_path%</argument>
+        </service>
+        
+        <service id="droppy_main.controller_tools" class="Droppy\MainBundle\Util\ControllerTools">
+            <argument type="service" id="service_container" />
+        </service>
+        
+        <service id="droppy_main.mailer" class="Droppy\MainBundle\Util\Mailer" public="false">
+            <argument type="service" id="mailer" />
+            <argument type="service" id="router" />
+            <argument type="service" id="templating" />
+            <argument type="collection">
+                <argument key="registration.template">%droppy_user.mail.registration_template%</argument>
+                <argument key="confirmation.template">%fos_user.registration.confirmation.template%</argument>
+                <argument key="resetting.template">%fos_user.resetting.email.template%</argument>
+                <argument key="from_email" type="collection">
+                    <argument key="confirmation">%fos_user.registration.confirmation.from_email%</argument>
+                    <argument key="resetting">%fos_user.resetting.email.from_email%</argument>
+                </argument>
+            </argument>
+        </service>
+    </services>
+</container>

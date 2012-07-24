@@ -1,0 +1,17 @@
+{% extends "DroppyUserBundle::layout.html.twig" %}
+
+{% form_theme form 'DroppyUserBundle:Layout:widgets_theme_settings.html.twig' %}
+
+{% block body %}
+<div id="setting_wrapper">
+	<div id="sidebar_left">
+		&nbsp;
+		{% include 'DroppyUserBundle:Includes:settings_menu.html.twig' %}
+	</div><!-- // #sidebar_left -->
+	<div id="content_2column">
+		{% include 'DroppyUserBundle:Includes:change_profile.html.twig' %}
+	</div>
+	<br class="clear">
+</div>
+
+{% endblock body %}

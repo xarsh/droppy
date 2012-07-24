@@ -1,0 +1,33 @@
+<div id="search_form">
+    <table>
+        <tr>
+            <th>
+                <label for="keyword"><%= ExposeTranslation.get('search.keyword') %></label>
+            </th>
+            <td>
+                <input type="text" id="search_keyword" placeholder="<%= ExposeTranslation.get('search.text') %>" />
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="place"><%= ExposeTranslation.get('event.place') %></label>
+            </th>
+            <td>
+                <input type="text" id="search_place" placeholder="<%= ExposeTranslation.get('search.place') %>"/>
+            </td>
+        </tr>
+        <tr>
+            <th>
+                <label for="date"><%= ExposeTranslation.get('time.date') %></label>
+            </th>
+            <td>
+                <input type="text" id="search_start_date" class="date datepicker" />
+                <span class="to">～</span>
+                <input type="text" id="search_end_date" class="date datepicker" />
+            </td>
+        </tr>
+    </table>
+    <div class="search_button">
+        <span id="search_button"><%= ExposeTranslation.get('search.search') %></span>
+    </div>
+</div>

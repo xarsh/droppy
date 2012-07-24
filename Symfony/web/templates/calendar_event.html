@@ -1,0 +1,12 @@
+<div class="event_box ellipsis 
+    <%= color.name %> <%= options.allDay ? ' all_day' : '' %> 
+    <%= startDateTime.date < options.today ? ' passed' : ''%>
+    <%= options.preceded ? ' preceded' : '' %>
+    <%= options.followed ? ' followed' : '' %>"
+    style="position: absolute; top: <%= options.top %>px; left: <%= options.left %>px;
+    width: <%= options.width %>px; height: <%= options.height %>px; ">
+<% if(!startDateTime.allDay && !options.preceded) { %>
+    <span><%= startDateTime.date.format('H:i') %></span>
+<% } %>
+    <span><%= name %></span>
+</div>

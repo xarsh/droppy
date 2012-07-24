@@ -1,0 +1,72 @@
+<div id="make_event_popup" class="popup">
+	<a class="close">
+        <span class="csssprite close">close</span>
+	</a>
+		<table border="0" cellspacing="0" cellpadding="0">
+            <col style="width: 60px;">
+            <col style="width: 200px;">
+            <tbody>
+                <tr>
+                    <td class="label">{{ 'time.date' | trans({}, 'DroppyMainBundle') }}</td>
+		    		<td class="value date">{{ "now" | date('Y-m-d') }}</td>
+		    	</tr>
+		    	    <td class="label">{{ 'event.title' | trans({}, 'DroppyMainBundle') }}</td>
+		    		<td class="value title"><input type="text" class="title" /></td>
+		    	</tr>
+            </tbody>
+		</table>
+		<div class="popup_buttons">
+			<span class="button_big light_blue">{{ 'common.create' | trans({}, 'DroppyMainBundle') }}</span>
+
+			<a class="setting_details">
+				{{ 'common.details' | trans({}, 'DroppyMainBundle') }}&nbsp;&gt;&gt;
+			</a>
+		</div>
+</div>
+
+<div id="event_summary_popup" class="popup">
+<table border="0" cellspacing="0" cellpadding="0">
+    <col style="width: 60px;">
+    <col style="width: 70px;">
+    <col style="width: 180px;">
+    <col style="width: 16px;">
+    <tbody>
+    <tr>
+        <td rowspan="4" class="picture">
+            <span class="csssprite dummy00_48">dummy00_48</span>
+        </td>
+        <td colspan="2" class="title"><p class="title ellipsis"></p></td>
+        <td rowspan="4" class="close">
+		<a class="close">
+            <span class="csssprite close">close</span>
+		</a>        
+        </td>
+    </tr>
+    <tr>
+        <td class="label">{{ 'time.date' | trans({}, 'DroppyMainBundle') }}</td>
+        <td class="value date"></td>
+    </tr>
+    <tr>
+        <td class="label">{{ 'event.creator' | trans({}, 'DroppyMainBundle') }}</td>
+        <td class="value creator ellipsis"></td>
+    </tr>
+    <tr>
+        <td class="label">{{ 'event.place' | trans({}, 'DroppyMainBundle') }}</td>
+        <td class="value place ellipsis"></td>
+    </tr>
+    </tbody>
+</table>
+	<div class="buttons">
+		<span class="button_small like clicked">
+            <span class="csssprite button_like">button_like</span>
+			<span>{{ 'button.like' | trans({}, 'DroppyMainBundle') }}</span>
+		</span>
+		<span class="button_small out">
+            <span class="csssprite button_in">button_in</span>
+			<span>{{ 'button.out' | trans({}, 'DroppyMainBundle') }}</span>
+		</span>
+		<a class="setting_details">
+			{{ 'common.details' | trans({}, 'DroppyMainBundle') }}&nbsp;&gt;&gt;
+		</a>
+	</div>
+</div>

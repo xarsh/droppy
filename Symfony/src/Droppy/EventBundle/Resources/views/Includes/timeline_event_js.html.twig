@@ -1,0 +1,21 @@
+			<script type="text/template" id="timeline-event-template">
+			<div class="event ym-column">
+				<div class="event_picture ym-col1">
+					<div class="ym-cbox">
+						<img class="user_thumbnail" src="<%= iconSet.thumbnail %>" alt="{{ 'user.image' | trans ({}, 'DroppyMainBundle') }}" width="48" height="48" />
+					</div>
+				</div>
+				<div class="event_text ym-col3">
+					<div class="event_text ym-cbox">
+						<p class="ymd"><strong><%= startDateTime %></strong></p>
+						<p class="user_name"><a><%= creator.username %></a></p>
+						<p class="title"><%= name %></p>
+					</div>
+                    <% if(!isCreator) { %>
+					<a class="close">
+						<img src="{{ asset('img/close.png') }}">
+					</a>
+                    <% } %>
+				</div>
+			</div>
+        </script>

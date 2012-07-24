@@ -1,0 +1,11 @@
+*~
+app/cache/
+app/logs/
+.project
+.buildpath
+.settings/
+*.log
+ccache.sh
+#*
+.#*
+web/uploads/

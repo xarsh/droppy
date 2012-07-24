@@ -1,0 +1,11 @@
+{% block subject %}
+{% autoescape false %}
+{{ 'registration.subject' | trans({}, 'DroppyUserEmail') }}
+{% endautoescape %}
+{% endblock %}
+{% block body_text %}
+{% autoescape false %}
+{{ 'registration.content' | trans({'%username%': user.username}, 'DroppyUserEmail') }}
+{% endautoescape %}
+{% endblock %}
+{% block body_html %}{% endblock %}

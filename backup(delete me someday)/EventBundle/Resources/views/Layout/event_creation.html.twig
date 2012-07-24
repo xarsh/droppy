@@ -1,0 +1,133 @@
+{% extends 'DroppyMainBundle::layout.html.twig' %}
+{% form_theme form 'DroppyEventBundle:Layout:widgets_theme.html.twig' %}
+
+{% block css %}
+<link rel=stylesheet type="text/css" href="{{ asset('css/event_creation.css') }}" />
+<link rel=stylesheet type="text/css" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" />
+<link rel="stylesheet" type="text/css" href="{{ asset('css/jquery.fancybox-1.3.4.css') }}" media="screen">
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ asset('js/jquery.fancybox-1.3.4.pack.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/timepicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.placeholder.min.js') }}"></script>
+<script>
+	function alldayform(){
+		var time = $('.time');
+		var timezone = $('#timezone_modal_link');
+		time.hide();
+		timezone.hide();
+		$("input[name='event_creation_form[startDateTime][allDay]']").click(function(){
+			if(time.is(':hidden')) {
+				time.show();
+				timezone.show();
+				} else {
+				time.hide();
+				timezone.hide();
+			}
+		});
+	}
+</script>
+<script>
+	$(function() {
+		$(".timepicker").timePicker();
+		$(".datepicker").datepicker();
+		$(".ui-placeholder").placeholder();
+		$("a#timezone_modal_link").fancybox({
+			'hideOnContentClick' : true
+		});
+		$("#timezone_modal_link").fancybox({
+			'titlePosition'	:	'inside',
+			'transitionIn'	:	'none',
+			'transitionOut'	:	'none',
+			'overlayColor'	:	'#ffffff'
+		});
+		alldayform();
+	});
+</script>
+{% endblock %}
+
+{% block body %}
+<div id="content">
+	<p class="event_creation_title">{{ 'event.make_event' | trans({}, 'DroppyMainBundle') }}</p>
+	<div id="event_creation_form">
+		<form name="event_creation_form" action="{{ path('droppy_event_creation') }}" {{ form_enctype(form) }} method="POST" >
+			<div class="event_summary">
+				<div class="title_form">
+					{{ form_widget(form.name, {'attr' : {'class' : 'title_form ui-placeholder', 'data-placeholder' : 'event.title' | trans({}, 'DroppyMainBundle')  } }) }}
+				</div>
+				<span class="datetime_form" id="start_datetime_form">
+					{{ form_widget(form.startDateTime.date, {'attr' : {'class' : 'date datepicker'} }) }}
+					{{ form_widget(form.startDateTime.time, {'attr' : {'class' : 'time timepicker'} }) }}
+				</span><span id="to">～</span>
+				<span class="datetime_form" id="end_datetime_form">
+					{{ form_widget(form.endDateTime.date, {'attr' : {'class' : 'date datepicker'} }) }}
+					{{ form_widget(form.endDateTime.time, {'attr' : {'class' : 'time timepicker'} }) }}
+				</span>
+
+				<a href="#timezone_modal" id="timezone_modal_link">
+					{{ 'event.timezone' | trans({}, 'DroppyMainBundle') }}
+				</a>
+
+				<div style="display:none;">
+					<div id="timezone_modal">
+						<tr>
+							<th>{{ 'event.timezone' | trans({}, 'DroppyMainBundle') }}</th>
+							<td>{{ form_widget(form.startDateTime.timezone) }}</td>
+						</tr>
+						<input type="button" value="OK" onclick="$.fancybox.close();">
+					</div>
+				</div>
+
+
+				<div class="options">
+					<span class="option">
+						{{ form_widget(form.startDateTime.allDay) }}
+						<label for="event_creation_form_startDateTime_allDay">{{ 'event.allday' | trans({}, 'DroppyMainBundle') }}</label>
+					</span>
+					{#<!--span class="option">
+					{{ form_widget(form.xxx) }}
+					<label for="event_creation_form_xxx">{{ 'event.repeat' | trans({}, 'DroppyMainBundle') }}...</label>
+					</span-->#}
+					<p class="option">
+					<span>{{ 'privacy_policy.event' | trans({}, 'DroppyMainBundle') }}</span>
+					<span>{{ form_widget(form.privacySettings.visibility) }}</span>
+					</p>
+				</div>
+			</div>
+			<div class="event_details">
+				<table border="0" cellspacing="0" cellpadding="0">
+					<tr><th>{{ 'event.place' | trans({}, 'DroppyMainBundle') }}</th>
+						<td>{{ form_widget(form.location) }}</td>
+					</tr>
+					<tr><th>{{ 'event.address' | trans({}, 'DroppyMainBundle') }}</th>
+						<td>{{ form_widget(form.address) }}</td>
+					</tr>
+					<tr><th>{{ 'event.details' | trans({}, 'DroppyMainBundle') }}</th>
+						<td>{{ form_widget(form.details) }}</td>
+					</tr>
+					<tr><th>{{ 'event.picture.label' | trans({}, 'DroppyMainBundle') }}</th>
+						<td>
+							{{ form_widget(form.iconSet.file, {'attr' : {'class' : 'picture'} }) }}
+							<p>{{ 'event.picture.size' | trans({}, 'DroppyMainBundle') }}</p>
+						</td>
+					</tr>
+					<tr><th>{{ 'event.color' | trans({}, 'DroppyMainBundle') }}</th>
+						<td>{{ form_widget(form.color, {'attr' : {'class' : 'color'} }) }}</td>
+					</tr>
+					<tr><th>{{ 'event.tag.label' | trans({}, 'DroppyMainBundle') }}</th>
+						<td>{{ form_widget(form.tags) }}</td>
+					</tr>
+					<tr><th>URL</th>
+						<td>{{ form_widget(form.url) }}</td>
+					</tr>
+					{{ form_rest(form) }}
+				</table>
+			</div>
+			<p class="btn_style1">
+			<a href="#" onclick="event_creation_form.submit()">{{ 'event.make_event' | trans({}, 'DroppyMainBundle') }}</a>
+			</p>
+		</form>
+	</div>
+</div>
+{% endblock body %}

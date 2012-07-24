@@ -1,0 +1,38 @@
+<div id="sidebar_left">
+  <div class="sidebar_left_body">
+    <h2 class="my_account">
+{% if personal_datas.iconSet.uploaded %}
+      <img src="{{ asset(personal_datas.iconSet.thumbnailPath) }}" alt="">
+{% else %}
+      <img src="{{ asset('images/common/dammy_photo_30x30.gif') }}" alt="">
+{% endif %}
+      <strong>{{ user.username }}</strong><br>
+      <br class="clear">
+    </h2><!-- // .my_account -->
+    <div id="ui-tab">
+      <ul>
+        <li class="ui-tab-1"><a href="#all_cal">
+            <span>{{ 'event.type.dropped' | trans({}, 'DroppyWebApplicationBundle') }}</span></a>
+	</li>
+        <li class="ui-tab-2"><a href="#drop_cal">
+            <span>{{ 'schedule.type.dropped' | trans({}, 'DroppyWebApplicationBundle') }}</span></a>
+	</li>
+        <li class="ui-tab-3"><a href="#make_cal">
+            <span>{{ 'schedule.type.created' | trans({}, 'DroppyWebApplicationBundle') }}</span></a>
+	</li>
+      </ul>
+      <div id="all_cal" class="change_eve_detail">
+	{% include 'DroppyWebApplicationBundle:Includes/index_logged_left:drop_event.html.twig' 
+            with {'drop_events' : drop_events} %}
+      </div>
+      <div id="drop_cal">
+	{% include 'DroppyWebApplicationBundle:Includes/index_logged_left:drop_schedule.html.twig' 
+            with {'drop_schedules' : drop_schedules} %}
+      </div>
+      <div id="make_cal">
+	{% include 'DroppyWebApplicationBundle:Includes/index_logged_left:my_schedule.html.twig' 
+            with {'my_schedules' : my_schedules} %}
+      </div>
+    </div><!-- // #ui-tab -->
+  </div><!-- // .sidebar_left_body -->
+</div><!-- // #sidebar_left -->

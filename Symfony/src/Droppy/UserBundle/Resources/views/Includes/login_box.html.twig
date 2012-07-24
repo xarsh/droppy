@@ -1,0 +1,17 @@
+<div id="login-box">
+	<form class="ym-form" id="login-form" action="{{ path("fos_user_security_check") }}" {{ form_enctype(form) }} method="post">
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+		<div class="ym-fbox-text">
+			<input type="text" name="_username" id="login-id-email" placeholder="{{ 'login.username_or_mailaddress' | trans({}, 'DroppyMainBundle') }}" />
+		</div>
+		<div class="ym-fbox-text password">
+			<input type="password" name="_password" id="login-pass" placeholder="{{ 'user.password' | trans({}, 'DroppyMainBundle') | trans({}, 'DroppyMainBundle') }}" />
+		</div>
+		<button class="button_login" onFocus="this.blur()">{{ 'login.login' | trans({}, 'DroppyMainBundle') }}</button>
+		<label class="remember" onclick="">
+			<input type="checkbox" checked="checked" value="on" name="_remember_me" id="_remember_me" />
+			<strong class="remember-label">{{ 'login.remember' | trans({}, 'DroppyMainBundle') }}</strong>
+		</label>
+	</form>
+</div>
+

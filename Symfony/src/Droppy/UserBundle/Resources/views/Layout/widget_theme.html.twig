@@ -1,0 +1,12 @@
+{% block field_errors %}
+{% spaceless %}
+    {% if errors|length > 0 %}
+	{% set error = errors[0] %}
+	<p class="register_error">
+		{{
+             error.messageTemplate|trans(error.messageParameters, 'validators')
+		}}
+	</p>
+    {% endif %}
+{% endspaceless %}
+{% endblock field_errors %}

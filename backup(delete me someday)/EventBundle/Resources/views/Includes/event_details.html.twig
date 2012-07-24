@@ -1,0 +1,44 @@
+<div id="event_details_wrapper" class="hidden">
+	<input type="button" 
+			onclick="" 
+			value="{{ 'common.back' | trans({}, 'DroppyMainBundle') }}" 
+			class="back">
+
+	<input type="button" 
+			onclick="" 
+			value="{{ 'common.delete' | trans({}, 'DroppyMainBundle') }}" 
+			class="delete">
+		
+	<div id="event_details_summary">
+		<p id="event_details_datetime"></p>
+		<div id="event_details_picture">
+			<img />
+		</div>
+		<div id="event_details_titles">
+			<a href="#"><p class="username"></p></a>
+			<a href="#"><p class="eventtitle"></p></a>
+		</div>
+		<dl class="event_details_tags hidden">
+			<dt>{{ 'event.tag' | trans({}, 'DroppyMainBundle') }}:</dt>
+			<dd>
+			</dd>
+		</dl>
+	</div>
+	<div class="clearfix"></div>
+	<div id="event_details_body" class="hidden">
+		<div class="event_details_header location_wrapper hidden">
+			<span class="head">{{ 'event.place' | trans({}, 'DroppyMainBundle') }}：</span>
+			<span class="detail_body"></span>
+		</div>
+	    <div class="event_details_header address_wrapper hidden">
+			<span class="head">{{ 'event.address' | trans({}, 'DroppyMainBundle') }}：</span>
+			<span class="detail_body"></span>
+		</div>
+		<div class="event_details_header url_wrapper hidden">
+			<span class="head">URL：</span>
+			<span class="detail_body"></span>
+		</div>
+		<div id="event_details_details" class="details_wrapper hidden">
+		</div>
+	</div>
+</div>

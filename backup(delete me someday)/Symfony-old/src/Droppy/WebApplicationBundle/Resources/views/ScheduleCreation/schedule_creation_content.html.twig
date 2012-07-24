@@ -1,0 +1,25 @@
+{% form_theme form 'DroppyWebApplicationBundle:ScheduleCreation:widgets_theme.html.twig' %}
+
+<form name="make_schedule_form" {{ form_enctype(form) }} method="post" action="{{ path('droppy_webapp_schedule_create') }}">
+	<table border="0" cellspacing="0" cellpadding="0">
+		{{ form_row(form.name) }}
+		{{ form_row(form.genre) }}
+		{{ form_row(form.iconSet.file) }}
+	</table>
+	<p class="btn_style1"><a href="#" onclick="make_schedule_form.submit();">
+	    {{ 'schedule.creation.create' | trans({}, 'DroppyWebApplicationBundle')}}
+	</a></p>
+	<p class="more">{{ 'common.add_details' | trans({}, 'DroppyWebApplicationBundle') }}</p>
+	<div class="more_cal_box">
+		<table border="0" cellspacing="0" cellpadding="0">
+			{{ form_row(form.description) }}
+			{{ form_row(form.privacySettings.visibility) }}
+			{{ form_row(form.creatorVisible) }}
+			{{ form_row(form.tags) }}
+			{{ form_rest(form) }}
+		</table>
+		<p class="btn_style1"><a href="#" onclick="make_schedule_form.submit();">
+		{{ 'schedule.creation.create' | trans({}, 'DroppyWebApplicationBundle') }}
+		</a></p>
+	</div>
+</form>

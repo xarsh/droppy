@@ -1,0 +1,60 @@
+div#accountinfo {
+	font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+	background-color:#f0ffff;
+	width:260px;
+	margin:10px;
+	height:100px;
+	padding:10px;
+}
+div#accountinfo div.account_avatar {
+	float:left;
+	margin:5px;
+}
+div#accountinfo a.user_information_link {
+	text-decoration:none;
+	color:#000000;
+}
+
+div#accountinfo p.display_name {
+	font-family:inherit;
+	font-size:15px;
+	font-weight:bold;
+	position:absolute;
+	top:35px;
+	left:60px;
+	line-height:0px;
+}
+div#accountinfo p.account_name {
+	font-family:inherit;
+	font-size:10px;
+	font-weight:normal;
+	color:#888888;
+	position:absolute;
+	top:40px;
+	left:60px;
+}
+div#accountinfo div.account_counter {
+	border-top: 1px solid #E8E8E8;
+	overflow: hidden;
+	width:230px;
+	position:absolute;
+	top:70px;
+	left:20px;
+}
+div#accountinfo li {
+	display:inline;
+}
+div#accountinfo a {
+	color: #999999;
+	float: left;
+	font-size: 10px;
+	line-height: 16px;
+	letter-spacing: 0.1em;
+	padding: 7px 15px;
+}
+div#accountinfo strong {
+	color: #333333;
+	display: block;
+	font-size: 14px;
+	letter-spacing: 0;
+}

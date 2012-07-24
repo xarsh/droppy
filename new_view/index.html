@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" >
+		<title>Droppy</title>
+		<link href="css/layout.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		<link href="favicon.png" rel="icon" type="image/png">
+		<link href="favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="js/jquery-ui-1.8.21.custom.min.js"></script>
+		<script>
+			$(function(){
+				$('#pulldown_items').not(':animated').slideToggle('fast');
+			});
+		</script>
+	</head>
+	<body>
+		<div class="page_margins">
+			<div id="header" class="clearfix">
+				<div class="logo">
+					<img src="img/logo.png" class="logo" alt="logo">
+				</div>
+				<div class="tools">
+
+					<div class="pulldown header_link">
+						<span class="icon">
+							<img src="img/config.png" alt="config_icon">
+						</span>
+						<div id="pulldown_items">
+							<!-- a onFocus="this.blur()" href="#">
+								<p class="pulldown_item">他のサービスと同期</p>
+							</a -->
+							<a onFocus="this.blur()" href="{{ path('droppy_user_personal_datas') }}">
+								<p class="pulldown_item">設定</p>
+							</a>
+							<a onFocus="this.blur()" href="{{ path('fos_user_security_logout') }}">
+								<p class="pulldown_item">ログアウト</p>
+							</a>
+						</div>
+					</div>
+
+					<span class="search_form">
+						<input type="text" name="" value="" class="search_txt" placeholder="アーティストを検索">
+					</span>
+				</div>
+			</div>
+			<div id="body">
+				<div id="left">
+					<div id="account_info" class="clearfix">
+						<div class="picture">
+							<img width="48" height="48" src="http://placehold.it/48x48" alt="">
+						</div>
+						<div class="names">
+							<div class="display_name">ないとー</div>
+							<div class="username">&gt;xarsh</div>
+						</div>
+					</div>
+					<div id="timeline">
+						<div class="daybar">今世紀</div>
+						<div class="event clearfix">   <!-- ここからイベント -->
+							<div class="picture">
+								<img width="48" height="48" src="http://placehold.it/48x48" alt="">
+							</div>
+							<div class="info">
+								<div class="datetime ellipsis">2012年7月12日</div>
+								<div class="display_name ellipsis">ないとー</div>
+								<div class="title ellipsis">ボーナスほしいなー</div>
+							</div>
+							<span class="close"><img src="img/close.png"></span>
+						</div>                         <!-- ここまでイベント -->
+						<div class="event clearfix">
+							<div class="picture">
+								<img width="48" height="48" src="http://placehold.it/48x48" alt="">
+							</div>
+							<div class="info">
+								<div class="datetime">2012年8月12日</div>
+								<div class="display_name">ないとー</div>
+								<div class="title">給料ほしいなー</div>
+							</div>
+							<span class="close"><img src="img/close.png"></span>
+						</div>
+						<div class="daybar">来世紀</div>
+						<div class="event clearfix">
+							<div class="picture">
+								<img width="48" height="48" src="http://placehold.it/48x48" alt="">
+							</div>
+							<div class="info">
+								<div class="datetime ellipsis">2112年9月30日</div>
+								<div class="display_name ellipsis">ないとー</div>
+								<div class="title ellipsis">122歳の誕生日</div>
+							</div>
+							<span class="close"><img src="img/close.png"></span>
+						</div>
+					</div>
+				</div>
+				<div id="right">
+					<div id="popular_user">
+						<div class="title">人気のユーザー</div>
+						<div class="user clearfix">
+							<div class="picture">
+								<img width="32" height="32" src="http://placehold.it/32x32" alt="">
+							</div>
+							<div class="info">
+								<div class="display_name ellipsis">ないとー</div>
+								<div class="button dropping"><img src="img/check.png">Drop中</div>
+							</div>
+						</div>
+						<div class="user clearfix">
+							<div class="picture">
+								<img width="32" height="32" src="http://placehold.it/32x32" alt="">
+							</div>
+							<div class="info">
+								<div class="display_name ellipsis">ないとー</div>
+								<div class="button drop"><img src="img/drop.png">Dropする</div>
+							</div>
+						</div>
+					</div>
+					<div id="recommendation">
+						<div class="title">おすすめユーザー</div>
+						<div class="user clearfix">
+							<div class="picture">
+								<img width="32" height="32" src="http://placehold.it/32x32" alt="">
+							</div>
+							<div class="info">
+								<div class="display_name ellipsis">ないとー</div>
+								<div class="button drop"><img src="img/drop.png">Dropする</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="main">
+				    <div id="main_calendar">
+						<div class="calendar_tools">
+							<table width="100%" cellpadding="0" border="0">
+								<tbody><tr>
+										<td class="date">2012年7月</td>
+										<td class="center">&nbsp;</td>
+										<td class="right">
+											<div class="change_date">
+												<span class="calendar_button current disabled">今月</span>
+												<span class="calendar_button prev" unselectable="on">&lt;</span>
+												<span class="calendar_button next" unselectable="on">&gt;</span>
+											</div>
+										</td>
+								</tr></tbody>
+							</table>
+						</div>
+					</div>
+					<!-- IE Column Clearing -->
+					<div id="ie_clearing"> &#160; </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+

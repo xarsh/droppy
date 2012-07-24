@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="droppy_user.settings.form" factory-method="createNamed" 
+                factory-service="form.factory" class="Symfony\Component\Form\Form">
+            <argument type="service" id="droppy_user.settings.form.type" />
+            <argument>settings_form</argument>
+        </service>
+        
+        <service id="droppy_user.settings.form.type"
+                class="Droppy\UserBundle\Form\Type\SettingsFormType">
+            <tag name="form.type" alias="settings_form_type" />
+            <argument type="service" id="translator" />
+        </service>
+        
+        <service id="droppy_user.settings.form.handler" scope="request"
+                class="Droppy\UserBundle\Form\Handler\SettingsFormHandler">
+            <argument type="service" id="droppy_user.settings.form" />
+            <argument type="service" id="request" />
+            <argument type="service" id="doctrine.orm.entity_manager" />
+        </service>
+    </services>
+</container>

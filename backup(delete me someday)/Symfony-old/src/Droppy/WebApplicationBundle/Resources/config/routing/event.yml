@@ -1,0 +1,12 @@
+droppy_webapp_make_event:
+    pattern: /make
+    defaults: { _controller: DroppyWebApplicationBundle:MakeEvent:makeEvent }
+
+droppy_event_drop:
+    pattern: /drop
+    defaults: { _controller: DroppyWebApplicationBundle:EventDrop:dropEvent }
+
+droppy_event_undrop:
+    pattern: /undrop
+    defaults: { _controller: DroppyWebApplicationBundle:EventDrop:undropEvent }
+

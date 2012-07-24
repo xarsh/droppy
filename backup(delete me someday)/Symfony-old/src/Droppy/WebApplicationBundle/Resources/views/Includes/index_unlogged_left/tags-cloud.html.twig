@@ -1,0 +1,16 @@
+<div class="tag_cloud">
+	<div class="ttl">
+		<h3>{{ name | trans({}, 'DroppyWebApplicationBundle') }}</h3>
+		<br class="clear">
+	</div>
+	<!-- // .ttl -->
+	<div class="tag_cloud_body">
+		<ul>
+		{% for tag in tags %}
+			<li class="level_{{ tag.level }}"><a href="#">tag.name</a></li>
+		{% endfor %}
+		</ul>
+	</div>
+	<!-- // .tag_cloud_body -->
+</div>
+<!-- // .tag_cloud -->

@@ -1,0 +1,43 @@
+html, body, h1, h2, h3, h4, h5, h6, p, blockquote, address, ol, ul, li, dl, dt, dd, table, th, td, form, input, textarea, select, option {
+	margin:0px;
+	padding:0px;
+	font-family: 'PT Sans Caption', Helvetica, 'ƒqƒ‰ƒMƒmŠpƒS Pro W3', 'HiraKakuProN-W3', 'Hiragino Kaku Gothic Pro', 'ƒƒCƒŠƒI', Meiryo, '‚l‚r ‚oƒSƒVƒbƒN', sans-serif;
+	font-size:12px;
+}
+ul, ol, li {
+	list-style:none;
+}
+html, body {
+	margin:0;
+	padding:0;
+	/*background-color:#eaf4fc;*/
+	min-width:960px;
+	min-height:800px;
+	height:100%;
+}
+div#container {
+	width: 100%;
+	position: relative;
+	height: 100%;
+	min-height: 100%;
+}
+body > #container {
+	height: auto;
+}
+div#contents {
+	padding-bottom:30px;
+}
+p {
+	margin:0 10px 10px;
+}
+.clearfix:after, dl:after {
+	clear: both;
+	content: " ";
+	display: block;
+	font-size: 0;
+	height: 0;
+	visibility: hidden;
+}
+.clearfix, dl {
+	display: block;
+}

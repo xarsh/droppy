@@ -1,0 +1,26 @@
+
+{% form_theme form 'DroppyWebApplicationBundle:MakeEvent:widgets_theme_include.html.twig' %}
+
+<div class="reveal-modal" id="modalwin">
+  <div class="overlay_body">
+    <p><a class="close-reveal-modal">×</a></p>
+    <form name="make_event_include_form" action="{{ path('droppy_webapp_make_event') }}" method="post" {{ form_enctype(form) }} >
+      <h3><strong>{{ 'event.creation.make_event' | trans({}, 'DroppyWebApplicationBundle') }}</strong></h3>
+      <table border="0" cellspacing="0" cellpadding="0">
+<div class="make_cal_box">
+{{ form_row(form.name) }}	
+{{ form_row(form.schedule) }}
+{{ form_row(form.start_date_time) }}
+{{ form_row(form.privacySettings.visibility) }}
+{{ form_rest(form) }}
+</div>
+	        </table>
+      <p class="btn_style5"><a href="#" onclick="make_event_include_form.submit()">>
+	  {{ 'event.creation.make' | trans({}, 'DroppyWebApplicationBundle') }}
+      </a></p>
+     <a href="{{ path('droppy_webapp_make_event') }}">
+       <p class="more">{{ 'common.add_details' | trans({}, 'DroppyWebApplicationBundle') }}</p>
+       </a>
+    </form>
+  </div><!-- // .overlay_body -->
+</div><!-- // .reveal-modal #modalwin -->

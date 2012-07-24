@@ -1,0 +1,37 @@
+div#events_list {
+	background-color:#ffffff;
+	width:240px;
+	margin-left: auto;
+	margin-right: auto;
+	height:100%;
+	margin-top:20px;
+}
+div#events_list li {
+	border-bottom:1px solid #eeeeee;
+	height:50px;
+	padding-top:10px;
+}
+div#events_list li.today {
+	background-color:#fcfedf;
+}
+div#events_list p.daybar {
+	background-color:#ffcccc;
+	color:#ff0000;
+	width:225px;
+	margin:0;
+	padding-left:15px;
+}
+div#events_list div.event_avatar {
+	float:left;
+	margin:5px;
+}
+div#events_list div.event_text {
+	float:left;
+}
+div#events_list p.event_title {
+	font-weight:bold;
+}
+div#events_list div.event_btn {
+	text-align:right;
+	padding-right:5px;
+}

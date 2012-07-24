@@ -1,0 +1,61 @@
+.slogan {
+	margin:10px auto;
+}
+.top_lead {
+	margin-left:20px;
+	margin-bottom:20px;
+}
+.popular_user .title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #222222;
+	background: -moz-linear-gradient(
+		top,
+		#ffffff 0%,
+		#ffffff 25%,
+		#ededed);
+	background: -webkit-gradient(
+		linear, left top, left bottom, 
+		from(#ffffff),
+		color-stop(0.25, #ffffff),
+		to(#ededed));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr="#ffffff", EndColorStr="#ededed");
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #d7d7d7;
+	-moz-box-shadow:
+		0px 0px 0px rgba(000,000,000,0),
+		inset 0px -1px 0px rgba(255,255,255,0.5);
+	-webkit-box-shadow:
+		0px 0px 0px rgba(000,000,000,0),
+		inset 0px -1px 0px rgba(255,255,255,0.5);
+	font-weight:bold;
+	width:90%;
+	margin:10px 0 20px 0;
+	padding:2px 10px;
+}
+.popular_user .title_text {
+	border-left:#ff6666 solid 6px;
+	padding:.3em .3em .3em .8em;
+}
+.popular_user .users ul{
+	height:140px;
+    margin:0 0 20px 0;
+}
+.popular_user .users li {
+	float:left;
+	text-align:center;
+}
+.popular_user .users .user_name {
+	width:120px;
+	text-align:center;
+	white-space:nowrap;
+	overflow:hidden;
+	margin:0 auto;
+    font-size:12px;
+    color:#333;
+}
+.popular_user .users li a {
+	font-size:12px;
+}

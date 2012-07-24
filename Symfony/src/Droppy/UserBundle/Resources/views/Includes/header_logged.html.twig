@@ -1,0 +1,56 @@
+{% block javascript %}
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31048144-1']);
+  _gaq.push(['_setDomainName', 'droppy.jp']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+{% endblock %}
+
+<div id="header">
+	<div id="header_inner">
+		<div class="logo">
+            <a href="{{ path('droppy_main_index') }}">
+                <span class="csssprite header_logo">header_logo</span>
+            </a>
+        </div>
+		<div class="pulldown">
+			<!--a href="{{ path('fos_user_security_logout') }}">
+				<img src="{{ asset('img/icon_setting.gif') }}"/ >
+		    </a-->
+            <span class="csssprite header_setting">header_setting</span>
+			<div id="pulldown_items">
+				<a onFocus="this.blur()" href="{{ path('droppy_user_personal_datas') }}">
+					<p class="pulldown_item">{{ 'settings.setting' | trans({}, 'DroppyMainBundle') }}</p>
+				</a>
+				<a onFocus="this.blur()" href="{{ path('fos_user_security_logout') }}">
+					<p class="pulldown_item">{{ 'login.logout' | trans({}, 'DroppyMainBundle') }}</p>
+				</a>
+			</div>
+		</div>
+		<div class="recommend">
+			<a href="{{ path('droppy_main_index') ~ '#!/recommended-users' }}">
+				<span class="csssprite header_recommend">header_recommend</span>
+				<span>{{ 'common.recommended' | trans({}, 'DroppyMainBundle') }}</span>
+			</a>
+		</div>
+		<div class="make_event">
+			<a href="{{ path('droppy_main_index') ~ '#!/create-event' }}">
+				<span class="csssprite header_calendar">header_calendar</span>
+				<span>{{ 'event.make_event' | trans({}, 'DroppyMainBundle') }}</span>
+			</a>
+		</div>
+		<div class="header_search_form">
+				<input type="text" name="" value="" class="header_search_txt" 
+				placeholder="{{ 'header.search_users_and_events' | trans({}, 'DroppyMainBundle') }}">
+		</div>
+	</div>
+</div>

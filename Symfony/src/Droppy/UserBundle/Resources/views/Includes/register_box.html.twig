@@ -1,0 +1,34 @@
+
+<div id="register-box">
+	<p class="register">{{ 'user.user_register' | trans({}, 'DroppyMainBundle') }}</p>
+	<form name="register_user" class="ym-form ym-columnar" id="register-form" action="{{ path('droppy_main_index') }}" method="POST" {{ form_enctype(form) }} >
+		<div class="ym-fbox-text">
+		    {{ form_errors(form.username) }}
+			<label for="register-id">{{ 'user.droppy_id_with_restriction' | trans({}, 'DroppyMainBundle') }}</label>
+			{{ form_widget(form.username) }}
+		</div>
+		<div class="ym-fbox-text">
+		    {{ form_errors(form.personalDatas.displayedName) }}
+			<label for="register-name">{{ 'user.display_name' | trans({}, 'DroppyMainBundle') }}</label>
+			{{ form_widget(form.personalDatas.displayedName) }}
+		</div>
+		<div class="ym-fbox-text">
+			{{ form_errors(form.email) }}
+			<label for="register-email">{{ 'user.mailaddress' | trans({}, 'DroppyMainBundle') }}</label>
+			{{ form_widget(form.email) }}
+		</div>
+		<div class="ym-fbox-text">
+		    {{ form_errors(form.plainPassword.first) }}
+			<label for="register-pass-first">{{ 'user.password' | trans({}, 'DroppyMainBundle') }}</label>
+			{{ form_widget(form.plainPassword.first) }}
+		</div>
+		<div class="ym-fbox-text">
+		    {{ form_errors(form.plainPassword.second) }}
+			<label for="register-pass-second">{{ 'user.password_confirm' | trans({}, 'DroppyMainBundle') }}</label>
+			{{ form_widget(form.plainPassword.second) }}
+		</div>
+		<button class="register" onclick="register_user.submit()" onFocus="this.blur()">{{ 'user.create' | trans({}, 'DroppyMainBundle') }}</button>
+		{{ form_rest(form) }}
+	</form>
+    <p>{{ 'top.register_info' | trans({}, 'DroppyMainBundle') | raw }}
+</div>

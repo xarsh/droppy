@@ -1,0 +1,64 @@
+div#register_form { 
+	margin-left:300px;
+}
+p.title { 
+	width: 320px;
+	background: url(../img/icon_eve_pin.gif) 10px 5px no-repeat;
+	font-size: 16px;
+	padding: 5px 0 5px 50px;
+	margin:20px auto;
+	border: 1px solid #E2E2E2;
+	background-color: #F6F6F6;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	font-size:20px;
+}
+div#register_form input[type="text"], input[type="email"], input[type="password"] {
+	font-size: 16px;
+	height: 32px;
+	padding:0 5px;
+	margin:5px 20px;
+	border: 1px solid #CCC;
+	background-color: white;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0px 0px 2px 0px #ccc;
+	-moz-box-shadow: inset 0px 0px 2px 0px #ccc;
+	box-shadow: inset 0px 0px 2px 0px #ccc;
+}
+div#register table {
+	margin:0 auto;
+}
+div#register table th {
+	vertical-align:middle;
+	font-weight:normal;
+}
+div#register input {
+	width:400px;
+}
+div.account_register_choice_form {
+	margin:30px 20px;
+}
+div.error {
+	float: right;
+	margin-left:90px;
+	border-bottom: 10px solid #ff0080;
+	border-left: 10px solid transparent;
+	-border-left-color: white;
+	width:80px;
+}
+div.error p.error {
+	float: right;
+	padding: 5px 10px;
+	margin: 0 0 0 -75px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	background: #ff0040;
+	font: 12px "Gill Sans", "Trebuchet MS", sans-serif;
+	text-align: center;
+	color: white;
+	-position: relative;
+}

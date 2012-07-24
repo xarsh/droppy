@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings bundle="user">
+    <setting xml:id="droppy_user_api_get_public_key" route="/user/public-api/get-public-key"
+        method="GET">
+        <parameter id="token" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_create_user" route="/user/public-api/create-user"
+        method="POST">
+        <parameter id="token" optional="false" />
+        <parameter id="username" optional="false" />
+        <parameter id="encrypted_password" optional="false" />
+        <parameter id="email" optional="false" />
+        <parameter id="displayed_name" optional="false" default="_username" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_recommended_users" route="/user/api/recommended-users"
+        method="GET">
+        <parameter id="offset" optional="true" default="0" />
+        <parameter id="max_results" optional="true" default="20" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_aetelrecommended_users" route="/user/api/aetel-recommended-users"
+        method="GET">
+        <parameter id="offset" optional="true" default="0" />
+        <parameter id="max_results" optional="true" default="20" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_isobeselected_users" route="/user/api/selected-users"
+        method="GET">
+        <parameter id="offset" optional="true" default="0" />
+        <parameter id="max_results" optional="true" default="20" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_drop" route="/user/api/drop"
+        method="POST">
+        <parameter id="user_id" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_undrop" route="/user/api/undrop"
+        method="POST">
+        <parameter id="user_id" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_get_user" route="/user/api/get-user"
+        method="GET">
+        <parameter id="user_id" optional="true" default="_current_user" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_get_by_username" route="/user/api/get-by-username"
+        method="GET">
+        <parameter id="username" optional="true" default="_current_user" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_get_salt" route="/user/public-api/get-salt"
+        method="GET">
+        <parameter id="username" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_dropping_users" route="/user/api/dropping-users"
+        method="GET">
+        <parameter id="user_id" optional="true" default="_current_user" />
+        <parameter id="offset" optional="true" default="0" />
+        <parameter id="max_results" optional="true" default="20" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_droppers" route="/user/api/droppers"
+        method="GET">
+        <parameter id="user_id" optional="true" default="_current_user" />
+        <parameter id="offset" optional="true" default="0" />
+        <parameter id="max_results" optional="true" default="20" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_set_started" route="/user/api/set-started"
+        method="POST">
+    </setting>
+    
+    <setting xml:id="droppy_user_api_lock_user" route="/user/api/lock-user"
+        method="POST">
+        <parameter id="user_id" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_user_api_search_users" route="/user/api/search"
+        method="GET">
+        <parameter id="keywords" optional="true" />
+        <parameter id="places" optional="true" />
+        <parameter id="offset" optional="true" default="0" />
+        <parameter id="max_results" optional="true" default="20" />
+    </setting>
+    
+    
+</settings>
+   

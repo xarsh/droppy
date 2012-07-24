@@ -1,0 +1,97 @@
+{% form_theme form 'DroppyEventBundle:Layout:widgets_theme.html.twig' %}
+<div id="make_event_popup" date_format="{{ 'time.popup' | trans({}, 'DroppyMainBundle') }}">
+	<a href="#" onclick="javascript:closePopup()" class="close">
+		<img src="{{ asset('img/popup_close.png') }}">
+	</a>
+	<form name="event_creation_form" action="{{ path('droppy_event_creation') }}" {{ form_enctype(form) }} method="POST" >
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr><th>{{ 'event.datetime.date' | trans({}, 'DroppyMainBundle') }}</th>
+				<td class="date">{{ "now" | date('Y-m-d') }}</td>
+			</tr>
+			<tr><th>{{ 'event.title' | trans({}, 'DroppyMainBundle') }}</th>
+				<td>{{ form_widget(form.name) }}</td>
+			</tr>
+		</table>
+		{{ form_rest(form) }}
+		<div class="buttons">
+			<input type="button" 
+			onclick="event_creation_form.submit()" 
+			value="{{ 'common.create' | trans({}, 'DroppyMainBundle') }}" 
+			class="ok">
+
+			<a href="{{ path('droppy_event_creation') }}" class="setting_details">
+				{{ 'common.setting_details' | trans({}, 'DroppyMainBundle') }}&nbsp;>>
+			</a>
+		</div>
+	</form>
+</div>
+
+<div id="main_calendar">
+	<div class="calendar_tools">
+		<table width="100%" border="0" cellpadding="0">
+			<tr>
+				<td class="prevmonth">
+					<a href="#" id="{{ dateTime | previousMonth | date('Ym') }}" class="cal_link">
+						<img src="{{ asset('img/btn_prev.png') }}" class="prevmonth">
+						<span class="prevmonth_text">{{ dateTime | previousMonth | date('time.year_month' | trans({}, 'DroppyMainBundle') ) }}</span>
+					</a>
+				</td>
+				<td class="calendar_title" id="{{ dateTime | date('Ym') }}">
+					{{ dateTime|date('time.year_month' | trans({}, 'DroppyMainBundle')) }}
+				</td>
+				<td class="nextmonth">
+					<a href="#" id="{{ dateTime | nextMonth | date('Ym') }}" class="cal_link">
+						<span class="nextmonth_text">
+							{{ dateTime | nextMonth | date('time.year_month' | trans({}, 'DroppyMainBundle')) }}
+						</span>
+						<img src="{{ asset('img/btn_next.png') }}" class="nextmonth">
+					</a>
+				</td>
+			</tr>
+		</table>
+	</div>
+	{% set starts_sunday = app.user.settings.firstDayOfWeek == 0 %}
+	<table border="0" cellpadding="0" cellspacing="0" class="coloring_cells">
+		<tr>
+			{% if starts_sunday %}
+			<th class="sun">&nbsp;</th>
+			{% endif %}
+			<th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th><th>&nbsp;</th>
+			<th class="sat">&nbsp;</th>
+			{% if not starts_sunday %}
+			<th class="sun">&nbsp;</th>
+			{% endif %}
+		</tr>
+			{% for j in 0..4 %}
+			<tr>
+			{% if starts_sunday %}
+			<td class="sun">&nbsp;</td>
+			{% endif %}
+			{% for i in 0..4 %}
+			<td>&nbsp;</td>
+			{% endfor %}
+			<td class="sat">&nbsp;</td>
+			{% if not starts_sunday %}
+			<td class="sun">&nbsp;</td>
+			{% endif %}
+		</tr>
+			{% endfor %}
+	</table>
+	<table border="0" cellpadding="0" cellspacing="0" class="main_calendar">
+		<tr>
+			{% if starts_sunday %}
+			<th>{{ 'time.day_of_week.sun' | trans({}, 'DroppyMainBundle') }}</th>
+			{% endif %}
+			<th>{{ 'time.day_of_week.mon' | trans({}, 'DroppyMainBundle') }}</th>
+			<th>{{ 'time.day_of_week.tue' | trans({}, 'DroppyMainBundle') }}</th>
+			<th>{{ 'time.day_of_week.wed' | trans({}, 'DroppyMainBundle') }}</th>
+			<th>{{ 'time.day_of_week.thu' | trans({}, 'DroppyMainBundle') }}</th>
+			<th>{{ 'time.day_of_week.fri' | trans({}, 'DroppyMainBundle') }}</th>
+			<th>{{ 'time.day_of_week.sat' | trans({}, 'DroppyMainBundle') }}</th>
+			{% if not starts_sunday %}
+			<th>{{ 'time.day_of_week.sun' | trans({}, 'DroppyMainBundle') }}</th>
+			{% endif %}
+		</tr>
+	</table>
+
+</div>

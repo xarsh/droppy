@@ -1,0 +1,20 @@
+<div class="event ym-column" event-id="<%= id %>">
+	<div class="event_picture ym-col1">
+		<div class="ym-cbox">
+			<img class="user_thumbnail" src="<%= Assetics.asset(iconSet.thumbnail) %>" 
+			     alt="<%= ExposeTranslation.get('user.image') %>" width="48" height="48" />
+		</div>
+	</div>
+	<div class="event_text ym-col3">
+		<div class="event_text ym-cbox">
+			<p class="ymd"><strong><%= startDateString %></strong></p>
+			<p class="user_name"><span><%= creator.personalDatas.displayedName %></span></p>
+			<p class="title"><%= name %></p>
+		</div>
+        <% if(!isCreator) { %>
+		<a class="close" style="display: none;">
+			<img src="<%= Assetics.staticAsset('img/close.png') %>" alt="close" />
+		</a>
+        <% } %>
+	</div>
+</div>

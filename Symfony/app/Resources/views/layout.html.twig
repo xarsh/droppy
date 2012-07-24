@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" 
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" 
+	xml:lang="{{ 'language' | trans({}, 'DroppyMainBundle') }}" 
+	lang="{{ 'language' | trans({}, 'DroppyMainBundle') }}" dir="ltr" xmlns:og="http://ogp.me/ns#" xmlns:fb="http://www.facebook.com/2008/fbml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=9" />
+        <meta property="og:title" content="Droppy | スケジュールまとめ共有サービス" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="http://www.droppy.jp/" />
+        <meta property="og:image" content="https://s3-ap-northeast-1.amazonaws.com/droppy-image/img/logo.png" />
+        <meta property="og:site_name" content="Droppy" />
+        <meta property="fb:admins" content="100002254916108" />
+        <title>{{ 'droppy.title' | trans({}, 'DroppyMainBundle') }}</title>
+        <link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="image/x-icon" />
+		{% block css %}{% endblock %}
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="{{ asset('js/libs/jquery-ui/jquery.placeholder.min.js') }}"></script>
+		<script>
+			$(function(){
+				$('input[placeholder]').placeholder();
+			});
+		</script>
+		<script type="text/javascript">
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-31048144-1']);
+			_gaq.push(['_setDomainName', 'droppy.jp']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+			 var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			 ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			 var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			 })();
+
+		 </script>
+		 {% block javascript %}{% endblock %}
+	 </head>
+	 <body>
+	 	<div id="wrapper">
+		 <div id="top_message_wrapper">
+			<div id="top_message" style="display:none;"><p></p></div>
+		 </div>
+		<div class="page_margins">
+			{% block header %}{% endblock %}
+			{% block body %}{% endblock %}
+		</div>
+		{% block footer %}{% endblock %}
+		</div>
+	</body>
+</html>

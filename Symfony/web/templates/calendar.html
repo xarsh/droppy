@@ -1,0 +1,43 @@
+<div id="main_calendar">
+    <div class="calendar_tools">
+        <table width="100%" cellpadding="0" border="0">
+            <tbody><tr>
+                    <td class="date"></td>
+                    <td class="center">&nbsp;</td>
+                    <td class="right">
+                        <div class="change_date">
+                            <span class="calendar_button current"><%= ExposeTranslation.get('time.this_month') %></span>
+                            <span class="calendar_button prev" unselectable="on">&lt;</span>
+                            <span class="calendar_button next" unselectable="on">&gt;</span>
+                        </div>
+                    </td>
+            </tr></tbody>
+        </table>
+    </div><!-- calendar_tools -->
+    <div class="calendar">
+        <table class="calendar">
+            <thead>
+                <tr>
+                    <th class="sun"><%= ExposeTranslation.get('time.day_of_week.sun') %></th>
+                    <th><%= ExposeTranslation.get('time.day_of_week.mon') %></th>
+                    <th><%= ExposeTranslation.get('time.day_of_week.tue') %></th>
+                    <th><%= ExposeTranslation.get('time.day_of_week.wed') %></th>
+                    <th><%= ExposeTranslation.get('time.day_of_week.thu') %></th>
+                    <th><%= ExposeTranslation.get('time.day_of_week.fri') %></th>
+                    <th class="sat"><%= ExposeTranslation.get('time.day_of_week.sat') %></th>
+                </tr>
+            </thead>
+            <tbody>
+                <% for(var i = 0; i < 6; i++) { %>
+                    <tr>
+                    <% for(var j = 0; j < 7; j++) { %> 
+	                    <td>
+	                        <p></p>
+	                    </td>
+                    <% } %>
+                    </tr>
+                <% } %>
+            </tbody>
+        </table>
+    </div><!-- calendar -->
+</div>

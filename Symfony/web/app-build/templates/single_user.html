@@ -1,0 +1,31 @@
+<div class="box">
+    <div class="ym-column event">
+        <div class="ym-col1">
+            <div class="ym-cbox user_icon">
+                <img width="64" height="64" 
+                    src="<%= Assetics.asset(personalDatas.iconSet.icon) %>"/>
+            </div>
+        </div>
+        <div class="ym-col2">
+            <div class="ym-cbox">
+                <% if(id != appUser.get('id')) { %> 
+                <span class="button_small drop drop_button <%= dropped ? 'dropping' : '' %>">
+                    <img src="<%= Assetics.staticAsset('img/' + (dropped ? 'check.png' : 'drop.png')) %>"/>
+                    <span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop'))%></span>
+                </span>
+                <% } %>
+            </div>
+        </div>
+        <div class="ym-col3 ym-clearfix">
+            <div class="ym-cbox user_infos">
+                <div class="user_link">
+                <p class="user ellipsis"><a href="#"><%= personalDatas.displayedName %></a></p>
+                <p class="username ellipsis"><%= '>' + username %></p>
+                </div>
+                <% if(personalDatas.introduction) { %>
+                    <p class="description ellipsis"><%= personalDatas.introduction %></p>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</div>

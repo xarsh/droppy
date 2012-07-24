@@ -1,0 +1,94 @@
+<div id="event_details">
+    <p class="head_title event_details_title">
+        <span class="csssprite icon_details">icon_details</span>
+        <%= ExposeTranslation.get('event.details_long') %>
+    </p>
+    <span class="head_button">
+        <button class="button_big white">
+            <%= ExposeTranslation.get('common.back') %>
+        </button>
+        </span>
+    <div class="event_details_summary">
+        <div class="ym-column">
+            <div class="ym-col1">
+                <img src="<%= Assetics.asset(iconSet.icon)%>" />
+            </div>
+            <div class="ym-col3">
+                <p class="event_title ellipsis">
+                    <%= name %>
+                </p>
+                <div class="event_username">
+                    <p>
+                        <span class="event_details_displayed_name">
+                            <%= creator.personalDatas.displayedName %>
+                        </span>
+                        <span class="event_details_unique_name">
+                            (<a href="#" class="unique_name"><%= '>' + creator.username %></a>)
+                        </span>
+                        </p>
+                    </div>
+                 <% if(isCreator) { %>
+                <span class="event_details_buttons">
+	                <span class="button_small edit">
+	                    <span class="csssprite button_edit">edit_button</span>
+	                    <span><%= ExposeTranslation.get('button.edit') %></span>
+	                </span>
+	                <span class="button_small delete">
+	                    <span class="csssprite button_delete">delete_button</span>
+	                    <span><%= ExposeTranslation.get('button.delete') %></span>
+	                </span>
+	            </span>
+		        <% } else { %>
+		            <span class="button_small drop drop_button <%= dropped ? 'dropping' : '' %>">
+		                <img src="<%= Assetics.staticAsset('img/' + (dropped ? 'check.png' : 'drop.png')) %>"/>
+		                <span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop'))%></span>
+		            </span>
+		         <% } %> 
+            </div>
+        </div>
+    </div>
+    <div class="event_details_body">
+        <table>
+            <tbody>
+                <tr class="event_timedate">
+                    <th><%= ExposeTranslation.get('time.date') %></th>
+                    <td class="event_timedate_text"><%= date %></td>
+                </tr>
+                <% if(typeof location !== 'undefined' && location.place) { %>
+                    <tr class="event_place">
+                        <th><%= ExposeTranslation.get('event.place') %></th>
+                        <td class="event_place_text"><%= location.place %></td>
+                    </tr>
+                <% } %>
+                <% if(typeof address !== 'undefined' && address) { %>
+                    <tr class="event_address">
+                        <th><%= ExposeTranslation.get('event.address') %></th>
+                        <td class="event_address_text"><%= address %></td>
+                    </tr>
+                <% } %>
+                <% if(typeof tags !== 'undefined' && tags.length !== 0) { %>
+                <tr class="event_tags">
+                    <th><%= ExposeTranslation.get('event.tag.label') %></th>
+                    <td>
+                    <% for(var i in tags) { %>
+                        <span class="hash_symbol">#</span>
+                        <span class="event_details_tag"><%= tags[i].name %></span>
+                    <% } %> 
+                    </td>
+                </tr>
+                <% } %>
+                <% if(typeof details !== 'undefined' && details) { %>
+                <tr class="event_details_container">
+                    <th><%= ExposeTranslation.get('event.details') %></th>
+                    <td>&nbsp;</td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+        <% if(typeof details !== 'undefined' && details) { %>
+        <div class="event_details event_details_container event_details_text">
+            <%= details.urlify().nl2br() %>
+        </div>
+        <% } %>
+    </div>
+</div>

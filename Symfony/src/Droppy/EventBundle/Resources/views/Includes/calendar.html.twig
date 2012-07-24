@@ -1,0 +1,46 @@
+<div id="main_calendar">
+    <div class="calendar_tools">
+    	<table width="100%" cellpadding="0" border="0">
+    		<tbody><tr>
+    				<td class="date"></td>
+    				<td class="center">&nbsp;</td>
+					<td class="right">
+						<div class="change_date">
+							<span class="calendar_button current disabled" unselectable="on">{{ 'time.this_month' | trans({}, 'DroppyMainBundle') }}</span>
+							<span class="calendar_button prev" unselectable="on">&lt;</span>
+							<span class="calendar_button next" unselectable="on">&gt;</span>
+						</div>
+					</td>
+    		</tr></tbody>
+    	</table>
+    </div><!-- calendar_tools -->
+    <div class="calendar">
+    	<table class="calendar">
+    		<thead>
+    			<tr>
+    			    {% if app.user.settings.firstDayOfWeek == 0 %}
+    				    <th class="sun">{{ 'time.day_of_week.sun' | trans({}, 'DroppyMainBundle') }}</th>
+    				{% endif %}
+    				<th>{{ 'time.day_of_week.mon' | trans({}, 'DroppyMainBundle') }}</th>
+    				<th>{{ 'time.day_of_week.tue' | trans({}, 'DroppyMainBundle') }}</th>
+    				<th>{{ 'time.day_of_week.wed' | trans({}, 'DroppyMainBundle') }}</th>
+    				<th>{{ 'time.day_of_week.thu' | trans({}, 'DroppyMainBundle') }}</th>
+    				<th>{{ 'time.day_of_week.fri' | trans({}, 'DroppyMainBundle') }}</th>
+    				<th class="sat">{{ 'time.day_of_week.sat' | trans({}, 'DroppyMainBundle') }}</th>
+    				{% if app.user.settings.firstDayOfWeek == 1 %}
+    				    <th class="sun">{{ 'time.day_of_week.sun' | trans({}, 'DroppyMainBundle') }}</th>
+    				{% endif %}
+    			</tr>
+    		</thead>
+    		<tbody>
+    			{% for i in 1..6 %}
+    			    <tr>
+    			    {% for j in 1..7 %}
+    			    <td><p></p></td>
+    			    {% endfor %}
+    			    </tr>
+    			{% endfor %}
+    		</tbody>
+    	</table>
+    </div><!-- calendar -->
+</div>

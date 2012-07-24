@@ -1,0 +1,15 @@
+<div class="event_lists">
+    <div id="timeline-tab">
+        <div id="date_tab" class="change_eve_detail scrollable">
+        <div class="loading centering"><img src="<%= Assetics.staticAsset('img/loading_big.gif') %>" /></div>
+        <% var categories = ['today', 'tomorrow', 'this_week', 'next_week', 'this_month', 'after_this_month'] %>
+        <% for(var i in categories) { %>
+            <div class="timeline_container <%= categories[i] %>">
+                <p class="day_bar">
+                    <%= ExposeTranslation.get('timeline.' + categories[i]) %>
+                </p>                 
+            </div>
+        <% } %>
+        </div>
+    </div>
+</div>

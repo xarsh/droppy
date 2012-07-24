@@ -1,0 +1,27 @@
+services:
+    droppy_web_application.type.tag_selector:
+        class: Droppy\WebApplicationBundle\Form\Type\TagFormType
+        arguments: ["@doctrine.orm.entity_manager"]
+        tags:
+            - { name: form.type, alias: tag_selector }
+    droppy_web_application.type.genre_selector:
+        class: Droppy\WebApplicationBundle\Form\Type\GenreFormType
+        tags:
+            - { name: form.type, alias: genre_selector }
+    droppy_web_application.type.privacy_settings_type:
+        class: Droppy\WebApplicationBundle\Form\Type\PrivacySettingsFormType
+        tags:
+            - { name: form.type, alias: privacy_settings_type }
+    droppy_web_application.type.icon_set_type:
+        class: Droppy\WebApplicationBundle\Form\Type\IconSetFormType
+        tags:
+            - { name: form.type, alias: icon_set_type }
+    droppy_web_application.type.schedule_selector:
+        class: Droppy\WebApplicationBundle\Form\Type\ScheduleFormType
+        arguments: ["@security.context"]
+        tags:
+            - { name: form.type, alias: schedule_selector }
+    droppy_web_application.type.date_time_selector:
+        class: Droppy\WebApplicationBundle\Form\Type\DateTimeFormType
+        tags:
+            - { name: form.type, alias: date_time_selector }

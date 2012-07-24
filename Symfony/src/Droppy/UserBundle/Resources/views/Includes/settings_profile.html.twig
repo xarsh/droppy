@@ -1,0 +1,61 @@
+{% form_theme form 'DroppyUserBundle:Layout:widget_theme.html.twig' %}
+<div class="setting_items">
+    <h3>{{ 'settings.account.label' | trans({}, 'DroppyMainBundle') }}</h3>
+	<form name="change_personal_datas" action="{{ path('droppy_user_personal_datas') }}" {{ form_enctype(form) }} method="POST">
+		<table>
+			<tbody>
+				<tr>
+					<th>{{ 'user.droppy_id' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.username) }} <br /> {{ form_errors(form.username) }}</td>
+				</tr>
+				<tr>
+					<th>{{ 'user.mailaddress' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.email) }} <br /> {{ form_errors(form.email) }}</td>
+				</tr>
+				{#
+				<tr>
+					<th>{{ 'settings.account.birth_date' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.birthDate.date) }}</td>
+					<td>{{ form_widget(form.birthDate.privacySettings.visibility) }}</td>
+				</tr>
+				<tr>
+					<th>{{ 'settings.account.birth_place' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.birthPlace.name) }}</td>
+					<td>{{ form_widget(form.birthPlace.privacySettings.visibility) }}</td>
+				</tr>
+				<tr>
+					<th>{{ 'settings.account.current_location' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.currentLocation.name) }}</td>
+					<td>{{ form_widget(form.currentLocation.privacySettings.visibility) }}</td>
+				</tr>
+				#}
+				<tr>
+					<th>{{ 'settings.account.displayed_name' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.personalDatas.displayedName) }} 
+					    <br /> {{ form_errors(form.personalDatas.displayedName) }}</td>
+				</tr>
+				<tr>
+					<th>{{ 'settings.account.introduction' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.personalDatas.introduction) }} 
+					    <br /> {{ form_errors(form.personalDatas.introduction) }}</td>
+				</tr>
+				<tr>
+					<th>{{ 'settings.account.icon_set' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>{{ form_widget(form.personalDatas.iconSet.file) }} 
+					    <br /> {{ form_errors(form.personalDatas.iconSet.file) }}</td>
+				</tr>
+			</tbody>
+		</table>
+		{{ form_rest(form) }}
+		<div class="button">
+			<span class="button_big light_blue" onclick="change_personal_datas.submit()">
+				{{ 'settings.apply'|trans({}, 'DroppyMainBundle') }}
+			</span>
+			<span class="button_big white" onclick='location.href="{{ path('droppy_main_index') }}"'>
+				{{ 'common.cancel'|trans({}, 'DroppyMainBundle') }}
+			</span>
+	</div>
+	</form>
+</div>
+
+

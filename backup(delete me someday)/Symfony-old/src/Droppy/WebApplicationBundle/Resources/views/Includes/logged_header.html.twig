@@ -1,0 +1,34 @@
+<div id="header">
+	<div id="header_body">
+		<div class="inner_l">
+			<h1 class="header_logo"><a href="{{ path('droppy_webapp_index') }}"><img src="{{ asset("images/common/header_logo_s.gif") }}" alt="Droppy"></a></h1>
+			<div class="header_search_form">
+				<form action="" method="post">
+					<input type="text" name="" value="" class="header_search_txt" placeholder="{{ 'header.logged.search' | trans({}, 'DroppyWebApplicationBundle') }}">
+				</form>
+			</div>
+			<br class="clear">
+		</div>
+		<div class="inner_r">
+
+			<div class="header_menu">
+				<p><a href="#" class="search_eve">
+					{{ 'header.logged.search_event' | trans({}, 'DroppyWebApplicationBundle') }}
+				</a>
+				<a href="#" class="recommend">
+					{{ 'header.logged.recommended' | trans({}, 'DroppyWebApplicationBundle') }}
+				</a>
+				<span><img src="{{ asset("images/common/icon_setting.gif") }}" alt="setting"></span></p>
+				<ul>
+					<li><a href="{{ path('droppy_webapp_settings_personal') }}">{{ 'header.logged.setting' | trans({}, 'DroppyWebApplicationBundle') }}</a></li>
+					<li><a href="#">{{ 'header.logged.feature' | trans({}, 'DroppyWebApplicationBundle') }}</a></li>
+					<li><a href="{{ path('fos_user_security_logout') }}">
+						{{ 'header.logged.logout' | trans({}, 'DroppyWebApplicationBundle') }}
+					</a></li>
+				</ul>
+			</div><!-- // .header_menu -->
+
+		</div>
+		<br class="clear">
+	</div><!-- // #header_body -->
+</div><!-- // #header -->

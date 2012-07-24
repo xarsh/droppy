@@ -1,0 +1,10 @@
+parameters:
+    droppy_webapp.icon_uploader.class: Droppy\WebApplicationBundle\Util\IconUploader
+    droppy_webapp.thumbnail_file_name: icon_thumbnail.png
+    droppy_webapp.smallicon_file_name: icon_small.png
+
+services:
+    droppy_webapp.icon_uploader:
+        class: %droppy_webapp.icon_uploader.class%
+        arguments: [%droppy_webapp.thumbnail_file_name%, %droppy_webapp.smallicon_file_name%, @doctrine.orm.entity_manager]
+      

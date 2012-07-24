@@ -1,0 +1,31 @@
+/**
+ * "Yet Another Multicolumn Layout" - (X)HTML/CSS framework
+ * (en) central stylesheet
+ * (de) zentrales Stylesheet
+ *
+ * @creator       YAML Builder V1.2.1 (http://builder.yaml.de)
+ * @file          my_layout.css
+ * @-yaml-minver  3.3
+ * 
+ */
+
+/* import core styles | Basis-Stylesheets einbinden */
+@import url(yaml/core/base.css);
+
+/* import screen layout | Screen-Layout einbinden */
+@import url(yaml/screen/basemod/top.css);
+@import url(yaml/screen/content.css);
+
+@import url(button.css);
+@import url(csssprite.css);
+@import url(header.css);
+@import url(jquery.jscrollpane.css);
+@import url(top/left_column.css);
+@import url(top/center_column.css);
+@import url(top/right_column.css);
+@import url(top/calendar.css);
+@import url(top/event_creation.css);
+@import url(top/user_details.css);
+@import url(top/event_details.css);
+@import url(top/search.css);
+@import url(//ajax.googleapis.com/ajax/libs/jqueryui/1.8.14/themes/smoothness/jquery-ui.css)

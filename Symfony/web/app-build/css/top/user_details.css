@@ -1,0 +1,138 @@
+.user_details {
+	padding:10px 0;
+	background:#eeeeee;
+	border-right:1px solid #dddddd;
+}
+.user_profile {
+	padding:0 0 10px 0;
+}
+.user_profile .ym-col1 {
+	width:150px;
+	margin:0 0 0 10px;
+}
+.user_profile .ym-col3 {
+	margin-left:160px;
+	margin-right:0;
+	padding-top:15px;
+}
+.user_profile .display_name {
+	font-weight:bold;
+	font-size:18px;
+}
+.user_profile .unique_name {
+	color:#777777;
+	font-size:14px;
+	line-height:15px;
+}
+.user_profile .description {
+	margin-top:10px;
+}
+.user_profile .drop_button {
+    margin-top:10px;
+}
+#userdetails-tab {
+	margin-left:20px;
+}
+#event_tab, #droppings_tab, #droppers_tab { 
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	margin:-1px 10px;
+	padding:1px 0;
+	background:#ffffff;
+}
+#userdetails-tab li {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: block;
+    float: left;
+    font-size: 13px;
+    text-align: center;
+    width: 125px;
+    cursor:pointer;
+}
+#userdetails-tab a {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: block;
+    height: 28px;
+    text-decoration: none;
+    width:80%;
+}
+#userdetails-tab li span {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: block;
+    height: 28px;
+    line-height: 28px;
+}
+#userdetails-tab ul .ui-tabs-selected, #userdetails-tab .ui-tabs-selected a {
+    color: #000000;
+    font-weight: bold;
+}
+#userdetails-tab .ui-tabs-selected a:hover, #userdetails-tab .ui-tabs-selected a:active {
+    text-decoration: underline;
+}
+#user_relations_list, #userdetails-tab, .ui-tabs-nav.ui-helper-reset.ui-helper-clearfix.ui-widget-header.ui-corner-all{
+    background:#f0f0f0;
+    border-color:#f0f0f0;
+}
+#user_relations_list .ym-column {
+	margin-top:5px;
+    border-bottom:1px solid #ddd;
+}
+#user_relations_list .ym-col1 {
+	width:80px;
+}
+#user_relations_list .ym-col2 {
+	width:130px;
+	text-align:right;
+}
+#user_relations_list .ym-col2 span.button_small {
+	width:80px;
+	margin-bottom:3px;
+	text-align:center;
+	padding:2px 5px;
+}
+#user_relations_list .ym-col2 div.link.to_details {
+	margin-right:20px;
+	color:#08adfa;
+}
+#user_relations_list .ym-col3 {
+	margin-left:80px;
+}
+#event_tab, #user_tab {
+    border:1px solid #ddd;
+}
+li.event_tab.ui-state-default.ui-corner-top.ui-tabs-selected.ui-state-active {
+    border:1px solid #ddd;
+}
+#event_tab .event {
+    border-bottom:1px solid #ddd;
+}
+#event_tab .event .title{
+    cursor:pointer;
+    text-decoration:none;
+}
+#event_tab .event .title:hover{
+    text-decoration:underline;
+}
+#event_tab p.date {
+	font-size:12px;
+    margin:6px 0;
+    cursor:default;
+}
+.user_link .user a {
+    color:#08adfa;
+    font-size:17px;
+    text-decoration:none;
+}
+.user_link .user a:hover {
+    text-decoration:underline;
+}
+.user_link .username {
+    font-size:14px;
+}
+.user_infos .description {
+    font-size:14px;
+}

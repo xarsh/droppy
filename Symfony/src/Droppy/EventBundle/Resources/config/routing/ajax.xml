@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    
+    <route id="droppy_event_ajax_get_event" pattern="/get-event">
+        <default key="_controller">droppy_event.api:getEventAction</default>
+        <requirement key="_method">GET</requirement>
+        <requirement key="event_id">\d+</requirement>
+    </route>
+
+    <route id="droppy_event_ajax_event_and_rel" pattern="/event-and-relation">
+        <default key="_controller">droppy_event.api:getEventAndRelationAction</default>
+        <requirement key="_method">GET</requirement>
+        <requirement key="event_id">\d+</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_search_events" pattern="/search">
+        <default key="_controller">droppy_event.api:searchEventsAction</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+
+    <route id="droppy_event_ajax_interval" pattern="/in-interval">
+        <default key="_controller">droppy_event.api:eventsInRangeAction</default>
+        <requirement key="_method">GET</requirement>
+        <requirement key="start">\d{4}-\d{1,2}-\d{1,2}</requirement>
+        <requirement key="end">\d{4}-\d{1,2}-\d{1,2}</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_update_event" pattern="/update-event">
+        <default key="_controller">droppy_event.api:updateEventAction</default>
+        <requirement key="_method">POST</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_update_event_html" pattern="/update-html">
+        <default key="_controller">DroppyEventBundle:AJAXRequest:getEventUpdateHtml</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_remove_event" pattern="/remove-event">
+        <default key="_controller">droppy_event.api:removeEventAction</default>
+        <requirement key="event_id">\d+</requirement>
+        <requirement key="_method">POST</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_timeline" pattern="/timeline">
+        <default key="_controller">droppy_event.api:getTimelineAction</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_details_html" pattern="/details-html">
+        <default key="_controller">DroppyEventBundle:AJAXRequest:getEventDetailsHtml</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_event_in" pattern="/event-in">
+        <default key="_controller">droppy_event.api:setInCalendarAction</default>
+        <requirement key="event_id">\d+</requirement>
+        <requirement key="_method">POST</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_event_out" pattern="/event-out">
+        <default key="_controller">droppy_event.api:setOutOfCalendarAction</default>
+        <requirement key="event_id">\d+</requirement>
+        <requirement key="_method">POST</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_created_events" pattern="/created-events">
+        <default key="_controller">droppy_event.api:getCreatedEventsAction</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_drop" pattern="/drop">
+        <default key="_controller">droppy_event.api:dropEventAction</default>
+        <requirement key="event_id">\d+</requirement>
+        <requirement key="_method">POST</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_undrop" pattern="/undrop">
+        <default key="_controller">droppy_event.api:undropEventAction</default>
+        <requirement key="event_id">\d+</requirement>
+        <requirement key="_method">POST</requirement>
+    </route>
+    
+    <route id="droppy_event_ajax_latest_events" pattern="/latest-events">
+        <default key="_controller">droppy_event.api:latestEventsAction</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+
+</routes>

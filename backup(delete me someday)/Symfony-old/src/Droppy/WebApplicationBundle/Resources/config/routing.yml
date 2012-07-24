@@ -1,0 +1,41 @@
+droppy_webapp_top:
+    pattern:  /top
+    defaults: { _controller: DroppyWebApplicationBundle:Default:top }
+    
+droppy_webapp_index_require:
+    pattern:  /{date}
+    defaults: { _controller: DroppyWebApplicationBundle:Default:index }
+    requirements:
+        date: \d{4}-\d{2}
+
+droppy_webapp_index:
+    pattern:  /
+    defaults: { _controller: DroppyWebApplicationBundle:Default:index, date: now }
+
+droppy_webapp_fbdrop:
+    pattern: /fb-drop
+    defaults: { _controller: DroppyWebApplicationBundle:Default:facebookDrop }
+   
+droppy_webapp_dropschedule:
+    pattern: /dropschedule
+    defaults: { _controller: DroppyWebApplicationBundle:Default:dropSchedule }
+
+droppy_webapp_make_event:
+    pattern: /makeevent
+    defaults: { _controller: DroppyWebApplicationBundle:MakeEvent:makeEvent }
+
+droppy_webapp_schedule:
+    resource: "@DroppyWebApplicationBundle/Resources/config/routing/schedule.yml"
+    prefix: /schedule
+
+droppy_webapp_event:
+    resource: "@DroppyWebApplicationBundle/Resources/config/routing/event.yml"
+    prefix: /event
+    
+droppy_webapp_event:
+    resource: "@DroppyWebApplicationBundle/Resources/config/routing/settings.yml"
+    prefix: /settings
+
+fos_user:
+    resource: "@DroppyWebApplicationBundle/Resources/config/routing/fos_user.yml"
+

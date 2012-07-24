@@ -1,0 +1,76 @@
+<div id="event_update">
+    <p class="event_creation head_title">
+    	<span class="csssprite icon_new">icon_new</span>
+    	<%= ExposeTranslation.get('event.make_event') %>
+    </p>
+    <div class="buttons">
+        <span class="head_button">
+            <span id="back_button" class="button_big white"><%= ExposeTranslation.get('common.back') %></span>
+        </span>
+        <span class="head_button">
+            <span id="create_button" class="button_big light_blue">
+                <%= ExposeTranslation.get('common.create') %>
+            </span>
+        </span>
+        <span class="caution">(<%= ExposeTranslation.get('event.caution') %>)</span>
+    </div>
+    <div id="event_creation_form">
+            <div class="event_summary">
+                <div class="title_form">
+                    <input id="event_title" class="title_form" placeholder="<%= ExposeTranslation.get('event.title') %>" 
+                        value="<%= (name == ExposeTranslation.get('event.default_name')) ? '' : name %>" type="text" />
+                </div>
+                <span class="datetime_form" id="start_datetime_form">
+                    <input type="text" id="event_start_date" class="date datepicker" value="<%= startDateTime.date.format('Y/m/d') %>" />
+                    <input type="text" id="event_start_time" class="time timepicker" value="<%= startDateTime.date.format('H:i') %>" style="display: <%= startDateTime.allDay ? 'none' : 'inline' %>;" />
+                        
+                </span><span id="to">～</span>
+                <span class="datetime_form" id="end_datetime_form">
+                    <input type="text" id="event_end_date" class="date datepicker" value="<%= endDateTime.date.format('Y/m/d') %>" />
+                    <input type="text" id="event_end_time" class="time timepicker" value="<%= endDateTime.date.format('H:i') %>" style="display: <%= endDateTime.allDay ? 'none' : 'inline' %>;" /> 
+                        
+                </span>
+                <div class="options">
+                    <span class="option">
+                        <input type="checkbox" id="event_allday" name="event_allday" <%= startDateTime.allDay ? 'checked="checked"' : '' %> />
+                        <label for="event_allday">
+                            <%= ExposeTranslation.get('event.allday') %>
+                        </label>
+                        <span style="display:none;">
+                            <input type="checkbox" id="event_privacy" name="event_privacy" checked="checked" />
+                            <label for="event_privacy"><%= ExposeTranslation.get('privacy_policy.public') %></label>
+                        </span>
+                    </span>
+                </div>
+            </div>
+            <div class="event_details">
+                <table border="0" cellspacing="0" cellpadding="0">
+                    <tr><th><%= ExposeTranslation.get('event.place') %></th>
+                        <td><input type="text" id="event_place" value="<%= typeof location != 'undefined' && location.place ? location.place : ''%>" /></td> 
+                    </tr>
+                    <tr><th><%= ExposeTranslation.get('event.address') %></th>
+                        <td><input type="text" id="event_address" value="<%= typeof address != 'undefined' && address ? address : ''%>"/> </td>                            
+                    </tr>
+                    <tr><th><%= ExposeTranslation.get('event.details') %></th>
+                        <td><textarea id="event_details"><%= typeof details != 'undefined' && details ? details : '' %></textarea></td>
+                    </tr>
+                    <tr><th><%= ExposeTranslation.get('event.color') %></th>
+                        <td>
+                            <% var colors = ["red", "orange", "yellow", "green", "blue", "violet"] %>
+                            <div id="color_sample">
+                            <% var color = (typeof color !== 'undefined' && color.name) ? color.name : 
+                                (typeof appUser.get('settings') !== 'undefined' ? appUser.get('settings').color.name : '') %> 
+                            <% for(var i in colors) { %>                                
+                                <div class="<%= colors[i] %> <%= colors[i] == color ? 'clicked' : '' %>">&nbsp;</div>
+                            <% } %>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr><th><%= ExposeTranslation.get('event.tag.label') %></th>
+                        <td><input type="text" id="event_tags" value="<%= typeof tags !== 'undefined' ? tags.join(' ') : ''%>"/></td>
+                    </tr>
+                </table>
+            </div>
+    </div>
+</div>
+

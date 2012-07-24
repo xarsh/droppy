@@ -1,0 +1,53 @@
+{% extends 'DroppyUserBundle::layout.html.twig' %}
+
+{% block css %}
+<link href="{{ asset('css/import_top.css') }}" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="{{ asset('css/patches/patch_top.css') }}" rel="stylesheet" type="text/css" />
+<![endif]-->
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ asset('js/ui.core.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/ui.tabs.js') }}"></script>
+<script type="text/javascript">
+	$(function(){
+			$('#userdetails-tab > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+			$.getScript("{{ asset('js/user_status_changer.js') }}").done(function() {
+				addLinks("{{ path('droppy_user_ajax_drop') }}",	"{{ path('droppy_user_ajax_undrop') }}");
+				});
+			$('.event_lists .ym-column').click(function(){
+				var event = $(this);
+				$('.event_option:not(:animated)', this).slideToggle('fast', function(){	event.toggleClass("separate");});
+				});	
+			});
+</script>
+{% endblock %}
+
+{% block body %}
+<div id="notifications">
+	<div class="new">12</div>
+	<div class="like">4</div>
+</div>
+
+<div id="main">
+	<div id="col1">
+		<div id="col1_content" class="clearfix">
+			{% include 'DroppyUserBundle:Includes:profile.html.twig' %}
+			{% include 'DroppyEventBundle:Includes:timeline.html.twig' %}
+		</div>
+	</div>
+	<div id="col2">
+		<div id="col2_content" class="clearfix">
+			{% include 'DroppyMainBundle:Includes:recommend_small.html.twig' %}
+		</div>
+	</div>
+	<div id="col3">
+		<div id="col3_content" class="clearfix ym-clearfix">
+			{% include 'DroppyUserBundle:Includes:user_details.html.twig' %}
+		</div><!-- col3_content -->
+	</div><!-- col3 -->
+	<!-- IE Column Clearing -->
+	<div id="ie_clearing"> &#160; </div>
+</div><!-- main -->
+{% endblock %}

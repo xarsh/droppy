@@ -1,0 +1,8 @@
+{% set categories = ['today', 'tomorrow', 'this_week', 'this_month', 'after_this_month'] %}
+<div id="timeline" class="scrollable">
+{% for category in categories %}
+	<div class="{{ category }}" style="display: none;">
+	<div class="daybar">{{ ('timeline.' ~ category) | trans({}, 'DroppyMainBundle') }}</div>
+	</div>
+{% endfor %}
+</div>

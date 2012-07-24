@@ -1,0 +1,38 @@
+{% block javascript %}
+<link type="text/css" href="{{ asset('css/jquery.jscrollpane.css') }}" rel="stylesheet" media="all" />
+<style type="text/css" id="page-css">
+	.jspVerticalBar
+	{
+		left: 0;
+		width:5px;
+	}
+	.jspHorizontalBar
+	{
+		height:0;
+	}
+	.scroll-pane
+	{
+		width: 100%;
+		height: 100%;
+	}
+</style>
+<script type="text/javascript" src="{{ asset('js/jquery.mousewheel.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.jscrollpane.min.js') }}"></script>
+<script type="text/javascript" id="sourcecode">
+	$(function() {
+	    			$('#events_list').jScrollPane();
+			});
+		</script>
+		{% endblock javascript %}
+
+		<div id="events_list" data-prototype="{{ time_line_event_prototype | e }}">
+			{#	{% for title, events in time_line %}
+					{% if events is not empty %}
+						<p class="daybar">{{ title }}</p>
+						{% for event_relation in events %}
+							{% include 'DroppyEventBundle:Includes:single_list_event.html.twig' 
+								with {'event_relation': event_relation} %}
+						{% endfor %}
+					{% endif %}
+				{% endfor %} #}
+		</div>

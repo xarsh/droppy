@@ -1,0 +1,13 @@
+{% extends 'DroppyMainBundle::layout.html.twig' %}
+
+{% block javascript %}
+
+{% endblock %}
+
+{% block body %}
+<div id="content">
+	{% include 'DroppyMainBundle:Includes:popular_events.html.twig' %}
+	{% include 'DroppyMainBundle:Includes:login_box.html.twig' %}
+</div>
+	{% include 'DroppyMainBundle:Includes:footer.html.twig' %}
+{% endblock %}

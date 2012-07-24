@@ -1,0 +1,53 @@
+<div id="user_details" class="scrollable user_details">
+    <button class="button_big white"><%= ExposeTranslation.get('common.back') %></button>
+    <div class="user_profile">
+        <div class="ym-column">
+            <div class="ym-col1">
+                <div class="ym-cbox user_icon">
+                    <img width="128" height="128" src="<%= Assetics.asset(personalDatas.iconSet.icon) %>"/>
+                </div>
+            </div>
+            <div class="ym-col3">
+                <div class="ym-cbox">
+                    <p class="display_name"><%= personalDatas.displayedName %></p>
+                    <p class="unique_name"><%= '>' + username %></p>
+                    <p class="description"><%= personalDatas.introduction != null ? personalDatas.introduction.urlify().nl2br() : '' %></p>
+                    <% if(id != appUser.get('id')) { %>
+                    <p class="drop_button">
+                        <span class="button_small drop <%= dropped ? 'dropping' : '' %>">
+                            <img src="<%= Assetics.staticAsset(dropped ? 'img/check.png' : 'img/drop.png') %>">
+                            <span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop')) %></span>
+                        </span>
+                    </p>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="user_relations_list">
+        <div id="userdetails-tab">
+            <ul>
+                <li class="event_tab"><a href="#event_tab">
+                    <span><%= ExposeTranslation.get('event.created_events') %></span>
+                </a></li>
+                <li class="droppings_tab"><a href="#droppings_tab">
+                    <span><%= ExposeTranslation.get('droppy.droppings') %></span>
+                </a></li>
+                <li class="droppers_tab"><a href="#droppers_tab">
+                    <span><%= ExposeTranslation.get('droppy.droppers') %></span>
+                </a></li>
+            </ul>
+        </div><!-- // #ui-tab-3 -->
+        <div id="event_tab">
+        </div>
+        <div id="droppings_tab">
+            
+        </div>
+        <div id="droppers_tab">
+            <div class="box first-select">
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,44 @@
+{% block javascript %}
+<script type="text/javascript">
+	$(function(){
+    		$('#ui-tab-3 > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+			$("ul#pulldown_items").hide();
+			$("ul#pulldown>li").hover(function(){
+				$("ul:not(:animated)", this).slideDown("fast");},
+				function(){$("ul#pulldown_items",this).slideUp("fast");});
+			});
+</script>
+		{% endblock %}
+
+		<div id="header">
+			<div id="logo">
+				<a href="{{ path('droppy_main_top') }}"><img src="{{ asset('img/header_logo.gif') }}"></a>
+			</div>
+			<div id="setting">
+				<ul id="pulldown">
+					<li>
+					<a href="#"><img src="{{ asset('img/icon_setting.gif') }}"></a>
+					<ul id="pulldown_items">
+						<li><a href="{{ path('droppy_user_personal_datas') }}">{{ 'settings.setting' | trans({}, 'DroppyMainBundle') }}</a></li>
+						<li><a href="{{ path('fos_user_security_logout') }}">{{ 'login.logout' | trans({}, 'DroppyMainBundle') }}</a></li>
+					</ul>
+					</li>
+				</ul>
+			</div>		
+			<div class="recommend">
+				<a href="{{ path('droppy_event_creation') }}"><span>{{ 'event.make_event' | trans({}, 'DroppyMainBundle') }}</span><img src="{{ asset('img/icon_plus.gif') }}"></a>
+			</div>
+			<div class="recommend">
+				<a href="{{ path('droppy_main_recommendations') }}"><span>{{ 'common.recommended' | trans({}, 'DroppyMainBundle') }}</span><img src="{{ asset('img/icon_recommend.gif') }}"></a>
+			</div>
+			<div class="recommend">
+				<a href="{{ path('droppy_main_top') }}"><span>{{ 'header.home' | trans({}, 'DroppyMainBundle') }}</span><img src="{{ asset('img/icon_cal.gif') }}"></a>
+			</div>
+
+			{#	<div class="header_search_form">
+				<form action="" method="post">
+					<input type="text" name="" value="" class="header_search_txt" placeholder="{{ 'header.search_users_and_events' | trans({}, 'DroppyMainBundle') }}">
+				</form>
+			</div> #}
+		</div>
+

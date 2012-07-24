@@ -1,0 +1,555 @@
+{% extends "DroppyWebApplicationBundle::layout.html.twig" %}
+
+{% block javascript %}
+<script type="text/javascript">
+$(function(){
+    $('#ui-tab-2 > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+    $('#ui-tab-3 > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+});
+</script>
+{% endblock %}
+
+{% block body %}
+<!-- begin main2col -->
+<div id="main2col" class="clearfix">
+
+<!-- #account -->
+<div id="account">
+
+<dl class="profile clearfix">
+ <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+ <dd>
+  <p class="name">Account Name</p>
+  <p class="info">プロフィール詳細テキスト。</p>
+ </dd>
+</dl><!-- .profile -->
+
+<!-- #tab -->
+<div id="tab">
+<div id="ui-tab-3">
+<ul>
+	<li class="ui-tab-3-1"><a href="#drop_eve_tab_box"><span>Dropイベント</span></a></li>
+	<li class="ui-tab-3-2"><a href="#drop_cal_tab_box"><span>Dropスケジュール</span></a></li>
+	<li class="ui-tab-3-3"><a href="#make_cal_tab_box"><span>作成スケジュール</span></a></li>
+	<li class="ui-tab-3-4"><a href="#fav_tab_box"><span>お気に入り</span></a></li>
+</ul>
+</div><!-- // #ui-tab-3 -->
+<div id="drop_eve_tab_box">
+ <!-- tab-1 * drop event -->
+ <div class="box">
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="date">12/20（火）<span>19:00</span></p>
+   <p class="name"><a href="/">Drop Schedule Name</a></p>
+   <p class="event-name">Drop Event Name</p>
+   <p class="btn-current png" title="Drop中"><a href="/">Drop中</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="date">12/20（火）<span>19:00</span></p>
+   <p class="name"><a href="/">Drop Schedule Name</a></p>
+   <p class="event-name">Drop Event Name</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="date">12/20（火）<span>19:00</span></p>
+   <p class="name"><a href="/">Drop Schedule Name</a></p>
+   <p class="event-name">Drop Event Name</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="date">12/20（火）<span>19:00</span></p>
+   <p class="name"><a href="/">Drop Schedule Name</a></p>
+   <p class="event-name">Drop Event Name</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="date">12/20（火）<span>19:00</span></p>
+   <p class="name"><a href="/">Drop Schedule Name</a></p>
+   <p class="event-name">Drop Event Name</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="date">12/20（火）<span>19:00</span></p>
+   <p class="name"><a href="/">Drop Schedule Name</a></p>
+   <p class="event-name">Drop Event Name</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="date">12/20（火）<span>19:00</span></p>
+   <p class="name"><a href="/">Drop Schedule Name</a></p>
+   <p class="event-name">Drop Event Name</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ </div>
+ <!-- .end tab-1 * drop event -->
+</div><!-- // #drop_eve_tab_box -->
+<div id="drop_cal_tab_box">
+<!-- tab-2 * drop schedule -->
+ <div class="box">
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Drop Schedule Name</p>
+   <p class="info">詳細テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。詳細テキストが長い場合の表示例。</p>
+   <p class="btn-current png" title="Drop中"><a href="/">Drop中</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Drop Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Drop Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Drop Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Drop Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Drop Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Drop Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ </div>
+ <!-- .end tab-2 * drop schedule -->
+</div><!-- // #drop_cal_tab_box -->
+<div id="make_cal_tab_box">
+<!-- tab-3 * create schedule -->
+ <div class="box first-select">
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。詳細テキストが長い場合の表示例。</p>
+   <p class="btn-current png" title="Drop中"><a href="/">Drop中</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ </div>
+ <!-- .end tab-3 * create schedule -->
+</div><!-- // #make_cal_tab_box -->
+<div id="fav_tab_box">
+<!-- tab-4 * favorite -->
+ <div class="box">
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト。詳細テキストが長い場合の表示例。</p>
+   <p class="btn-current png" title="Drop中"><a href="/">Drop中</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ <!-- set -->
+ <dl class="clearfix">
+  <dt><img src="../images/common/dammy_photo_120x120.gif" width="120" height="120" alt="" /></dt>
+  <dd>
+   <p class="name">Create Schedule Name</p>
+   <p class="info">詳細テキスト</p>
+   <p class="btn-default png" title="Dropする"><a href="/">Dropする</a></p>
+  </dd>
+ </dl>
+ </div>
+ <!-- .end tab-4 * favorite -->
+</div><!-- // #fav_tab_box -->
+
+</div>
+<!-- // end #tab -->
+</div>
+<!-- // end #account -->
+
+<!-- begin side container -->
+<div id="side-container">
+<div id="sidebar_right">
+<p class="btn_style3"><a href="#">スケジュールを作ろう！</a></p>
+<div id="ui-tab-2">
+<h3>人気のスケジュール</h3>
+<ul>
+	<li class="ui-tab-2-1"><a href="#today_cal"><span>本日</span></a></li>
+	<li class="ui-tab-2-2"><a href="#monthly_cal"><span>一ヶ月</span></a></li>
+	<li class="ui-tab-2-3"><a href="#all_cal-2"><span>全て</span></a></li>
+</ul>
+<div id="today_cal">
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+</div><!-- // #today_cal -->
+<div id="monthly_cal">
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+</div><!-- // #monthly_cal -->
+<div id="all_cal-2">
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+</div><!-- // #all_cal-2 -->
+</div><!-- // #ui-tab-2 -->
+<p class="more"><a href="#">▼&nbsp;もっと見る</a></p>
+<h3>オススメスケジュール</h3>
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<p class="more"><a href="#">▼&nbsp;もっと見る</a></p>
+<h3>公式スケジュール</h3>
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<p class="more"><a href="#">▼&nbsp;もっと見る</a></p>
+</div><!-- // #sidebar_right -->
+</div>
+<!-- // end begin side container -->
+
+</div>
+<!-- // end main2col -->
+{% endblock %}

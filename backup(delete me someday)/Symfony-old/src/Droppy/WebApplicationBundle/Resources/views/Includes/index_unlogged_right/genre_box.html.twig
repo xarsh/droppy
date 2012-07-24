@@ -1,0 +1,12 @@
+<div class="genre_box">
+	<h4>{{ 'genre.by_genre' | trans({}, 'DroppyWebApplicationBundle') }}</h4>
+	<ul>
+		{% for genre in genres %}
+		<li><a href="#">{{ genre.name }}</a></li>
+		{% endfor %}
+	</ul>
+	<p>
+		&raquo;&nbsp;<a href="#">{{ 'genre.all_genre' | trans({}, 'DroppyWebApplicationBundle') }}</a>
+	</p>
+</div>
+<!-- // .genre_box -->

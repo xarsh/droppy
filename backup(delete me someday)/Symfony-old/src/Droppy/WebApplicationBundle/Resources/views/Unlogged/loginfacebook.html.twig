@@ -1,0 +1,18 @@
+{% extends "DroppyWebApplicationBundle::layout.html.twig" %}
+
+{% block body %}
+<div id="container">
+    <div class="login_box">
+    <h2 class="facebook">
+      <strong>{{ 'wizard.login_fb' | trans({}, 'DroppyWebApplicationBundle') }}</strong>
+    </h2>
+    <form action="" method="post">
+        <div class="btn_login_fb">
+            <a href="#"><img src="{{ asset('images/common/btn_sign_in_fb.gif') }}" 
+                                                alt="{{ 'wizard.fb_button' | trans({}, 'DroppyWebApplicationBundle') }}">
+            </a>
+        </div>
+    </form>
+    </div><!-- // .login_box -->
+</div>
+{% endblock %}

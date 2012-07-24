@@ -1,0 +1,19 @@
+{% extends "::layout.html.twig" %}
+
+{% block title %}{{ parent() }}{% endblock %}
+
+{% block javascript %} {% endblock %}
+
+{% block header %}
+{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+	{% include 'DroppyWebApplicationBundle:Includes:logged_header.html.twig' %}
+{% else %}
+	{% include 'DroppyWebApplicationBundle:Includes:unlogged_header.html.twig' 
+		with {'action': 'header.unlogged.login' | trans({}, 'DroppyWebApplicationBundle'), 
+		      'action_name': 'header.unlogged.login' | trans({}, 'DroppyWebApplicationBundle'),
+	              'facebook_action_path': 'droppy_general_index', 
+		      'droppy_action_path': 'fos_user_security_login'} %}
+{% endif %}
+{% endblock %}
+
+{% block body %}{% endblock %}

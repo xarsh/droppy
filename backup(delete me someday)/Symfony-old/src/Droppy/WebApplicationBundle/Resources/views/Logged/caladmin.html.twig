@@ -1,0 +1,1228 @@
+{% extends "DroppyWebApplicationBundle::layout.html.twig" %}
+
+{% block javascript %}
+<script type="text/javascript">
+$(function(){
+    $('#ui-tab > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+    $('#ui-tab-2 > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+    
+    $("#datepicker1").datepicker();
+	$("#datepicker2").datepicker();
+	$("#datepicker3").datepicker();
+	$("#datepicker14").datepicker();
+	
+	$("#datepicker4").datepicker();
+	$("#datepicker5").datepicker();
+	$("#datepicker6").datepicker();
+	$("#datepicker7").datepicker();
+	$("#datepicker8").datepicker();
+	$("#datepicker9").datepicker();
+	$("#datepicker10").datepicker();
+	$("#datepicker11").datepicker();
+	$("#datepicker12").datepicker();
+	$("#datepicker13").datepicker();
+});
+
+$(document).ready(function(){
+	$(".repeat_section").css("display", "none");
+	$('.repeat_section_check :checkbox').click(function(){
+	    var idname = this.value;
+	    $("tr[id^=" + idname + "]").each(function(){
+	    	$(this).toggle();
+		});
+	});
+});
+</script>
+{% endblock %}
+
+{% block body %}
+<div id="main">
+<div id="sidebar_left">
+<div class="sidebar_left_body">
+<div id="ui-tab">
+<ul>
+	<li class="ui-tab-4"><a href="#all_eve"><span>全イベント</span></a></li>
+	<li class="ui-tab-5"><a href="#drop_now"><span>Dropユーザー(81)</span></a></li>
+</ul>
+<div id="all_eve" class="change_eve_detail">
+<!-- event list start -->
+<div class="event_list bg_today">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1_o"><a href="#"><span>Drop中</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">12/20（火）</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+<p class="eve_ttl">Eventタイトル</p>
+<p class="hms">19:00</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+</div><!-- // #all_eve -->
+<div id="drop_now">
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+<!-- event list start -->
+<div class="event_list">
+<div class="event_list_body">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p class="ymd">ユーザー名</p>
+</div>
+<br class="clear">
+</div>
+</div>
+<!-- event list end -->
+</div><!-- // #drop_now -->
+</div><!-- // #ui-tab -->
+</div><!-- // .sidebar_left_body -->
+</div><!-- // #sidebar_left -->
+<div id="content_3column">
+<div class="main_cal_box">
+<ul class="cal_menu">
+	<li class="make_button"><a href="#" data-reveal-id="modalwin_make_button"><span>ボタンを作る</span></a></li>
+    <li class="cal_set"><a href="#"><span>スケジュール設定</span></a></li>
+    <li class="preview"><a href="#"><span>プレビュー</span></a></li>
+    <li class="invite"><a href="#" data-reveal-id="modalwin_invite"><span>友達招待</span></a></li>
+</ul><!-- // .cal_menu -->
+<div class="reveal-modal" id="modalwin_make_button">
+<div class="overlay_body">
+<p><a class="close-reveal-modal">×</a></p>
+<form action="" method="post">
+<h3><strong>Dropボタンを作ろう！</strong></h3>
+<p class="caption">このボタンをあなたのWebサイトやブログに設置すれば、ユーザーに｢●●｣のスケジュールをDropしてもらうことができます。</p>
+<h4>ボタン選択</h4>
+<div class="button_select_box">
+<div class="btn_type_box">
+<label>
+<input type="radio" name="" value=""><br>
+<img src="../images/common/drop_btn_type1.gif" alt="">
+</label>
+</div><!-- // .btn_type_box -->
+<div class="btn_type_box">
+<label>
+<input type="radio" name="" value=""><br>
+<img src="../images/common/drop_btn_type2.gif" alt="">
+</label>
+</div><!-- // .btn_type_box -->
+<div class="btn_type_box">
+<label>
+<input type="radio" name="" value=""><br>
+<img src="../images/common/drop_btn_type3.gif" alt="">
+</label>
+</div><!-- // .btn_type_box -->
+<div class="btn_type_box">
+<label>
+<input type="radio" name="" value=""><br>
+<img src="../images/common/drop_btn_type4.gif" alt="">
+</label>
+</div><!-- // .btn_type_box -->
+<br class="clear">
+</div><!-- // .button_select_box -->
+<h4>貼付用コード<span>（このコードをあなたのWebサイトに貼り付けて下さい。）</span></h4>
+<div class="code_box">
+<textarea rows="5" cols="10"></textarea>
+</div><!-- // .code_box -->
+<p class="btn_style6"><a href="#">OK</a></p>
+</form>
+</div><!-- // .overlay_body -->
+</div><!-- // .reveal-modal #modalwin_make_button -->
+<div class="reveal-modal" id="modalwin_invite">
+ <div class="overlay-body">
+ <p><a class="close-reveal-modal">×</a></p>
+  <h3 class="headline">友人にスケジュールを招待しよう！</h3>
+  <div class="inside-box">
+   <form action="" method="post">
+    <div class="name"><label><span class="title">友人名もしくはURL</span><input type="text" name="" value="" /></label></div>
+    <ul class="clearfix">
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+     <li><label><input type="checkbox" name="" value=""><img src="../images/common/dammy_photo_45x45.gif" alt=""></label></li>
+    </ul>
+    <dl class="clearfix">
+     <dt><a class="bt" href="/" title="送信">送信</a></dt>
+     <dd><a class="bt" href="/" title="キャンセル">キャンセル</a></dd>
+    </dl>
+   </form>
+  </div><!-- // .inside-box -->
+ </div><!-- // .overlay_body -->
+</div><!-- // .reveal-modal #modalwin_invite -->
+<div class="cal_info_box">
+<div class="photo"><img src="../images/common/dammy_photo_120x120.gif" alt=""></div>
+<div class="txt">
+<h2>スケジュール名</h2>
+<p>詳細テキストが入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+<p class="author">作成者：山田太郎</p>
+</div>
+<br class="clear">
+</div><!-- // .cal_info_box -->
+<div class="cal_social_box">
+<ul>
+	<li class="btn_drop"><strong class="drop_btn_style2"><a href="#"><span>Dropする</span></a></strong></li>
+    <li class="btn_like"><img src="../images/cal/dammy_btn_like.gif" alt=""></li>
+    <li class="btn_tweet"><img src="../images/cal/dammy_btn_tweet.gif" alt=""></li>
+</ul>
+<br class="clear">
+</div><!-- // .cal_social_box -->
+<div class="cal_ymd_box">
+<div class="bg">
+<ul>
+    <li class="prev"><a href="#"><img src="../images/common/btn_prev.gif" alt="Prev"></a></li>
+    <li class="ymd">2011年10月</li>
+    <li class="next"><a href="#"><img src="../images/common/btn_next.gif" alt="Next"></a></li>
+</ul>
+<br class="clear">
+</div><!-- // .bg -->
+</div><!-- // .cal_ymd_box -->
+<table border="0" cellpadding="0" cellspacing="0" class="main_calender">
+    <tr>
+        <th><p>月</p></th>
+        <th><p>火</p></th>
+        <th><p>水</p></th>
+        <th><p>木</p></th>
+        <th><p>金</p></th>
+        <th class="sat"><p>土</p></th>
+        <th class="sun"><p>日</p></th>
+    </tr>
+    <tr>
+        <td><div><span class="days txt_gray">26</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days txt_gray">27</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days txt_gray">28</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days txt_gray">29</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days txt_gray">30</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sat"><div><span class="days">1</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sun"><div><span class="days">2</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+    </tr>
+    <tr>
+        <td><div><span class="days">3</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">4</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">5</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">6</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">7</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sat"><div><span class="days">8</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sun"><div><span class="days">9</span><span class="eve_name">イベント<br>DVD発売</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+    </tr>
+    <tr>
+        <td><div><span class="days">10</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">11</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">12</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">13</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">14</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sat"><div><span class="days">15</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sun"><div><span class="days">16</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+    </tr>
+    <tr>
+        <td><div><span class="days">17</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="today"><div><span class="days">18</span><span class="eve_name">CD発売</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">19</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">20</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">21</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sat"><div><span class="days">22</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sun"><div><span class="days">23</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+    </tr>
+    <tr>
+        <td><div><span class="days">24</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">25</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">26</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">27</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">28</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sat"><div><span class="days">29</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sun"><div><span class="days">30</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+    </tr>
+    <tr>
+        <td><div><span class="days">30</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days">31</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days txt_gray">1</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days txt_gray">2</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td><div><span class="days txt_gray">3</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sat"><div><span class="days txt_gray">4</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+        <td class="sun"><div><span class="days txt_gray">5</span><p><a href="#" data-reveal-id="modalwin"></a></p></div></td>
+    </tr>
+</table>
+<p class="make_bundle"><a href="#" data-reveal-id="modalwin_make_multiple"><span>まとめて作る</span></a></p>
+<div class="reveal-modal" id="modalwin_make_multiple">
+<div class="overlay_body">
+<p><a class="close-reveal-modal">×</a></p>
+<form action="" method="post">
+<h3><strong>イベントをまとめて作る</strong></h3>
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th><strong>タイトル</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" class="txt_field">
+		</td>
+	</tr>
+	<tr>
+		<th><strong>日時</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker4" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</td>
+	</tr>
+	<tr>
+		<th><strong>&nbsp;</strong></th>
+		<td>
+		<p class="end_set">終了時間を入力</p>
+		<div class="end_ymd">
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker5" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</div>
+		</td>
+	</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th><strong>タイトル</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" class="txt_field">
+		</td>
+	</tr>
+	<tr>
+		<th><strong>日時</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker6" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</td>
+	</tr>
+	<tr>
+		<th><strong>&nbsp;</strong></th>
+		<td>
+		<p class="end_set">終了時間を入力</p>
+		<div class="end_ymd">
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker7" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</div>
+		</td>
+	</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th><strong>タイトル</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" class="txt_field">
+		</td>
+	</tr>
+	<tr>
+		<th><strong>日時</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker8" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</td>
+	</tr>
+	<tr>
+		<th><strong>&nbsp;</strong></th>
+		<td>
+		<p class="end_set">終了時間を入力</p>
+		<div class="end_ymd">
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker9" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</div>
+		</td>
+	</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th><strong>タイトル</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" class="txt_field">
+		</td>
+	</tr>
+	<tr>
+		<th><strong>日時</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker10" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</td>
+	</tr>
+	<tr>
+		<th><strong>&nbsp;</strong></th>
+		<td>
+		<p class="end_set">終了時間を入力</p>
+		<div class="end_ymd">
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker11" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</div>
+		</td>
+	</tr>
+</table>
+<table border="0" cellspacing="0" cellpadding="0" class="last">
+	<tr>
+		<th><strong>タイトル</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" class="txt_field">
+		</td>
+	</tr>
+	<tr>
+		<th><strong>日時</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker12" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</td>
+	</tr>
+	<tr>
+		<th><strong>&nbsp;</strong></th>
+		<td>
+		<p class="end_set">終了時間を入力</p>
+		<div class="end_ymd">
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker13" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</div>
+		</td>
+	</tr>
+</table>
+<p class="btn_style5"><a href="#">作成</a></p>
+</form>
+</div><!-- // .overlay_body -->
+</div><!-- // .reveal-modal #modalwin_make_multiple -->
+<div class="reveal-modal" id="modalwin">
+<div class="overlay_body">
+<p><a class="close-reveal-modal">×</a></p>
+<form action="" method="post">
+<h3><strong>イベントを作る</strong></h3>
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th><strong>タイトル</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" class="txt_field">
+		</td>
+	</tr>
+	<tr>
+		<th><strong>日時</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker1" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</td>
+	</tr>
+	<tr>
+		<th><strong>&nbsp;</strong></th>
+		<td>
+		<p class="end_set">終了時間を入力</p>
+		<div class="end_ymd">
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" id="datepicker2" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</div>
+		</td>
+	</tr>
+</table>
+<p class="btn_style5"><a href="#">作成</a></p>
+<p class="more">もっと詳しく</p>
+<div class="more_sche_box">
+<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<th><strong>詳細</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<textarea rows="5" cols="10"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<th><strong>場所</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<select name="">
+        <option value="">東京都</option>
+        <option value="">東京都</option>
+        <option value="">東京都</option>
+        </select>&nbsp;&nbsp;
+        <input type="text" name="" value="" class="txt_field_s">
+		</td>
+	</tr>
+	<tr>
+		<th><strong>画像</strong></th>
+		<td>
+		<div class="photo"><img src="../images/common/dammy_photo_150x150.gif" alt=""></div>
+		<input type="file" name="" value=""><br>
+		<span class="size_set_txt">画像の容量は--KB以下でお願いします。サポートしているフォーマットはGIFとJPGとPNGです。</span>
+		</td>
+	</tr>
+	<tr>
+		<th><strong>ジャンル</strong></th>
+		<td>
+		<select name="">
+        <option value="">IT</option>
+        <option value="">IT</option>
+        <option value="">IT</option>
+        </select>
+		</td>
+	</tr>
+	<tr>
+		<th><strong>タグ</strong></th>
+		<td>
+		<span class="error_msg">※エラーメッセージが入ります</span>
+		<input type="text" name="" value="" class="txt_field">
+		</td>
+	</tr>
+	<tr>
+		<th><strong>繰り返し</strong></th>
+		<td class="repeat_section_check"><input type="checkbox" value="hogehoge"></td>
+	</tr>
+	<tr id="hogehoge0" class="repeat_section">
+		<th><strong>繰り返し</strong></th>
+		<td>
+		<select name="">
+        <option value="">毎週</option>
+        <option value="">毎週</option>
+        <option value="">毎週</option>
+        </select>
+		</td>
+	</tr>
+    <tr id="hogehoge1" class="repeat_section">
+		<th><strong>繰り返す間隔</strong></th>
+		<td>
+		<select name="">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+        </select>
+        &nbsp;週間
+		</td>
+	</tr>
+    <tr id="hogehoge2" class="repeat_section">
+		<th><strong>曜日</strong></th>
+		<td>
+		<label><input type="checkbox" value="">&nbsp;日</label>&nbsp;
+        <label><input type="checkbox" value="">&nbsp;月</label>&nbsp;
+        <label><input type="checkbox" value="">&nbsp;火</label>&nbsp;
+        <label><input type="checkbox" value="">&nbsp;水</label>&nbsp;
+        <label><input type="checkbox" value="">&nbsp;木</label>&nbsp;
+        <label><input type="checkbox" value="">&nbsp;金</label>&nbsp;
+        <label><input type="checkbox" value="">&nbsp;土</label>&nbsp;
+		</td>
+	</tr>
+    <tr id="hogehoge3" class="repeat_section">
+		<th><strong>開始日</strong></th>
+		<td>
+		<input type="text" name="" value="" id="datepicker3" class="txt_field_ss">&nbsp;&nbsp;
+        <select name="">
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        <option value="">00:00</option>
+        </select>
+		</td>
+	</tr>
+    <tr id="hogehoge4" class="repeat_section">
+		<th><strong>終了日</strong></th>
+		<td class="repeat_seciton_over">
+		<label><input type="radio" name="" value="">&nbsp;なし</label>
+        <label><input type="radio" name="" value="">&nbsp;<input type="text" name="" value="" class="txt_field_ssss">&nbsp;回</label>
+        <label><input type="radio" name="" value="">&nbsp;<input type="text" name="" value="" class="txt_field_sss"></label>
+		</td>
+	</tr>
+    <tr id="hogehoge5" class="repeat_section">
+		<th><strong>概要</strong></th>
+		<td>毎週 火曜日</td>
+	</tr>
+</table>
+<p class="add_sche">日程を追加</p>
+<div class="add_sche_ymd">
+<span class="error_msg">※エラーメッセージが入ります</span>
+<input type="text" name="" value="" id="datepicker14" class="txt_field_ss">&nbsp;&nbsp;
+<select name="">
+<option value="">00:00</option>
+<option value="">00:00</option>
+<option value="">00:00</option>
+<option value="">00:00</option>
+</select>
+</div><!-- // .add_sche_ymd -->
+<p class="btn_style5"><a href="#">作成</a></p>
+</div><!-- // .more_sche_box -->
+</form>
+</div><!-- // .overlay_body -->
+</div><!-- // .reveal-modal #modalwin -->
+</div><!-- // .main_cal_box -->
+
+<div class="eve_detail_box">
+<p class="return_cal">閉じる</p>
+<div class="eve_ttl">
+<div class="inner">
+<h3><strong>定例飲み会</strong></h3>
+<p><span>●月●日(金)19:00～21:00</span></p>
+<br class="clear">
+</div>
+</div><!-- // .eve_ttl -->
+<div class="eve_info">
+<div class="photo"><img src="../images/common/dammy_photo_120x120.gif" alt=""></div>
+<div class="inner">
+<ul class="social">
+    <li><img src="../images/common/dammy_btn_droppy.gif" alt=""></li>
+    <li><img src="../images/common/dammy_btn_tweet.gif" alt=""></li>
+    <li><img src="../images/common/dammy_btn_like.gif" alt=""></li>
+</ul>
+<p class="eve_cal_name">in<strong>○○スケジュール</strong></p>
+<p class="eve_tag">タグ　#早稲田, #サークル</p>
+</div>
+<br class="clear">
+</div><!-- // .eve_info -->
+<p class="txt">詳細が入ります。テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+</div><!-- // .eve_detail_box -->
+
+</div><!-- // #content_3column -->
+<div id="sidebar_right">
+<div id="ui-tab-2">
+<h3 class="first">人気のスケジュール</h3>
+<ul>
+	<li class="ui-tab-2-1"><a href="#today_cal"><span>本日</span></a></li>
+	<li class="ui-tab-2-2"><a href="#monthly_cal"><span>一ヶ月</span></a></li>
+	<li class="ui-tab-2-3"><a href="#all_cal-2"><span>全て</span></a></li>
+</ul>
+<div id="today_cal">
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+</div><!-- // #today_cal -->
+<div id="monthly_cal">
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+</div><!-- // #monthly_cal -->
+<div id="all_cal-2">
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+</div><!-- // #all_cal-2 -->
+</div><!-- // #ui-tab-2 -->
+<p class="more"><a href="#">▼&nbsp;もっと見る</a></p>
+<h3>オススメスケジュール</h3>
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<p class="more"><a href="#">▼&nbsp;もっと見る</a></p>
+<h3>公式スケジュール</h3>
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<!-- cal list start -->
+<div class="cal_list">
+<div class="photo"><img src="../images/common/dammy_photo_45x45.gif" alt=""></div>
+<div class="txt">
+<p>スケジュール名</p>
+<div class="btn"><p class="drop_btn_style1"><a href="#"><span>Dropする</span></a></p></div>
+</div>
+<br class="clear">
+</div>
+<!-- cal list end -->
+<p class="more"><a href="#">▼&nbsp;もっと見る</a></p>
+</div><!-- // #sidebar_right -->
+<br class="clear">
+</div><!-- // #main -->
+{% endblock %}

@@ -1,0 +1,288 @@
+div#event_details {
+	background-color:#eaf4fc;
+	padding:20px;
+	height:100%;
+}
+div.event_details_tools div.button {
+	border-top: 1px solid #ccc;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #ccc;
+	padding: 5px 20px;
+	margin:5px 20px;
+	font-weight: bold;
+	cursor: pointer;
+	color: #666;
+	background-color:#a0d8ef;
+	float:left;
+}
+div.event_details_tools a.button {
+	text-decoration:none;
+}
+div.event_details_tools ul.social {
+	padding-top:10px;
+}
+div.event_details_tools ul.social li {
+	display: inline;
+	padding-right: 10px;
+}
+div.event_details_title {
+	height:150px;
+}
+div.event_details_title h1 {
+	font-size:2em;
+	height:100px;
+	line-height:110px;
+}
+div.event_details_title h2 {
+	font-weight:normal;
+	line-height:0px;
+}
+div.event_details_title img {
+	float:left;
+	margin:20px 20px;
+	vertical-align:middle;
+}
+div.event_details_summary {
+	padding:10px 20px;
+	width: 450px;
+}
+div.event_details_summary a {
+	color: #000000;
+	text-decoration: underline;
+}
+div.event_details_summary dt {
+	width:50px;
+}
+div.event_details_summary dl dt {
+	color: #666666;
+	float: left;
+	padding-bottom: 20px;
+}
+div.event_details_summary dl dd {
+	font-weight: bold;
+	padding-bottom: 20px;
+	word-wrap: break-word;
+}
+div.event_details_summary span.symbol-hash {
+	color: #4FA1BD;
+	font-family: Arial;
+	font-size: 1.2em;
+	font-weight: normal;
+	padding-right: 3px;
+}
+div.event_details_summary span.tag {
+	font-family: Arial;
+	font-size: 1.2em;
+	font-weight: bold;
+	padding-right: 15px;
+}
+div.event_details_body {
+	border-bottom: 1px solid #757575;
+	border-top: 1px solid #757575;
+	clear: both;
+	padding: 30px 0 15px;
+}
+div.calendar_tools {
+	height:30px;
+	padding:10px 20px 0 20px;
+}
+div.calendar_tools img {
+	vertical-align:middle;
+	margin-left:10px;
+	margin-right:10px;
+}
+div.calendar_tools td.calendar_title {
+	font-size:20px;
+	font-weight:bold;
+	text-align:center;
+}
+div.calendar_tools td.prevmonth {
+}
+div.calendar_tools td.nextmonth {
+	text-align:right;
+}
+.main_calender {
+	height:100%;
+	width:100%;
+	border-collapse:collapse;
+	border-top:1px solid #ccc;
+	border-right:1px solid #ccc;
+}
+.main_calender th {
+	height:20px;
+	border-collapse:collapse;
+	color:#fff;
+	padding:5px 0;
+	border-left:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	text-align:center;
+	vertical-align:middle;
+	font-weight:normal;
+	background-color:#999999;
+}
+.main_calender th.sat {
+	background-color:#6ba1d4;
+}
+.main_calender th.sun {
+	background-color:#FF6666;
+}
+.main_calender td {
+	border-collapse:collapse;
+	border-left:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	text-align:left;
+	vertical-align:top;
+	font-weight:normal;
+	background-color:#f9f9f9;
+}
+.main_calender td.sat {
+	background-color:#e3f1fd;
+}
+.main_calender td.sun {
+	background-color:#ffe4de;
+}
+.main_calender td .txt_gray {
+	color:#b9b9b9;
+}
+.main_calender td div {
+	position:relative;
+	left:0;
+	top:0;
+}
+.main_calender td p {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:0;
+	cursor:default;
+}
+.main_calender td p a {
+	display:block;
+}
+.main_calender td .days {
+	display:block;
+	position:absolute;
+	left:5px;
+	top:3px;
+	z-index:1;
+	font-weight:bold;
+	cursor:default;
+}
+.main_calender td .eve_name {
+	display:block;
+	position:absolute;
+	left:5px;
+	top:18px;
+	z-index:1;
+	line-height:1.4;
+	cursor:default;
+}
+.main_calender td.today {
+	background-color:#e0ebaf;
+}
+.main_calender td.today:hover, .main_calender td:hover, .main_calender td.sat:hover, .main_calender td.sun:hover, .main_calender td.today:hover {
+	color:#000;
+	background-color:#c3e2fd;
+}
+div#content {
+	margin: 0 auto;
+	padding: 20px 0 50px;
+	text-align: left;
+	width: 960px;
+}
+div#popular_events {
+	width:680px;
+	float:left;
+}
+div#popular_events p.toppage_lead {
+	line-height: 1.6;
+	margin-top: 10px;
+	font-size:16px;
+}
+div#popular_events div.ttl {
+    background: url("../img/bg_title.png") no-repeat scroll 0 0 transparent;
+    height: 34px;
+    margin-top: 35px;
+    overflow: hidden;
+    width: 680px;
+}
+div#popular_events div.ttl h3 {
+    float: left;
+    font-size: 16px;
+    padding: 8px 0 0 12px;
+}
+div#popular_events ul {
+    display:inline-block;
+}
+div#popular_events div.cal_list {
+	margin:20px 0 10px 20px;
+}
+div#popular_events div.cal_list li {
+    margin: 0 10px 5px 0;
+    float: left;
+    text-align: center;
+    width: 150px;
+}
+div#popular_events div.cal_list li a {
+    color: #08ADFA;
+	text-decoration:none;
+}
+div#right_pane {
+	float:right;
+}
+p.signup {
+	background: url(../img/btn_login.gif) no-repeat scroll 0 0 transparent;
+	height: 60px;
+	text-align: center;
+	width: 250px;
+}
+p.signup span, p.signup a {
+	color: #FFFFFF;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 60px;
+	line-height: 60px;
+	text-decoration: none;
+	width: 250px;
+}
+div#loginbox span {
+	color: #FFFFFF;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: 60px;
+	line-height: 60px;
+	text-decoration: none;
+	width: 250px;
+}
+div#popular_events {
+	float:left;
+}
+div#rule_text {
+    margin: 0 auto;
+    padding: 0 0 25px;
+    text-align: left;
+    width: 800px;
+}
+div#rule_text h2 {
+    color: #333333;
+    font-size: 20px;
+    margin: 0 0 5px;
+}
+div#rule_text h3 {
+    color: #333333;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 0 10px;
+}
+div#rule_text p {
+    color: #333333;
+    line-height: 1.6;
+    margin: 0 10px 30px;
+}
+div#rule_text p.contact_us {
+    border-left: 3px solid #EEEEEE;
+    padding-left: 10px;
+}

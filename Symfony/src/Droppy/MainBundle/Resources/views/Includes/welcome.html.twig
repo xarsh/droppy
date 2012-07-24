@@ -1,0 +1,58 @@
+{% block css %}
+<link href="{{ asset('css/top/welcome.css') }}" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+<div id="welcome">
+	<div class="popup message">
+		<div class="title">
+			<strong>{{ 'welcome.welcome' | trans({}, 'DroppyMainBundle') }}</strong>
+		</div>
+		<div class="explanation">
+			<span>{{ 'welcome.welcome_explanation' | trans({}, 'DroppyMainBundle') | raw }}</span>
+		</div>
+		<div class="buttons">
+			<span class="button_small finish">{{ 'button.skip' | trans({}, 'DroppyMainBundle') }}</span>
+			<span class="button_small next">{{ 'common.next' | trans({}, 'DroppyMainBundle') }}</span>
+		</div>
+	</div>
+
+	<div class="popup arrow recommended">
+		<div class="title">
+			<strong>{{ 'welcome.recommended' | trans({}, 'DroppyMainBundle') }}</strong>
+		</div>
+		<div class="explanation">
+			<span>{{ 'welcome.recommended_explanation' | trans({}, 'DroppyMainBundle') | raw }}</span>
+		</div>
+		<div class="buttons">
+			<span class="button_small finish">{{ 'button.skip' | trans({}, 'DroppyMainBundle') }}</span>
+			<span class="button_small next">{{ 'common.next' | trans({}, 'DroppyMainBundle') }}</span>
+		</div>
+	</div>
+
+	<div class="popup arrow timeline">
+		<div class="title">
+			<strong>{{ 'welcome.timeline' | trans({}, 'DroppyMainBundle') }}</strong>
+		</div>
+		<div class="explanation">
+			<span>{{ 'welcome.timeline_explanation' | trans({}, 'DroppyMainBundle') | raw }}</span>
+		</div>
+		<div class="buttons">
+			<span class="button_small finish">{{ 'button.skip' | trans({}, 'DroppyMainBundle') }}</span>
+			<span class="button_small next">{{ 'common.next' | trans({}, 'DroppyMainBundle') }}</span>
+		</div>
+	</div>
+
+	<div class="popup arrow event_creation" id="ewp">
+		<div class="title">
+			<strong>{{ 'welcome.event_creation' | trans({}, 'DroppyMainBundle') }}</strong>
+		</div>
+		<div class="explanation">
+			<span>{{ 'welcome.event_creation_explanation' | trans({}, 'DroppyMainBundle') | raw }}</span>
+		</div>
+		<div class="buttons">
+			<span class="button_small finish">{{ 'button.close' | trans({}, 'DroppyMainBundle') }}</span>
+		</div>
+	</div>
+</div>
+
+

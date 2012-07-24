@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+    
+    <route id="droppy_user_ajax_recommended_users" pattern="/recommended-users">
+        <default key="_controller">droppy_user.api:getRecommendedUsersAction</default>
+    </route>
+    
+    <route id="droppy_user_ajax_aetelrecommended_users" pattern="/aetel-recommended-users">
+        <default key="_controller">droppy_user.api:getAetelRecommendedUsersAction</default>
+    </route>
+    
+    <route id="droppy_user_ajax_isobeselected_users" pattern="/selected-users">
+        <default key="_controller">droppy_user.api:getIsobeSelectedUsersAction</default>
+    </route>
+    
+    <route id="droppy_user_ajax_drop" pattern="/drop">
+        <default key="_controller">droppy_user.api:dropUserAction</default>
+        <requirement key="user_id">\d+</requirement>
+        <requirement key="_method">POST</requirement>
+    </route>
+    
+    <route id="droppy_user_ajax_undrop" pattern="/undrop">
+        <default key="_controller">droppy_user.api:undropUserAction</default>
+        <requirement key="user_id">\d+</requirement>
+        <requirement key="_method">POST</requirement>
+    </route>
+    
+    <route id="droppy_user_ajax_get_user" pattern="/get-user">
+        <default key="_controller">droppy_user.api:getUserAction</default>
+        <requirement key="user_id">\d+</requirement>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+    <route id="droppy_user_ajax_get_by_username" pattern="/get-by-username">
+        <default key="_controller">droppy_user.api:getUserByUsernameAction</default>
+        <requirement key="username">[a-zA-Z0-9_]+</requirement>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+    <route id="droppy_user_ajax_details_html" pattern="/user-details-html">
+        <default key="_controller">DroppyUserBundle:AJAXRequest:getUserDetailsHtml</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+    <route id="droppy_user_ajax_dropping_users" pattern="/dropping-users">
+        <default key="_controller">droppy_user.api:getDroppingUsersAction</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+    <route id="droppy_user_ajax_droppers" pattern="/droppers">
+        <default key="_controller">droppy_user.api:getDroppersAction</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+    <route id="droppy_user_ajax_set_started" pattern="/set-started">
+        <default key="_controller">droppy_user.api:setStartedAction</default>
+        <requirement key="_method">POST</requirement>
+    </route>
+    
+    <route id="droppy_user_ajax_lock_user" pattern="/lock-user">
+        <default key="_controller">droppy_user.api:lockUserAction</default>
+        <requirement key="_method">POST</requirement>
+        <requirement key="user_id">\d+</requirement>
+    </route>
+    
+    <route id="droppy_user_ajax_search_users" pattern="/search">
+        <default key="_controller">droppy_user.api:searchUsersAction</default>
+        <requirement key="_method">GET</requirement>
+    </route>
+    
+</routes>

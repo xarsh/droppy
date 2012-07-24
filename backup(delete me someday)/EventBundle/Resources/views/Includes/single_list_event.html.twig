@@ -1,0 +1,47 @@
+{% set event = event_relation.event %}
+<div class="event_wrapper" event_id="{{ event.id }}">
+	<li class="today">
+		<div class="event_avatar">
+			{% if event.iconSet.uploaded %}
+				<img src="{{ asset(event.iconSet.smallIconPath) }}" alt="" width="32" height="32">
+			{% else %}
+				<img src="{{ asset('img/dummy_120x120.gif') }}" alt="" width="32" height="32">
+			{% endif %}
+		</div>
+		<div class="event_text">
+			<p class="event_datetime">
+				{% if (event.startDateTime.date | date("Y")) == "now" | date("Y") %}
+				{{ event.startDateTime.date | date('time.month_day' | trans({}, 'DroppyMainBundle'))}}
+				{% else %}
+				{{ event.startDateTime.date | date('time.year_month_day' | trans({}, 'DroppyMainBundle')) }}
+				{% endif %}
+				{% if event.startDateTime.time is not null %}
+					{{ event.startDateTime.time | date("G:i") }}
+				{% endif %}
+			</p>
+			<p class="event_title">{{ event.name }}</p>
+		</div>
+		{% if app.user.id != event.creator.id %}
+			<div class="event_btn">
+				{% if event_relation.eventLiked %}
+					<span class="like_status unlike"><img src="{{ asset('img/btn_liked.png') }}"></span>
+					<span class="like_status like hidden"><img src="{{ asset('img/btn_like.png') }}"></span>
+				{% else %}
+					<span class="like_status like"><img src="{{ asset('img/btn_like.png') }}"></span>
+					<span class="like_status unlike hidden"><img src="{{ asset('img/btn_liked.png') }}"></span>
+				{% endif %}
+				<span class="like_processing hidden"><img src="{{ asset('img/btn_processing_smallest.gif') }}"></span>
+				{% if event_relation.inCalendar %}
+					<span class="drop_status drop hidden"><img src="{{ asset('img/btn_in.png') }}"></span>
+					<span class="drop_status undrop"><img src="{{ asset('img/btn_in_done.png') }}"></span>
+				{% else %}
+					<span class="drop_status drop"><img src="{{ asset('img/btn_in.png') }}"></span>
+					<span class="drop_status undrop hidden"><img src="{{ asset('img/btn_in_done.png') }}"></span>
+				{% endif %}
+				<span class="drop_processing hidden"><img src="{{ asset('img/btn_processing_smallest.gif') }}"></span>
+				
+			</div>
+		{% endif %}
+	</li>
+	<div class="clear"></div>
+</div>

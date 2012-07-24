@@ -1,0 +1,20 @@
+body, textarea { font-family: "���C���I", "�l�r �o�S�V�b�N", sans-serif; }
+input, select { font-family: Arial, "�l�r �o�S�V�b�N", sans-serif; }
+#settings_menu li.active a {
+	color:#ffffff;
+}
+.settings_items {
+	background-color:#fff;
+}
+.setting_items th {
+	width:38%;
+}
+.setting_items td {
+	width:62%;
+}
+div.button {
+	margin:20px auto;
+}
+.setting_items .button span {
+	margin-left:30px;
+}

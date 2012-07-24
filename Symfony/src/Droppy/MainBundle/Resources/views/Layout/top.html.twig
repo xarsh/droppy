@@ -1,0 +1,39 @@
+{% extends 'DroppyMainBundle::layout.html.twig' %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ asset('js/libs/require/require.js') }}"></script>
+<script type="text/javascript">
+define('config', function() {
+	return {
+		bootstrappedUser : {{ bootstrappedUser | json_encode | raw }},
+        bootstrappedTimeline : {{ bootstrappedTimeline | json_encode | raw }},
+        bootstrappedCalendar : {{ bootstrappedCalendar | json_encode | raw }}
+	};
+});
+</script>
+<script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+{% endblock javascript %}
+
+{% block body %}	
+	<div id="wrapper">
+		<div id="top_message_wrapper">
+			<div id="top_message" style="display: none;">
+				<p></p>
+			</div>
+		</div>
+		<div class="page_margins">
+			{% include 'DroppyMainBundle:Includes:header_logged.html.twig' %}
+			<div id="body">
+				<div id="left">
+					{% include 'DroppyEventBundle:Includes:timeline.html.twig' %}
+				</div>
+				<div id="right">
+					{% include 'DroppyUserBundle:Includes:recommend_users.html.twig' %}
+				</div>
+				<div id="main">
+					<div id="ie_clearing"> &#160; </div>
+				</div>
+			</div>			
+		</div>
+	</div>
+{% endblock body %}

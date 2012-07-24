@@ -1,0 +1,214 @@
+{#
+<script type="text/javascript" src="{{ asset('js/event_display.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/event_container.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/calendar_events.js') }}"></script>
+<script type="text/javascript" src="{{ url('bazinga_exposetranslation_js', { '_locale' : app.session.locale }) }}"></script>
+<script type="text/javascript">
+window.firstDayOfCalendar = new Date();
+window.lastDayOfCalendar = new Date();
+window.firstDayOfWeek = {{ app.user.settings.firstDayOfWeek }};
+window.rowHeight = 20;
+
+var eventContainer = new EventContainer();
+
+
+$(document).ready(function(){
+	$('.hidden').hide();
+
+	$.getScript("{{ asset('js/calendar.js') }}").done(function() {
+		changeMonth("", true, true);
+		calendarLink();
+	});
+
+	$.getScript("{{ asset('js/resizer.js') }}").done(function() {
+		$(window).resize(function() {
+	        resize();
+	        changeMonth($('calendar_title').attr('id'), true, false);
+    	}).trigger("resize");
+	});
+	
+	/*$.getScript("{{ asset('js/calendar_events.js') }}").done(function() {
+		getEvents();
+	});*/
+
+    $.getScript("{{ asset('js/event_status_changer.js') }}").done( function() {
+        $.getScript("{{ asset('js/timeline.js') }}").done(function() {
+                           getTimelineEvents();
+            	    });
+	});
+
+//	$.getScript("{{ asset('js/event_display.js') }}").done(function() {
+//		addEventLink('event_wrapper', "{{ path('droppy_event_ajax_get_event') }}");
+//	});
+
+	$.getScript("{{ asset('js/calendar_popup.js') }}").done(function() {
+		makePopup();
+	});
+});
+</script>
+#}
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<title>Droppy | ソーシャルスケジューリングサービス</title>
+		<!-- add your meta tags here -->
+
+		<link href="{{ asset('css/import_top.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('css/header.css') }}" rel="stylesheet" type="text/css" />
+		<link href="{{ asset('css/ui.tabs.css') }}" rel="stylesheet" type="text/css" />
+		<link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/redmond/jquery-ui.css" rel="stylesheet" type="text/css" />
+		<!--[if lte IE 7]>
+		<link href="{{ asset('css/patches/patch_top.css') }}" rel="stylesheet" type="text/css" />
+		<![endif]-->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.18/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="{{ asset('js/ui.core.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/ui.tabs.js') }}"></script>
+		<script type="text/javascript">
+			$(function(){
+					$('#ui-tab > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+					$('.event_lists .ym-column').click(function(){
+						var event = $(this);
+						$('.event_option:not(:animated)', this).slideToggle('fast', function(){
+							event.toggleClass("separate");
+							});
+						});	
+					});
+		</script>
+	</head>
+	<body>
+		<div id="notifications">
+			<div class="new">12</div>
+			<div class="like">4</div>
+		</div>
+		<div class="page_margins">
+			<div id="header">
+				<div id="header_inner">
+					<div class="logo"><a href="#"><img src="{{ asset('img/header_logo.gif') }}"></a></div>
+					<div class="setting"><a href="#"><img src="{{ asset('img/icon_setting.gif') }}"></a></div>
+					<div class="recommend"><a href="#"><img src="{{ asset('img/icon_recommend.gif') }}"><span>おすすめ</span></a></div>
+					<div class="header_search_form">
+						<form action="" method="post">
+							<input type="text" name="" value="" class="header_search_txt" placeholder="イベント・ユーザーを検索">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div id="main">
+				<div id="col1">
+					<div id="col1_content" class="clearfix">
+						<div id="user_profile" class="ym-column">
+							<div class="ym-col1">
+								<div class="ym-cbox">
+									<img src="http://a0.twimg.com/profile_images/1681203626/___2011-08-01_20.41___tttttt_normal.jpg" width="48" height="48" />
+								</div>
+							</div>
+							<div class="ym-col3">
+								<div class="ym-cbox">
+									<p class="display_name">礒辺洋平</p>
+									<p class="unique_name">@yohei</p>
+								</div>
+							</div>
+						</div>
+						<div class="event_lists">
+
+							<div id="ui-tab">
+
+								<ul>
+									<li class="ui-tab-1"><a href="#date_tab"><span>日程順</span></a></li>
+									<li class="ui-tab-2"><a href="#new_tab"><span>新着</span></a></li>
+									<li class="ui-tab-3"><a href="#like_tab"><span>いいね！</span></a></li>
+								</ul>
+
+								<div id="date_tab" class="change_eve_detail">
+									<p class="day_bar">今週</p>
+									<div class="event ym-column">
+										<div class="event_picture ym-col1">
+											<div class="ym-cbox">
+												<img src="http://a0.twimg.com/profile_images/1092319526/icon_normal.png" alt="" width="48" height="48" />
+											</div>
+										</div>
+										<div class="event_text ym-col3">
+											<div class="event_text ym-cbox">
+												<p class="ymd"><strong>4月31日</strong></p>
+												<p class="user_name">Jorte</p>
+												<p class="title">倒産</p>
+											</div>
+										</div>
+										<div class="event_option ym-column">
+											<div class="ym-col1"><span class="button_small like"><img src="{{ asset('img/like.png') }}" />いいね!</span></div>
+											<div class="ym-col2"><span class="button_small in"><img src="{{ asset('img/in.png') }}" />IN</span></div>
+											<div class="ym-col3"><span class="link to_details">イベント詳細 &gt;&gt;</span></div>
+										</div>
+									</div>
+
+								</div>
+
+								<div id="new_tab">
+									<!-- events here -->
+								</div>
+
+								<div id="like_tab">
+									<!-- events here -->
+								</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="col2">
+					<div id="col2_content" class="recommended_users clearfix">
+						<p class="recommended_users title">おすすめユーザー</p>
+						<div class="ym-column user">
+							<div class="ym-col1">
+								<div class="ym-cbox">
+									<img src="https://si0.twimg.com/profile_images/1314739389/profile_pic_normal.jpg" width="32" height="32" />
+								</div>
+							</div>
+							<div class="ym-col3">
+								<div class="ym-cbox">
+									<p class="user_name">Daniel</p>
+									<span class="button_small drop"><img src="{{ asset('img/drop.png') }}" />Dropする</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="col3">
+					<div id="col3_content" class="clearfix ym-clearfix">
+						<div class="calendar_tools">
+							<table width="100%" cellpadding="0" border="0">
+								<tbody><tr>
+										<td class="prev"><span class="prev">
+												<img id="2012/02" class="prev" src="{{ asset('img/btn_prev.png') }}"><span class="prev">2012年2月</span>
+										</span></td>
+										<td class="date">2012年3月</td>
+										<td class="next"><span class="next">
+												<span class="next">2012年4月</span><img id="2012/04" class="next" src="{{ asset('img/btn_next.png') }}" />
+										</span></td>
+								</tr></tbody>
+							</table>
+						</div>
+						<div class="calendar">
+							<table class="calendar">
+								<thead>
+									<tr>
+										<th class="sun">sun</th>
+										<th>mon</th><th>tue</th><th>wed</th><th>thu</th><th>fri</th>
+										<th class="sat">sat</th>
+									</tr>
+								</thead>
+								<tbody>
+									<!-- calendar cells here -->
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<!-- IE Column Clearing -->
+					<div id="ie_clearing"> &#160; </div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,123 @@
+#notifications {
+	font-size:9px;
+	color:#ffffff;
+	z-index:9999;
+}
+#notifications .new {
+	position:absolute;
+	top:100px;
+	left:170px;
+	background:#e2041b;
+	padding:3px 3px;
+	font-weight:bold;
+}
+#notifications .like {
+	position:absolute;
+	top:100px;
+	left:270px;
+	background:#e2041b;
+	padding:3px 5px;
+	font-weight:bold;
+}
+#user_profile {
+	margin:10px 0;
+	word-wrap:normal;
+	white-space:nowrap;
+	overflow:hidden;
+}
+#user_profile .display_name {
+	font-weight:bold;
+	color:#111111;
+	font-size:15px;
+	margin-top:5px;
+}
+#user_profile .unique_name {
+	color:#555555;
+	font-size:10px;
+	margin:0 5px;
+}
+.event .remove {
+	display:none;
+	margin:3px 0 -15px 0;
+	padding:0;
+	position:relative;
+	top:0px;
+	left:270px;
+}
+.event_lists {
+	overflow:hidden;
+}
+.event_lists p.day_bar {
+	background:#bce2e8;
+	color:#1c305c;
+	margin:0;
+	padding-left:20px;
+	font-size:10px;
+}
+.event_lists .top_line {
+	border-top:1px solid #dddddd;
+}
+.event_lists .event {
+	padding:5px 0 5px 0;
+}
+.event_lists .event_text {
+	word-wrap:normal;
+	white-space:nowrap;
+	overflow:hidden;
+	padding-top:2px;
+	margin:0;
+}
+.event_lists p.user_name {
+	color:#0483be;
+}
+.event_lists .separate {
+	border-bottom:5px solid #eeeeee;
+}
+.event_option {
+	display:none;
+	margin-top:10px;
+}
+.event_option .ym-col1 {
+	width:auto;
+	margin:0;
+	padding-left:20px;
+}
+.event_option .ym-col2 {
+	width:auto;
+	float:left;
+	margin:0;
+}
+.event_option .ym-col3 {
+	margin-right:20px;
+	text-align:right;
+}
+.event_option .link {
+	text-decoration:underline;
+	color:#0483be;
+}
+#ui-tab { width:300px; }
+#ui-tab .event_text p {
+	line-height:1.2;
+	margin:0;
+}
+#ui-tab ul { width:300px; height:24px; }
+#ui-tab li { font-size:10px; margin:0; }
+#ui-tab li a { display:block; height:24px; text-decoration:none; }
+#ui-tab li span { display:block; font-weight:bold; height:24px; line-height:24px; }
+.ui-tab-1, .ui-tab-2, .ui-tab-3 { float:left; width:96.5px;  }
+#ui-tab .ui-tab-1 a,
+#ui-tab .ui-tab-1 span { -moz-border-radius-topleft:5px;/*for Firefox*/ -webkit-border-top-left-radius:5px;/*for Safari and chrome*/ border-top-left-radius:5px;/*CSS3*/ }
+#ui-tab .ui-tab-3 a,
+#ui-tab .ui-tab-3 span { -moz-border-radius-topright:5px;/*for Firefox*/ -webkit-border-top-right-radius:5px;/*for Safari and chrome*/ border-top-right-radius:5px;/*CSS3*/ }
+#date_tab, #new_tab, #like_tab { 
+	width:290px;
+	background-color:#fff; 
+	margin:1px 0 15px 0;
+	-moz-border-radius-bottomleft:5px;/*for Firefox*/
+	-webkit-border-bottom-left-radius:5px;/*for Safari and chrome*/
+	border-bottom-left-radius:5px;/*CSS3*/
+	-moz-border-radius-bottomright:5px;/*for Firefox*/ 
+	-webkit-border-bottom-right-radius:5px;/*for Safari and chrome*/ 
+	border-bottom-right-radius:5px;/*CSS3*/
+}
+

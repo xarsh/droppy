@@ -1,0 +1,133 @@
+<div id="user_details" class="user_details">
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+	<button class="button_big white" onclick="backToCalendar()">{{ 'common.back' | trans({}, 'DroppyMainBundle') }}</button>
+	{% endif %}
+	<div class="user_profile">
+		<div class="ym-column">
+			<div class="ym-col1">
+				<div class="ym-cbox user_icon">
+					<img src="http://placehold.it/128x128" width="128" height="128" />
+				</div>
+			</div>
+			<div class="ym-col3">
+				<div class="ym-cbox">
+					<p class="display_name">ぺれず</p>
+					<p class="unique_name">&gt;perez</p>
+					<p class="description">早稲田生です。みなさんどうぞよろしくねぇ。</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="user_relations_list">
+		<div id="userdetails-tab">
+			<ul>
+				<li class="event_tab"><a href="#event_tab">
+					<span>{{ 'event.created_events' | trans({}, 'DroppyMainBundle') }}</span>
+				</a></li>
+				<li class="droppings_tab"><a href="#droppings_tab">
+					<span>{{ 'droppy.droppings' | trans({}, 'DroppyMainBundle') }}</span>
+				</a></li>
+				<li class="droppers_tab"><a href="#droppers_tab">
+					<span>{{ 'droppy.droppers' | trans({}, 'DroppyMainBundle') }}</span>
+				</a></li>
+			</ul>
+		</div><!-- // #ui-tab-3 -->
+		<div id="event_tab">
+
+			<div class="ym-column user">
+				<div class="ym-col1">
+					<div class="ym-cbox">
+						<img src="http://placehold.it/64x64" width="64" height="64" />
+					</div>
+				</div>
+				<div class="ym-col2">
+					<div class="ym-cbox">
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+						<span class="button_small like">
+							<img src="{{ asset('img/like.png') }}" />{{ 'button.like' | trans({}, 'DroppyMainBundle') }}
+						</span>
+						<span class="button_small drop">
+							<img src="{{ asset('img/drop.png') }}" />{{ 'button.drop' | trans({}, 'DroppyMainBundle') }}
+						</span>
+					{% endif %}
+						<div class="link to_details">
+							{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}
+						</div>
+					</div>
+				</div>
+				<div class="ym-col3 ym-clearfix">
+					<div class="ym-cbox">
+						<p class="date">2012年 4月 31日</p>
+						<p class="user"><a href="#">takao naito</a></p>
+						<p class="title">第二十五回 ギネスビール試飲会 in 早稲田大学</p>
+					</div>
+				</div>
+			</div>
+			<hr class="gradation" />
+			<div class="ym-column user">
+				<div class="ym-col1">
+					<div class="ym-cbox">
+						<img src="http://placehold.it/64x64" width="64" height="64" />
+					</div>
+				</div>
+				<div class="ym-col2">
+					<div class="ym-cbox">
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+						<span class="button_small like clicked">
+							<img src="{{ asset('img/like.png') }}" />{{ 'button.like' | trans({}, 'DroppyMainBundle') }}
+						</span>
+						<span class="button_small drop">
+							<img src="{{ asset('img/drop.png') }}" />{{ 'button.drop' | trans({}, 'DroppyMainBundle') }}
+						</span>
+						{% endif %}
+						<div class="link to_details">
+							{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}
+						</div>
+					</div>
+				</div>
+				<div class="ym-col3 ym-clearfix">
+					<div class="ym-cbox">
+						<p class="date">2012年 5月 20日</p>
+						<p class="user"><a href="#">佐藤 巧</a></p>
+						<p class="title">留年慰労会</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="droppings_tab">
+			<div class="box">
+			<div class="ym-column event">
+				<div class="ym-col1">
+					<div class="ym-cbox">
+						<img src="http://placehold.it/64x64" width="64" height="64" />
+					</div>
+				</div>
+				<div class="ym-col2">
+					<div class="ym-cbox">
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+						<span class="button_small like">
+							<img src="{{ asset('img/drop.png') }}" />{{ 'button.drop' | trans({}, 'DroppyMainBundle') }}
+						</span>
+						{% endif %}
+						<div class="link to_details">
+							{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}
+						</div>
+					</div>
+				</div>
+				<div class="ym-col3 ym-clearfix">
+					<div class="ym-cbox">
+						<p class="user"><a href="#">佐藤 巧</a></p>
+						<p class="description">理科大の学生です。みなさんよろしくね。</p>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<div id="droppers_tab">
+			<div class="box first-select">
+
+			</div>
+		</div>
+	</div>
+</div>

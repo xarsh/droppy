@@ -1,0 +1,61 @@
+<div id="event_summary_popup" class="popup">
+<table border="0" cellspacing="0" cellpadding="0">
+    <col style="width: 60px;">
+    <col style="width: 70px;">
+    <col style="width: 180px;">
+    <col style="width: 16px;">
+    <tbody>
+    <tr>
+        <td rowspan="4" class="picture">
+            <img width="48" height="48" 
+                    src="<%= Assetics.asset(creator.personalDatas.iconSet.thumbnail) %>"/>
+        </td>
+        <td colspan="2" class="title"><p class="title ellipsis"><%= name %></p></td>
+        <td rowspan="4" class="close">
+        <a class="close">
+            <span class="csssprite close">close</span>
+        </a>        
+        </td>
+    </tr>
+    <tr>
+        <td class="label"><%= ExposeTranslation.get('time.date') %></td>
+        <td class="value date ellipsis"><%= date %></td>
+    </tr>
+    <tr>
+        <td class="label"><%= ExposeTranslation.get('user.username') %></td>
+        <td class="value creator ellipsis"><%= creator.username %></td>
+    </tr>
+    <% if(typeof location !== 'undefined' && location.place) { %>
+    <tr>
+        <td class="label"><%= ExposeTranslation.get('event.place') %></td>
+        <td class="value place ellipsis"><%= location.place %></td>
+    </tr>
+    <% } %>
+    </tbody>
+</table>
+    <div class="buttons">
+        <% if(isCreator) { %>
+            <span class="button_small edit">
+                <span class="csssprite button_edit">button_edit</span>
+                <span><%= ExposeTranslation.get('button.edit') %></span>
+            </span>
+            <span class="button_small delete">
+                <span class="csssprite button_delete">button_delete</span>
+                <span><%= ExposeTranslation.get('button.delete') %></span>
+            </span>
+        <% } else { %>
+            <span class="button_small drop drop_button dropping">
+                <img src="<%= Assetics.staticAsset('img/check.png') %>"/>
+                <span><%= ExposeTranslation.get('button.dropping') %></span>
+            </span>
+            <span class="button_small in clicked">
+                <span class="csssprite button_in">button_in</span>
+                <span><%= ExposeTranslation.get('button.in') %></span>
+            </span>
+        <%  } %>
+        
+        <a class="setting_details">
+            <%= ExposeTranslation.get('common.details') %>&nbsp;&gt;&gt;
+        </a>
+    </div>
+</div>

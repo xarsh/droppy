@@ -1,0 +1,132 @@
+header:
+    unlogged:
+        title: Service social de gestion d'agendas
+        has_account: Déjà inscris ?
+        login: Connexion
+        login_droppy: Se connecter avec Droppy
+        login_fb: Se connecter avec Facebook
+    logged:
+        search: Recherche
+        search_event: Recherche
+        recommended: Recommendations
+        setting: Réglages
+        feature: Aide
+        logout: Déconnexion
+        
+unlogged_index:
+    title: Partageons nos agendas !
+    message: |
+        Avec Droppy, vous pouvez partager les agendas qui vous 
+        <br>
+        intéressent avec les gens autour de vous.
+    new_registration: Inscription
+        
+schedule:
+    name: Agenda
+    author: Auteur
+    schedule: Agenda
+    icon: Icône
+    details: Détails
+    privacy: Confidentialité
+    creation:
+        create_schedule: Créer un agenda
+        create: Créer
+        privacy_settings: Confidentialité
+        author_display: Afficher l'auteur
+        name_already_used: Un agenda de ce nom existe déjà.
+    type: 
+        official: Agendas officiels
+        recommended: Agendas recommandés
+        new: Agendas récents
+        popular: Agendas populaires
+        private: Mon agenda
+        dropped: Agendas droppés
+        created: Agendas créés
+    
+event:  
+    title: Évènement
+    start_date_time: Heure de début
+    end_date_time: Heure de fin
+    details: Détails
+    place: Lieu
+    icon: Icône
+    tag: Tags
+    url: Lien
+    creation:
+        make_event: Créer un évènement
+        make: Créer
+        more: Ajouter des détails
+        size_format: Taille maximale: --KB. Formats acceptés: GIF, JPG, PNG.
+        repeat: Récurrence
+        add_date: Ajouter une daté
+    type:
+        dropped: Évènements droppés
+        all: Tous les évènements
+        
+genre:
+    name: Genre
+    by_genre: Par genre
+    all_genre: Tous les genres
+    
+tag:
+    name: Tags
+    add: Ajouter des tags
+    
+icon:
+    name: Icône
+    
+privacy_policy:
+    settings: Confidentialité
+    public: Public
+    private: Privé
+    protected: Personnalisée
+    show: Afficher
+    hide: Masquer
+    
+wizard:
+    login_fb: Connexion avec Facebook
+    signin_fb: Authentification Facebook
+    signup_fb: Inscription avec Facebook
+    fb_button: Connexion avec Facebook
+    drop_schedule: Dropper des agendas
+    3schedules: Droppez trois agendas qui vous plaisent!
+    next: Passer à la suite!
+    sync: 
+        sync: Synchronisation
+        schedule: Agendas à synchroniser
+        google: Google Agenda
+        mixi: mixi calendar
+        ical: iCal
+        outlook: Outlook Calendar
+        cybozu: Cyboze Calendar
+        next: Suivant
+        
+drop_status:
+    drop_action: Dropper
+    dropping: Droppé
+    undrop: Dédropper
+
+form:
+    required: Obligatoire
+    
+time:
+    mon: Lundi
+    tue: Mardi
+    wed: Mercredi
+    thu: Jeudi
+    fri: Vendredi
+    sat: Samedi
+    sun: Dimanche
+    today: Ajourd'hui
+    this_month: Ce mois
+    every_day: Tous les jours
+    every_week: Toutes les semaines
+    every_month: Tous les mois
+    months: '{1} Janvier | {2} Février | {3} Mars | {4} Avril | {5} Mai | {6} Juin | {7} Juillet | {8} Août | {9} Septembre | {10} Octobre | {11} Novembre | {12} Décembre'
+    date: %month% %year%
+    
+common:
+    all: Tout afficher
+    see_more: Voir plus
+    add_details: En détails
+    close: Fermer

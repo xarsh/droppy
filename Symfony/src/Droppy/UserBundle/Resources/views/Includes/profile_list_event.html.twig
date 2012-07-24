@@ -1,0 +1,28 @@
+<div class="ym-column event">
+	<div class="ym-col1">
+		<div class="ym-cbox event_icon">
+			<img width="64" height="64" />
+		</div>
+	</div>
+	<div class="ym-col2">
+		<div class="ym-cbox action_buttons">
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+			<span class="button_small">
+				<img /><span></span>
+			</span>
+			<span class="button_small">
+				<img /><span></span>
+			</span>
+		{% endif %}
+		{#	<div class="link to_details">
+				{{ 'timeline.to_details' | trans({}, 'DroppyMainBundle') }}
+			</div> #}
+		</div>
+	</div>
+	<div class="ym-col3 ym-clearfix">
+		<div class="ym-cbox user_infos">
+			<p class="date"></p>
+			<p class="title"></p>
+		</div>
+	</div>
+</div>

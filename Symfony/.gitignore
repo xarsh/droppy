@@ -1,0 +1,12 @@
+*~
+app/cache/
+app/logs/
+app/config/parameters.ini
+.project
+.buildpath
+Thumbs.db
+.settings/
+*.log
+ccache.sh
+.DS_STORE
+web/uploads/

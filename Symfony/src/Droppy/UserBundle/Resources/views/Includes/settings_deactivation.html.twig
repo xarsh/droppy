@@ -1,0 +1,16 @@
+<div class="setting_items">
+    <h3>{{ 'deactivation.title' | trans({}, 'DroppyMainBundle') }}</h3>
+    <p>{{ 'deactivation.text' | trans({}, 'DroppyMainBundle')|raw }}</p>
+	<form name="deactivate" action="{{ path('droppy_user_deactivate') }}" method="POST">
+		<div class="button">
+			<span class="button_big light_blue" onclick="deactivate.submit()">
+				{{ 'deactivation.deactivate'|trans({}, 'DroppyMainBundle') }}
+			</span>
+			<span class="button_big white" onclick='location.href="{{ path('droppy_main_index') }}"'>
+				{{ 'common.cancel'|trans({}, 'DroppyMainBundle') }}
+			</span>
+	</div>
+	</form>
+</div>
+
+

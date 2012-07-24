@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+
+/* --------------------------
+
+	SITE LAYOUT CSS
+	
+-------------------------- */
+
+/*
+	#header
+*/
+#header { width:100%; background-color:#2d2d2d; }
+#header #header_body { width:960px; margin:0 auto; padding:10px 0 5px; text-align:left; }
+#header #header_body .inner_l { float:left; width:430px; }
+#header #header_body .inner_l div { margin-bottom:3px; }
+#header #header_body .inner_l h1 { font-size:10px; font-weight:normal; color:#fff; }
+
+#header #header_body .inner_r { float:right; width:480px; text-align:right; }
+#header #header_body .inner_r #dulldown { color:#a8a8a8; padding-top:20px; }
+#header #header_body .inner_r #dulldown li { position:relative; }
+#header #header_body .inner_r #dulldown li span { color:#fff; padding:2px 20px 2px 15px; cursor:pointer; background:url(../images/common/header_arrow.gif) right center no-repeat; }
+#header #header_body .inner_r #dulldown li span:hover,
+#header #header_body .inner_r #dulldown li span:active { text-decoration:underline; }
+#header #header_body .inner_r #dulldown li div { position:absolute; left:0; top:20px; z-index:9999; width:430px; display:none; text-align:right; }
+#header #header_body .inner_r #dulldown li div ul { float:right; }
+#header #header_body .inner_r #dulldown li div ul li { background-color:#2d2d2d; color:#fff; text-align:left; }
+#header #header_body .inner_r #dulldown li div ul li a { display:block; color:#fff; border-bottom:1px solid #a8a8a8; text-decoration:none; }
+#header #header_body .inner_r #dulldown li div ul li a:hover,
+#header #header_body .inner_r #dulldown li div ul li a:active { text-decoration:underline; }
+#header #header_body .inner_r #dulldown li div ul li.login_droppy a { padding:7px 10px 7px 25px; background:url(../images/common/icon_droppy.gif) 5px 7px no-repeat; }
+#header #header_body .inner_r #dulldown li div ul li.login_fb a { padding:7px 10px 7px 25px; background:url(../images/common/icon_fb.gif) 5px 7px no-repeat; }
+#header #header_body .inner_r #dulldown a.search_eve { color:#fff; text-decoration:none; text-decoration:none; padding:2px 15px 2px 20px; cursor:pointer; background:url(../images/common/icon_eve.gif) left center no-repeat; }
+#header #header_body .inner_r #dulldown a.search_cal { color:#fff; padding:2px 15px 2px 23px; cursor:pointer; background:url(../images/common/icon_cal.gif) left center no-repeat; }
+#header #header_body .inner_r #dulldown a.recommend { color:#fff; text-decoration:none; padding:2px 15px 2px 20px; cursor:pointer; background:url(../images/common/icon_recommend.gif) left center no-repeat; border-right:1px solid #636363; }
+#header #header_body .inner_r #dulldown a.recommend_2 { color:#fff; text-decoration:none; padding:2px 15px 2px 20px; cursor:pointer; background:url(../images/common/icon_recommend.gif) left center no-repeat; }
+#header #header_body .inner_r #dulldown .line_r { border-right:1px solid #636363; }
+#header #header_body .inner_r #dulldown a:hover,
+#header #header_body .inner_r #dulldown a:active { text-decoration:underline; }
+
+#header #header_body .inner_l h1.header_logo { float:left; width:146px; }
+#header #header_body .inner_l div.header_search_form { float:left; width:212px; height:23px; margin:2px 0 0; position:relative; background:#969696 url(../images/common/icon_search.gif) 7px center no-repeat; -moz-border-radius:10px;/*for Firefox*/ -webkit-border-radius:10px;/*for Safari and chrome*/ border-radius:10px;/*CSS3*/ }
+#header #header_body .inner_l .header_search_txt { width:180px; height:23px; position:absolute; left:25px; top:0; border:none; background-color:transparent; }
+
+#header #header_body .inner_r .header_menu { padding-top:5px; position:relative; }
+#header #header_body .inner_r .header_menu span { padding:0 10px; }
+#header #header_body .inner_r .header_menu img { vertical-align:middle; cursor:pointer; }
+#header #header_body .inner_r .header_menu a.make_cal { color:#fff; text-decoration:none; border-right:1px solid #636363; padding:2px 10px 2px 18px; cursor:pointer; background:url(../images/common/icon_plus.gif) left center no-repeat; }
+#header #header_body .inner_r .header_menu a.search_eve { color:#fff; text-decoration:none; padding:2px 15px 2px 20px; cursor:pointer; background:url(../images/common/icon_eve.gif) left center no-repeat; }
+#header #header_body .inner_r .header_menu a.search_cal { color:#fff; text-decoration:none; padding:2px 15px 2px 20px; cursor:pointer; background:url(../images/common/icon_cal.gif) left center no-repeat; }
+#header #header_body .inner_r .header_menu a.recommend { color:#fff; text-decoration:none; padding:2px 15px 2px 20px; cursor:pointer; background:url(../images/common/icon_recommend.gif) left center no-repeat; }
+#header #header_body .inner_r .header_menu a:hover,
+#header #header_body .inner_r .header_menu a:active { text-decoration:underline; }
+#header #header_body .inner_r .header_menu ul { position:absolute; right:0; top:33px; width:110px; background-color:#2d2d2d; color:#fff; }
+#header #header_body .inner_r .header_menu li { border-top:1px solid #a8a8a8; }
+#header #header_body .inner_r .header_menu li a { display:block; color:#fff; text-decoration:none; padding:5px 10px; }
+#header #header_body .inner_r .header_menu li a:hover,
+#header #header_body .inner_r .header_menu li a:active { text-decoration:underline; }
+
+
+/*
+	#container
+*/
+#container { width:960px; margin:0 auto; padding:20px 0 50px; text-align:left; }
+#container #content { float:left; width:680px; }
+#container #sidebar { float:right; width:250px; }
+
+
+/*
+	#main
+*/
+#main { width:960px; margin:0 auto; padding:15px 0 50px; text-align:left; background:url(../images/common/bg_container_body.gif) repeat-y; }
+#main #sidebar_left { float:left; width:262px; }
+#main #sidebar_left .sidebar_left_body { width:250px; margin:0 auto; text-align:left; }
+#main #content_2column { float:right; width:680px; }
+#main #content_3column { float:left; display:inline; width:490px; margin-left:15px; }
+#main #sidebar_right { float:right; width:178px; }
+
+
+/*
+	#footer
+*/
+#footer { width:100%; }
+#footer #footer_body { width:960px; margin:0 auto; padding:15px 0 5px; text-align:left; border-top:1px solid #d8d8d8; }
+#footer #footer_body address { display:inline; font-weight:normal; font-style:normal; font-size:10px; color:#666; padding:0 5px; }
+#footer #footer_body ul { display:inline; font-weight:normal; }
+#footer #footer_body li { display:inline; font-weight:normal; font-size:10px; color:#666; }
+#footer #footer_body li a { color:#08adfa; font-weight:normal; text-decoration:none; }
+#footer #footer_body li a:hover,
+#footer #footer_body li a:active { text-decoration:underline; }

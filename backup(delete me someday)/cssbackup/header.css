@@ -1,0 +1,91 @@
+div#header div#header_wrapper {
+	max-width:1000px;
+	min-width:960px;
+	margin:0 auto;
+}
+div#header a {
+	color:#bbbbbb;
+	text-decoration:none;
+}
+div#header a:hover {
+	color:#ffffff;
+}
+div#logo {
+	float:left;
+	padding:3px 0 0 15px;
+}
+div.header_search_form {
+	float:right;
+	width:212px;
+	height:23px;
+	margin:6px 15px 0;
+	position:relative;
+	background:#969696 url(../img/icon_search.gif) 7px center no-repeat;
+	-moz-border-radius:10px;/*for Firefox*/
+	-webkit-border-radius:10px;/*for Safari and chrome*/
+	border-radius:10px;/*CSS3*/
+}
+.header_search_txt {
+	width:180px;
+	height:23px;
+	position:absolute;
+	color:#dddddd;
+	left:25px;
+	top:0;
+	border:none;
+	background-color:transparent;
+}
+div#setting {
+	float:right;
+	padding:8px 20px 5px 10px;
+}
+div#setting ul#pulldown_items {
+	position:absolute;
+	right:0px;
+	top:35px;
+	width:100px;
+	padding-top:35px;
+	margin-top:-35px;
+	z-index:1;
+}
+div#setting ul#pulldown_items li{
+	border-top:1px solid #666;
+	float:none;
+	text-align:right;
+	padding:10px 20px 0 0;
+	background-color:#2d2d2d;
+}
+div#setting ul#pulldown_items li a{
+	display:block;
+	color:#ffffff;
+	text-decoration:none;
+	height:30px;
+}
+div.recommend span {
+	float:right;
+	padding:10px 10px 0 5px;
+}
+div.recommend img {
+	float:right;
+	padding:12px 0 8px 10px;
+}
+div#footer {
+	position:absolute;
+	left:50%;
+	bottom:0;
+	height: 35px;
+	text-align:center;
+	margin-left:-250px;
+}
+div#footer ul {
+	float: left;
+}
+div#footer ul li {
+	display: inline;
+	padding: 0 0 0 1.5em;
+	color:#999999;
+}
+div#footer a {
+	color: #333333;
+	text-decoration: none;
+}

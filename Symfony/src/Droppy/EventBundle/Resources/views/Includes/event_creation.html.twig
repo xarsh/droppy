@@ -1,0 +1,84 @@
+<div id="event_update">
+    <p class="head_title">
+				<span class="csssprite icon_new">icon_new</span>
+    {{ 'event.make_event' | trans({}, 'DroppyMainBundle') }}</p>
+	<div class="buttons">
+    <span class="head_button">
+		<span id="back_button" class="button_big white">{{ 'common.back_to_calendar' | trans({}, 'DroppyMainBundle') }}</span>
+    </span>
+    <span class="head_button">
+    	<span id="create_button" class="button_big light_blue">
+    		{{ 'common.save' | trans({}, 'DroppyMainBundle') }}
+    	</span>
+    </span>
+</div>
+    <div id="event_creation_form">
+    		<div class="event_summary">
+    			<div class="title_form">
+    				<input id="event_title" class="title_form" placeholder="{{ 'event.title' | trans({}, 'DroppyMainBundle') }}" type="text" />
+    			</div>
+    			<span class="datetime_form" id="start_datetime_form">
+    				<input type="text" id="event_start_date" class="date datepicker" />
+    				<input type="text" id="event_start_time" class="time timepicker" />
+    			</span><span id="to">～</span>
+    			<span class="datetime_form" id="end_datetime_form">
+    				<input type="text" id="event_end_date" class="date datepicker" />
+    				<input type="text" id="event_end_time" class="time timepicker" />
+    			</span>
+    			<div class="options">
+    				<span class="option">
+    					<input type="checkbox" id="event_allday" name="event_allday" checked="true" />
+    					<label for="event_allday">
+    						{{ 'event.allday' | trans({}, 'DroppyMainBundle') }}
+    					</label>
+    					<input type="checkbox" id="event_privacy" name="event_privacy" checked="true" />
+    					<label for="event_privacy">
+    						{{ 'privacy_policy.public' | trans({}, 'DroppyMainBundle') }}
+    					</label>
+    				</span>
+    				{#<!--span class="option">
+    				{{ form_widget(form.xxx) }}
+    				<label for="event_creation_form_xxx">{{ 'event.repeat' | trans({}, 'DroppyMainBundle') }}...</label>
+    				</span-->
+    				<p class="option">
+    				<span>{{ 'privacy_policy.public' | trans({}, 'DroppyMainBundle') }}</span>
+    				<span><input type="checkbox" id="event_privacy" /></span>
+    				</p>#}
+    			</div>
+    		</div>
+    		<div class="event_details">
+    			<table border="0" cellspacing="0" cellpadding="0">
+    				<tr><th>{{ 'event.place' | trans({}, 'DroppyMainBundle') }}</th>
+    					<td><input type="text" id="event_place" /></td>
+    				</tr>
+    				<tr><th>{{ 'event.address' | trans({}, 'DroppyMainBundle') }}</th>
+    					<td><input type="text" id="event_address" /></td>
+    				</tr>
+    				<tr><th>{{ 'event.details' | trans({}, 'DroppyMainBundle') }}</th>
+    					<td><textarea id="event_details"></textarea></td>
+    				</tr>
+    			{#	<tr><th>{{ 'event.picture.label' | trans({}, 'DroppyMainBundle') }}</th>
+    					<td><input type="file" id="event_picture" />
+    						<p class="picture_size">{{ 'event.picture.size' | trans({}, 'DroppyMainBundle') }}</p>
+    					</td>
+    				</tr> #}
+					<tr><th>{{ 'event.color' | trans({}, 'DroppyMainBundle') }}</th>
+						<td>
+						{% set default_color = app.user.settings.color.name %}
+						{% set colors = ["red", "orange", "yellow", "green", "blue", "violet"] %}
+							<div id="color_sample">
+							{% for color in colors %}
+								<div class="{{ color }}{% if color == default_color %} clicked{% endif %}">&nbsp;</div>
+							{% endfor %}
+							</div>
+							<input type="hidden" id="event_color" value="{{ default_color }}"/>
+						</td>
+					</tr>
+    				<tr><th>{{ 'event.tag.label' | trans({}, 'DroppyMainBundle') }}</th>
+    					<td><input type="text" id="event_tags" /></td>
+    				</tr>
+    			</table>
+    		</div>
+    </div>
+</div>
+

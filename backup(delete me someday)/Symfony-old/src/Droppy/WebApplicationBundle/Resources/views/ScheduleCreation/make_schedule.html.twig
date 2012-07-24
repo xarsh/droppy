@@ -1,0 +1,16 @@
+{% extends 'DroppyWebApplicationBundle::layout.html.twig' %}
+
+{% block javascript %}
+{% endblock javascript %}
+
+{% block body %}
+	<div id="container">
+		<h2 class="ttl_step">
+			<img src="{{ asset('images/makecal/img_step_1st.gif') }}" 
+				alt="1. {{ 'schedule.creation.create_schedule' | trans({}, 'DroppyWebApplicationBundle') }}">
+		</h2>
+		<div class="make_cal_box">
+			{% include 'DroppyWebApplicationBundle:ScheduleCreation:schedule_creation_content.html.twig' %}
+		</div><!-- // .make_cal_box -->
+	</div><!-- // #container -->
+{% endblock body %}

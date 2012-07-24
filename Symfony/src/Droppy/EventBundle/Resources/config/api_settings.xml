@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings bundle="event">
+    <setting xml:id="droppy_event_api_latest_events" route="/event/api/latest-events"
+        method="GET">
+        <parameter id="date" default="_today" optional="true" />
+        <parameter id="offset" default="0" optional="true" />
+        <parameter id="max_results" default="20" min="3" max="50" optional="true" />
+    </setting>
+
+    <setting xml:id="droppy_event_api_search_events" route="/event/api/search"
+        method="GET">
+        <parameter id="keywords" optional="true" />
+        <parameter id="places" optional="true" />
+        <parameter id="start" optional="true" />
+        <parameter id="end" otional="true" />
+        <parameter id="offset" default="0" optional="true" />
+        <parameter id="max_results" default="20" min="3" max="50" optional="true" />
+    </setting>
+
+    <setting xml:id="droppy_event_api_get_event" route="/event/api/get-event"
+        method="GET">
+        <parameter id="event_id" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_event_and_rel" route="/event/api/event-and-relation"
+        method="GET">
+        <parameter id="event_id" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_dropped_events" route="/event/api/dropped-events"
+        method="GET">
+        <parameter id="user_id" optional="true" default="_current_user" />
+        <parameter id="date" default="_today" optional="true" />
+        <parameter id="offset" default="0" optional="true" />
+        <parameter id="max_results" default="20" min="3" max="50" optional="true" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_created_events" route="/event/api/created-events"
+        method="GET">
+        <parameter id="user_id" optional="true" default="_current_user" />
+        <parameter id="offset" default="0" optional="true" />
+        <parameter id="max_results" default="20" min="3" max="50" optional="true" />
+    </setting>
+
+    
+    <setting xml:id="droppy_event_api_interval" route="/event/api/in-interval"
+        method="GET">
+        <parameter id="user_id" optional="true" default="_current_user" />
+        <parameter id="start" optional="false" />
+        <parameter id="end" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_update_event" route="/event/api/update-event"
+        method="POST">
+        <parameter id="id" optional="true" />
+        <parameter id="name" optional="false" />
+        <parameter id="start_date_time" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_timeline" route="/event/api/timeline"
+        method="GET">
+        <parameter id="user_id" optional="true" default="_current_user" />
+        <parameter id="type" optional="true" default="new" />
+        <parameter id="offset" default="0" optional="true" />
+        <parameter id="max_results" default="20" min="3" max="50" optional="true" />
+        <parameter id="from" optional="true" default="_today" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_remove_event" route="/event/api/remove-event"
+        method="POST">
+        <parameter id="event_id" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_event_in" route="/event/api/event-in"
+        method="POST">
+        <parameter id="event_id" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_event_out" route="/event/api/event-out"
+        method="POST">
+        <parameter id="event_id" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_drop" route="/event/api/drop"
+        method="POST">
+        <parameter id="event_id" optional="false" />
+    </setting>
+    
+    <setting xml:id="droppy_event_api_undrop" route="/event/api/undrop"
+        method="POST">
+        <parameter id="event_id" optional="false" />
+    </setting>
+</settings>
+   

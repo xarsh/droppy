@@ -1,0 +1,89 @@
+<div id="event_details">
+	<p class="head_title event_details">{{ 'event.details_long' | trans({}, 'DroppyMainBundle')}}</p>
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+	<span class="head_button">
+		<button class="button_big white" onclick="backToCalendar();">{{ 'common.back' | trans({}, 'DroppyMainBundle')}}</button>
+		<span class="event_details_buttons">
+			<span class="button_small like">
+				<img src="{{ asset('img/like.png') }}" />{{ 'button.like' | trans({}, 'DroppyMainBundle') }}
+			</span>
+			<span class="button_small in">
+				<img src="{{ asset('img/in.png') }}" />{{ 'button.in' | trans({}, 'DroppyMainBundle') }}
+			</span>
+		</span>
+	</span>
+	{% endif %}
+	<div class="event_details_summary">
+		<div class="ym-column">
+			<div class="ym-col1">
+				<div class="ym-cbox">
+					<img src="http://placehold.it/128x128" width="128" height="128" class="event_picture" />
+				</div>
+			</div>
+			<div class="ym-col3">
+				<div class="ym-cbox">
+					<p class="event_title">
+					第35回　インキュベーションセンターでお寿司を食べる会
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="event_details_body">
+		<table>
+			<tbody>
+				<tr>
+					<th>{{ 'time.date' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>2012年 5月 13日 19:00</td>
+				</tr>
+				<tr>
+					<th>{{ 'event.place' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>トラノコ</td>
+				</tr>
+				<tr>
+					<th>{{ 'event.address' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>東京都 新宿区 歌舞伎町 1-5 2F</td>
+				</tr>
+				<tr>
+					<th>{{ 'user.username' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>
+						<span class="event_details_displayed_name">ダニエル</span>
+						<span class="event_details_unique_name">(<a href="#">&gt;perez</a>)</span>
+					</td>
+				</tr>
+				<tr>
+					<th>{{ 'event.tag.label' | trans({}, 'DroppyMainBundle') }}</th>
+					<td>
+						<span class="tag">
+							<span class="hash_symbol">#</span><span class="event_details_tag">夏目</span>
+						</span>
+						<span class="tag">
+							<span class="hash_symbol">#</span><span class="event_details_tag">新渡戸</span>
+						</span>
+						<span class="tag">
+							<span class="hash_symbol">#</span><span class="event_details_tag">福沢</span>
+						</span>
+					</td>
+				</tr>
+				<tr>
+					<th>{{ 'event.details' | trans({}, 'DroppyMainBundle') }}:</th>
+					<td>&nbsp;</td>
+				</tr>
+			</tbody>
+		</table>
+		<div class="event_details">
+			<p>テキスト例）11月27日に開催される東京のIT勉強会でFacebook＋Webサイトで営業力アップ！というタイトルでプレゼンをすることになりました。</p>
+			<p>当日は<br />
+			・facebookとは？<br />
+			・営業マンのfacebook活用例<br />
+			・WEBサイトとfacebookの連携で得られる相乗効果<br />
+			というような内容について僕の考え方や成功している人の例などを交えてお話しようと思っています。<br />
+			まだプレゼン資料はざっくりしか出来ていないのでもしかしたら当日は少し変更があるかもしれないです。もし興味があるようでしたらぜひご参加頂ければと思います。</p>
+			<p>また、僕だけではなくてITアカデミーの鈴木さんによるTwitter APIによる業務効率アップ手法についてというプレゼンもあります。<br />
+			ITアカデミーさんは国内初のTwitter API正規代理店として日本でも有数のTwitter APIの取り扱い実績があるだけではなく、実際に社内で導入して運用してきた実績もあるものすごくTwitter APIを知り尽
+			くした会社なのでそのノウハウだけでも勉強会に参加する意味があると思います。</p>
+			<p>この勉強会はIT実践会会員は無料で参加できますのでまだ入会されていない方はこれを機会に会員登録するといいと思います。</p>
+			<p>という訳で当時は16：00からがっつりよろしくお願いします！</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,37 @@
+<div class="ym-column event">
+    <div class="ym-col1">
+        <div class="ym-cbox event_icon">
+            <img width="64" height="64" src="<%= Assetics.asset(iconSet.icon) %>"/>
+        </div>
+    </div>
+    <div class="ym-col2">
+        <% if(isCreator) { %>        
+        <div class="ym-cbox action_buttons">
+            <span class="button_small edit">
+                <img src="<%= Assetics.staticAsset('img/edit.png') %>"/>
+                <span><%= ExposeTranslation.get('button.edit') %></span>
+            </span>
+            <span class="button_small delete">
+                <img src="<%= Assetics.staticAsset('img/delete.png') %>"/>
+                <span><%= ExposeTranslation.get('button.delete') %></span>
+            </span>
+        </div>
+        <% } else { %>
+        <div class="ym-cbox">
+            <span class="button_small drop drop_button <%= dropped ? 'dropping' : '' %>">
+                <img src="<%= Assetics.staticAsset('img/' + (dropped ? 'check.png' : 'drop.png')) %>"/>
+                <span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop'))%></span>
+            </span>
+        </div>
+        <% } %>
+    </div>
+    <div class="ym-col3 ym-clearfix">
+        <div class="ym-cbox user_infos">
+            <p class="date"><%= date %></p>
+            <% if(options.showCreator) { %>
+                <p class="user ellipsis"><a href="#"><%= creator.username %></a></p>
+            <% } %>
+            <p class="title ellipsis"><%= name %></p>
+        </div>
+    </div>
+</div>

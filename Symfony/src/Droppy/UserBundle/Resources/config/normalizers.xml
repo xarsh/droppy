@@ -1,0 +1,53 @@
+<?xml version="1.0" ?>
+
+<container xmlns="http://symfony.com/schema/dic/services"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+
+    <services>
+        <service id="droppy_user.normalizer.user" 
+                class="Droppy\UserBundle\Normalizer\UserNormalizer">
+            <argument type="service" id="droppy_user.normalizer.personal_datas" />
+            <argument type="service" id="droppy_user.normalizer.settings" />
+            <argument type="service" id="droppy_user.user_manager" />
+            <argument type="service" id="droppy_main.normalizer.helper" />
+        </service>
+        
+        <service id="droppy_user.normalizer.user_minimal" 
+                class="Droppy\UserBundle\Normalizer\UserMinimalNormalizer">
+            <argument type="service" id="droppy_user.normalizer.personal_datas" />
+        </service>
+        
+        <service id="droppy_user.normalizer.personal_datas" 
+                class="Droppy\UserBundle\Normalizer\PersonalDatasNormalizer">
+            <argument type="service" id="droppy_main.normalizer.icon_set" />
+            <argument type="service" id="droppy_user.normalizer.general_datas" />
+            <argument type="service" id="droppy_main.normalizer.helper" />
+        </service>
+        
+        <service id="droppy_user.normalizer.settings" 
+                class="Droppy\UserBundle\Normalizer\SettingsNormalizer">
+            <argument type="service" id="droppy_main.normalizer.timezone" />
+            <argument type="service" id="droppy_main.normalizer.privacy_settings" />
+            <argument type="service" id="droppy_main.normalizer.color" />
+            <argument type="service" id="droppy_main.normalizer.helper" />
+        </service>
+        
+         <service id="droppy_user.normalizer.general_datas" 
+                class="Droppy\UserBundle\Normalizer\GeneralDatasNormalizer">
+            <argument type="service" id="droppy_main.normalizer.privacy_settings" />
+            <argument type="service" id="droppy_main.normalizer.helper" />
+        </service>
+        
+        <service id="droppy_user.normalizer.user_drops_event_relation" 
+                class="Droppy\UserBundle\Normalizer\UserDropsEventRelationNormalizer">
+            <argument type="service" id="droppy_event.normalizer.event" />
+        </service>
+        
+        <service id="droppy_user.normalizer.user_drops_user_relation" 
+                class="Droppy\UserBundle\Normalizer\UserDropsUserRelationNormalizer">
+            <argument type="service" id="droppy_user.normalizer.user" />
+        </service>
+    </services>
+
+</container>

@@ -1,0 +1,76 @@
+{% extends 'DroppyMainBundle::layout.html.twig' %}
+
+{% block css %}
+<link href="{{ asset('css/import_top.css') }}" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="{{ asset('css/patches/patch_top.css') }}" rel="stylesheet" type="text/css" />
+<![endif]-->
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ asset('js/ui.core.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/ui.tabs.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/timepicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/general.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.placeholder.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.mousewheel.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.jscrollpane.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.json-2.3.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/bazingaexposetranslation/js/translation.js') }}"></script>
+<script type="text/javascript" src="{{ url('bazinga_exposetranslation_js', 
+                    { 'domain_name' : 'DroppyMainBundle', '_locale' : app.session.locale }) }}"></script>
+<script type="text/javascript" src="{{ asset('js/event_container.js') }}"></script>                   
+<script type="text/javascript" src="{{ asset('js/event_details.js') }}"></script>                   
+<script type="text/javascript" src="{{ asset('js/user_details.js') }}"></script>                   
+<script type="text/javascript" src="{{ asset('js/date_manipulator.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/resizer.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/calendar_events.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/timeline.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/calendar.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/user_manipulator.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/event_manipulator.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/form_helper.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/create_event.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/calendar_popup.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/calendar_coloring.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/recommended_users.js') }}"></script>
+
+
+<script type="text/javascript">
+	$(function(){
+		initGlobals();
+		window.currentUser = parseInt("{{ app.user.id }}");
+		window.firstDayOfWeek = "{{ app.user.settings.firstDayOfWeek }}";
+		initPageElements();		
+		initPageDatas();
+	});
+</script>
+{% endblock %}
+
+{% block body %}
+{#<div id="notifications">
+	<div class="new">12</div>
+	<div class="like">4</div>
+</div>
+#}
+<div id="main">
+	<div id="col1">
+		<div id="col1_content" class="clearfix">
+			{% include 'DroppyUserBundle:Includes:profile.html.twig' with {'user' : user } %}
+			{% include 'DroppyEventBundle:Includes:timeline.html.twig' %}
+		</div>
+	</div>
+	<div id="col2">
+		<div id="col2_content" class="clearfix">
+			{% include 'DroppyMainBundle:Includes:recommend_small.html.twig' %}
+		</div>
+	</div>
+	<div id="col3">
+		<div id="col3_content" class="clearfix">
+			{% include 'DroppyMainBundle:Includes:recommend.html.twig' %}
+		</div><!-- col3_content -->
+	</div><!-- col3 -->
+</div><!-- main -->
+{% endblock %}

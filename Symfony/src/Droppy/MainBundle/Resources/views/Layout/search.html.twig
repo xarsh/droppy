@@ -1,0 +1,81 @@
+{% extends 'DroppyMainBundle::layout.html.twig' %}
+
+{% block css %}
+<link href="{{ asset('css/import_top.css') }}" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="{{ asset('css/patches/patch_top.css') }}" rel="stylesheet" type="text/css" />
+<![endif]-->
+{% endblock %}
+
+{% block javascript %}
+<script type="text/javascript" src="{{ asset('js/ui.core.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/ui.tabs.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/timepicker.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/jquery.json-2.3.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/fosjsrouting/js/router.js') }}"></script>
+<script type="text/javascript" src="{{ path('fos_js_routing_js', {"callback": "fos.Router.setData"}) }}"></script>
+<script type="text/javascript" src="{{ asset('bundles/bazingaexposetranslation/js/translation.js') }}"></script>
+<script type="text/javascript" src="{{ url('bazinga_exposetranslation_js', 
+                    { 'domain_name' : 'DroppyMainBundle', '_locale' : app.session.locale }) }}"></script>
+<script type="text/javascript" src="{{ asset('js/event_container.js') }}"></script>                   
+<script type="text/javascript" src="{{ asset('js/date_manipulator.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/resizer.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/timeline.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/calendar.js') }}"></script>
+
+
+<script type="text/javascript">
+	$(function(){
+		var date = new Date();
+		window.firstDayOfWeek = "{{ app.user.settings.firstDayOfWeek }}";
+		window.eventContainer = new EventContainer();
+		window.year = date.getFullYear();
+		window.month = date.getMonth() + 1;
+		window.rowsStart = [];
+		
+		$('#timeline-tab > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+		$('#search_type_tab > ul').tabs({ fx: { opacity: 'toggle', duration: 'fast'  } });
+		$(".datepicker").datepicker({dateFormat:"yy/mm/dd"});
+		$('.event_lists .ym-column').click(function(){
+			var event = $(this);
+			$('.event_option:not(:animated)', this).slideToggle('fast', function(){	event.toggleClass("separate");});
+		});
+		resize();
+		$(window).resize(function() {
+		       resize();
+		});
+		makeLinks();
+		displayCalendarDays(window.year, window.month);
+		console.log(window.rowStarts);
+	});
+ </script>
+ {% endblock %}
+
+{% block body %}
+<div id="notifications">
+	<div class="new">12</div>
+	<div class="like">4</div>
+</div>
+
+<div id="main">
+	<div id="col1">
+		<div id="col1_content" class="clearfix">
+			{% include 'DroppyUserBundle:Includes:profile.html.twig' %}
+			{% include 'DroppyEventBundle:Includes:timeline.html.twig' %}
+		</div>
+	</div>
+	<div id="col2">
+		<div id="col2_content" class="clearfix">
+			{% include 'DroppyMainBundle:Includes:recommend_small.html.twig' %}
+		</div>
+	</div>
+	<div id="col3">
+		<div id="col3_content" class="clearfix ym-clearfix">
+			{% include 'DroppyMainBundle:Includes:search.html.twig' %}
+		</div><!-- col3_content -->
+	</div><!-- col3 -->
+	<!-- IE Column Clearing -->
+	<div id="ie_clearing"> &#160; </div>
+</div><!-- main -->
+{% endblock %}
+

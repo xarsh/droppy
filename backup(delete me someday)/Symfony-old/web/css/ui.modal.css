@@ -1,0 +1,37 @@
+/* 白背景 */
+			/* the overlayed element */
+			.apple_overlay {
+				display:none;
+			/*background:#000 url("images/common/white.png");*/
+			background-color:#fff;
+				width:640px;
+				min-height:100px;
+				-moz-border-radius:10px;/*for Firefox*/ -webkit-border-radius:10px;/*for Safari and chrome*/ border-radius:10px;/*CSS3*/
+				-moz-box-shadow: 0 0 15px #000;
+				-webkit-box-shadow: 0 0 15px #000;
+			/*padding:35px;*/
+			}
+			.apple_overlay_wide {
+				display:none;
+			/*background:#000 url("images/common/white.png");*/
+			background-color:#fff;
+				width:820px;
+				min-height:100px;
+				-moz-border-radius:10px;/*for Firefox*/ -webkit-border-radius:10px;/*for Safari and chrome*/ border-radius:10px;/*CSS3*/
+				-moz-box-shadow: 0 0 15px #000;
+				-webkit-box-shadow: 0 0 15px #000;
+			/*padding:35px;*/
+			}
+			/* default close button positioned on upper right corner */
+			
+			/* 黒背景 */ 
+			div.apple_overlay.black { 
+			   /*background-image:url("images/common/transparent.png");*/
+			    color:#fff; 
+			}
+			
+			
+
+
+
+

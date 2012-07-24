@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+
+<routes xmlns="http://symfony.com/schema/routing"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://symfony.com/schema/routing http://symfony.com/schema/routing/routing-1.0.xsd">
+
+    <import resource="@DroppyUserBundle/Resources/config/routing/fos_user.xml" prefix="/" />
+    <import resource="@DroppyUserBundle/Resources/config/routing/ajax.xml" prefix="/ajax" />
+    <import resource="@DroppyUserBundle/Resources/config/routing/user.xml" prefix="/" />
+    <import resource="@DroppyUserBundle/Resources/config/routing/settings.xml" prefix="/" />
+    <import resource="@DroppyUserBundle/Resources/config/routing/api.xml" prefix="/api" />
+    <import resource="@DroppyUserBundle/Resources/config/routing/public_api.xml" prefix="/public-api" />
+          
+</routes>

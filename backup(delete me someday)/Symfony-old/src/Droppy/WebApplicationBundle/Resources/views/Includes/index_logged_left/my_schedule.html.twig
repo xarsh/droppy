@@ -1,0 +1,21 @@
+<!-- event list start -->
+{% for schedule in my_schedules %}
+<div class="event_list">
+  <div class="event_list_body">
+    <div class="photo">
+      {% if schedule.iconSet.uploaded %}
+      <img src="{{ asset(schedule.iconSet.thumbnailPath) }}" alt="">
+      {% else %}
+      <img src="{{ asset('images/common/dammy_photo_45x45.gif') }}" alt="">
+      {% endif %}
+    </div>
+    <div class="txt">
+      <div class="btn">&nbsp;</div>
+      <p class="eve_name">&nbsp;</p>
+      <p class="cal_ttl">{{ schedule.name }}</p>
+    </div>
+    <br class="clear">
+  </div>
+</div>
+{% endfor %}
+<!-- event list end -->

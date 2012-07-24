@@ -1,0 +1,54 @@
+{% extends 'DroppyMainBundle::layout.html.twig' %}
+
+{% form_theme form 'DroppyUserBundle:Layout:widget_theme.html.twig' %}
+
+{% block css %}
+<link href="{{ asset('css/import_index.css') }}" rel="stylesheet" type="text/css" />
+<!--[if lte IE 7]>
+<link href="{{ asset('css/patches/index.css') }}" rel="stylesheet" type="text/css" />
+<![endif]-->
+{% endblock %}
+
+{% block body %}
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/ja_JP/all.js#xfbml=1&appId=250441388375255";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<div id="main">
+	<div id="col1">
+		<div id="col1_content" class="clearfix">
+			{% include 'DroppyMainBundle:Includes:introduce.html.twig' %}
+			{% include 'DroppyUserBundle:Includes:popular_users.html.twig' %}
+            <div class="sns_buttons" style="white-space:nowrap;margin:15px 0 0 15px; padding:25px 0 0 0;border-top:1px solid #ddd;">
+            <span class="followbutton" style="float:left;">
+                <a href="https://twitter.com/droppy_jp" class="twitter-follow-button" data-show-count="true" data-lang="en" data-show-screen-name="false">Follow @droppy_jp</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            </span>
+            <span class="likebutton">
+<div class="fb-like" data-href="http://droppy.jp/" data-send="false" data-width="370" data-show-faces="true"></div>
+            </span>
+            </div>
+		</div>
+	</div>
+	<div id="col3">
+		<div id="col3_content" class="ym-clearfix">
+			{% include 'DroppyUserBundle:Includes:login_box.html.twig' %}
+			{% include 'DroppyUserBundle:Includes:register_box.html.twig' %}
+        </div>
+        {% if error is not empty %}
+        <span id="login_error"><p class="body">{{ 'login.wrong' | trans({}, 'DroppyMainBundle') }}</p></span>
+        {% endif %}
+
+	</div>
+	<!-- IE Column Clearing -->
+	<div id="ie_clearing"> &#160; </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+{% include 'DroppyMainBundle:Includes:footer.html.twig' %}
+{% endblock %}
