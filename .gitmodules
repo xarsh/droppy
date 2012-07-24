@@ -1,0 +1,6 @@
+[submodule "Symfony/vendor/bundles/FOS/JsRoutingBundle"]
+	path = Symfony/vendor/bundles/FOS/JsRoutingBundle
+	url = git://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git
+[submodule "Symfony/vendor/bundles/Bazinga/ExposeTranslationBundle"]
+	path = Symfony/vendor/bundles/Bazinga/ExposeTranslationBundle
+	url = http://github.com/willdurand/BazingaExposeTranslationBundle.git
