@@ -39,12 +39,12 @@ define([
 		el: $('div#wrapper'),
 		
 		events: {
-			'click div.logo a' : 'toTop',
+			'click div.logo' : 'toTop',
 			'click div.home a' : 'toTop',
 			'click div.make_event a' : 'eventCreation',
 			'click div.recommend a' : 'recommendations',
 			'click div.pulldown' : 'showMenu',
-			'keyup input.header_search_txt' : 'makeSearch',
+			'keyup input.search_txt' : 'makeSearch',
 			'click #user_profile' : 'showUser'
 		},
 		

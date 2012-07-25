@@ -15,14 +15,13 @@ define([
 		},
 		
 		events : {
-			'click p.user' : 'showUser',
-			'click p.user_name' : 'showUser',
-			'click span.button_small' : 'toggleDrop',
+			'click div.names' : 'showUser',
+			'click span.button_small' : 'toggleDrop'
 		},
 
 		render : function() {
 			this.$el.html(this.template(Assetics.wrapAssetics(_.extend({}, 
-					{ appUser : appUser }, this.model.toJSON()))));
+					{ appUser : appUser.toJSON() }, this.model.toJSON()))));
 			return this;
 		},
 		

@@ -1,0 +1,20 @@
+<div class="user">
+	<div class="picture">
+		<img src="<%= Assetics.asset(personalDatas.iconSet.icon) %>" width="64" height="64">
+	</div>
+	<div class="center_column">
+		<div class="names">
+			<span class="display_name ellipsis"><%= personalDatas.displayedName %></span>
+			<span class="username ellipsis">(&gt;<%= username %>)</span>
+		</div>
+		<% if(personalDatas.introduction) { %>
+        	<div class="introduce ellipsis"><%= personalDatas.introduction %></div>
+        <% } %>
+	</div>
+	<% if(id != appUser.id) { %>
+		<div class="button_small drop drop_button button dropping <%= dropped ? 'dropping' : '' %>">
+			<img src="<%= Assetics.staticAsset('img/' + (dropped ? 'check.png' : 'drop.png')) %>">
+			<span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop'))%></span>
+		</div>
+	<% } %>		
+</div>

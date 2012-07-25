@@ -1,53 +1,85 @@
-<div id="user_details" class="scrollable user_details">
-	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-	<button class="button_big white" onclick="backToCalendar()">{{ 'common.back_to_calendar' | trans({}, 'DroppyMainBundle') }}</button>
-	{% endif %}
-	<div class="user_profile">
-		<div class="ym-column">
-			<div class="ym-col1">
-				<div class="ym-cbox user_icon">
-					<img width="128" height="128" />
-				</div>
-			</div>
-			<div class="ym-col3">
-				<div class="ym-cbox">
-					<p class="display_name"></p>
-					<p class="unique_name"></p>
-					<p class="description"></p>
-                    <p class="drop_button">
-                        <span class="button_small drop">
-                            <img src="../img/check.png">
-                            <span></span>
-                        </span>
-                    </p>
-				</div>
-			</div>
+<div id="user">
+	<div class="buttons">
+		<span class="button_big white">戻る</span>
+	</div>
+	<div class="summary">
+		<div class="picture">
+			<img src="http://placehold.it/128x128" width="128" height="128">
+		</div>
+		<div class="title_names">
+			<h1 class="ellipsis">ないとー</h1>
+			<span class="username ellipsis">(&gt;xarsh)</span>
+			<div class="introduce ellipsis">適当にがんばります。旅行に行きたいな。</div>
+			<div class="button drop"><img src="img/drop.png">Dropする</div>
 		</div>
 	</div>
-
-	<div id="user_relations_list" event-prototype='{% include 'DroppyUserBundle:Includes:profile_list_event.html.twig' %}'
-	 user-prototype='{% include 'DroppyUserBundle:Includes:profile_list_user.html.twig' %}'>
-		<div id="userdetails-tab">
+	<div class="description">
+		<div id="tabs">
 			<ul>
-				<li class="event_tab"><a href="#event_tab">
-					<span>{{ 'event.public_events' | trans({}, 'DroppyMainBundle') }}</span>
-				</a></li>
-				<li class="droppings_tab"><a href="#droppings_tab">
-					<span>{{ 'droppy.droppings' | trans({}, 'DroppyMainBundle') }}</span>
-				</a></li>
-				<li class="droppers_tab"><a href="#droppers_tab">
-					<span>{{ 'droppy.droppers' | trans({}, 'DroppyMainBundle') }}</span>
-				</a></li>
+				<li><a href="#dropping">Drop中</a></li>
+				<li><a href="#created">作成したイベント</a></li>
 			</ul>
-		</div><!-- // #ui-tab-3 -->
-		<div id="event_tab">
-		</div>
-		<div id="droppings_tab">
-			
-		</div>
-		<div id="droppers_tab">
-			<div class="box first-select">
-
+			<div id="dropping">
+				<div class="userlist">
+					<div class="user">
+						<div class="picture">
+							<img src="http://placehold.it/64x64" width="64" height="64">
+						</div>
+						<div class="center_column">
+							<div class="names">
+								<span class="display_name ellipsis">ないとー</span>
+								<span class="username ellipsis">(&gt;xarsh)</span>
+							</div>
+							<div class="introduce ellipsis">適当にがんばりますすすすすすすすすすすすすすすすすすすすすすすすすすすすすす。</div>
+						</div>
+						<div class="button dropping"><img src="img/check.png">Drop中</div>
+					</div>
+					<div class="user">
+						<div class="picture">
+							<img src="http://placehold.it/64x64" width="64" height="64">
+						</div>
+						<div class="center_column">
+							<div class="names">
+								<span class="display_name ellipsis">ないとー</span>
+								<span class="username ellipsis">(&gt;xarsh)</span>
+							</div>
+							<span class="introduce ellipsis">適当にがんばります。</p>
+						</div>
+						<div class="button dropping"><img src="img/check.png">Drop中</div>
+					</div>
+				</div>
+			</div>
+			<div id="created">
+				<div class="eventlist">
+					<div class="event">
+						<div class="picture">
+							<img src="http://placehold.it/64x64" width="64" height="64">
+						</div>
+						<div class="center_column">
+							<div class="datetime">2012年7月13日 13:12～</div>
+							<div class="names">
+								<span class="display_name ellipsis">ないとー</span>
+								<span class="username ellipsis">(&gt;xarsh)</span>
+							</div>
+							<div class="title ellipsis">寿司パーティ</div>
+						</div>
+						<div class="button drop"><img src="img/in.png">カレンダーに入れる</div>
+					</div>
+					<div class="event">
+						<div class="picture">
+							<img src="http://placehold.it/64x64" width="64" height="64">
+						</div>
+						<div class="center_column">
+							<div class="datetime">2012年7月13日 13:12～</div>
+							<div class="names">
+								<span class="display_name ellipsis">ないとー</span>
+								<span class="username ellipsis">(&gt;xarsh)</span>
+							</div>
+							<div class="title ellipsis">寿司パーティ</div>
+						</div>
+						<div class="button drop"><img src="img/in.png">カレンダーに入れる</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>

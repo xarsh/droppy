@@ -14,7 +14,6 @@ define([
 			this.$el.append($loading);
 			this.userList = this.options.userList;
 			this.templateName = this.options.templateName;
-			
 			this.userList.bind('add', this.addOne, this);
 			this.userList.bind('reset', this.addAll, this);
 			Dispatcher.trigger('loading');

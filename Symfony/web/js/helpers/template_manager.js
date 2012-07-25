@@ -5,7 +5,7 @@ define([
 'text!templates/event_details.html',
 'text!templates/timeline/timeline_event.html',
 'text!templates/timeline/timeline.html',
-'text!templates/single_user.html',
+'text!templates/includes/single_user.html',
 'text!templates/includes/single_user_small.html',
 'text!templates/user_profile.html',
 'text!templates/single_event.html',

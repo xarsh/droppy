@@ -117,6 +117,7 @@ search:
     text: イベント、ユーザー、タグ名を検索
     place: (例)東京都
     artist: アーティストを検索
+    user_result: %number%件のユーザーが該当しました。
 
 top:
     title: 興味のあるスケジュールを共有しよう！
@@ -222,6 +223,7 @@ common:
     all: 全て
     keyword: キーワード
     loading: Loading...
+    searching: 検索中
     event_update_success: イベントが保存されました。
 
 deactivation:

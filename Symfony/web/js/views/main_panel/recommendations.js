@@ -59,8 +59,8 @@ define([
 				});
 				new UserListView({
 					userList : this.userList,
-					templateName : 'single_user',
-					el : 'div#user_tab' 					
+					templateName : 'single_user_new',
+					el : 'div.userlist'
 				});
 			},
 			
