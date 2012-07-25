@@ -1,84 +1,21 @@
 <div id="user">
 	<div class="buttons">
-		<span class="button_big white">戻る</span>
+		<span class="button_big white">{{ 'common.back' | trans({}, 'DroppyMainBundle') }}</span>
 	</div>
 	<div class="summary">
-		<div class="picture">
-			<img src="http://placehold.it/128x128" width="128" height="128">
-		</div>
-		<div class="title_names">
-			<h1 class="ellipsis">ないとー</h1>
-			<span class="username ellipsis">(&gt;xarsh)</span>
-			<div class="introduce ellipsis">適当にがんばります。旅行に行きたいな。</div>
-			<div class="button drop"><img src="img/drop.png">Dropする</div>
-		</div>
 	</div>
 	<div class="description">
 		<div id="tabs">
 			<ul>
-				<li><a href="#dropping">Drop中</a></li>
-				<li><a href="#created">作成したイベント</a></li>
+				<li><a href="#dropping">{{ 'button.dropping' | trans({}, 'DroppyMainBundle') }}</a></li>
+				<li><a href="#created">{{ 'event.created_events' | trans({}, 'DroppyMainBundle') }}</a></li>
 			</ul>
 			<div id="dropping">
 				<div class="userlist">
-					<div class="user">
-						<div class="picture">
-							<img src="http://placehold.it/64x64" width="64" height="64">
-						</div>
-						<div class="center_column">
-							<div class="names">
-								<span class="display_name ellipsis">ないとー</span>
-								<span class="username ellipsis">(&gt;xarsh)</span>
-							</div>
-							<div class="introduce ellipsis">適当にがんばりますすすすすすすすすすすすすすすすすすすすすすすすすすすすすす。</div>
-						</div>
-						<div class="button dropping"><img src="img/check.png">Drop中</div>
-					</div>
-					<div class="user">
-						<div class="picture">
-							<img src="http://placehold.it/64x64" width="64" height="64">
-						</div>
-						<div class="center_column">
-							<div class="names">
-								<span class="display_name ellipsis">ないとー</span>
-								<span class="username ellipsis">(&gt;xarsh)</span>
-							</div>
-							<span class="introduce ellipsis">適当にがんばります。</p>
-						</div>
-						<div class="button dropping"><img src="img/check.png">Drop中</div>
-					</div>
 				</div>
 			</div>
 			<div id="created">
 				<div class="eventlist">
-					<div class="event">
-						<div class="picture">
-							<img src="http://placehold.it/64x64" width="64" height="64">
-						</div>
-						<div class="center_column">
-							<div class="datetime">2012年7月13日 13:12～</div>
-							<div class="names">
-								<span class="display_name ellipsis">ないとー</span>
-								<span class="username ellipsis">(&gt;xarsh)</span>
-							</div>
-							<div class="title ellipsis">寿司パーティ</div>
-						</div>
-						<div class="button drop"><img src="img/in.png">カレンダーに入れる</div>
-					</div>
-					<div class="event">
-						<div class="picture">
-							<img src="http://placehold.it/64x64" width="64" height="64">
-						</div>
-						<div class="center_column">
-							<div class="datetime">2012年7月13日 13:12～</div>
-							<div class="names">
-								<span class="display_name ellipsis">ないとー</span>
-								<span class="username ellipsis">(&gt;xarsh)</span>
-							</div>
-							<div class="title ellipsis">寿司パーティ</div>
-						</div>
-						<div class="button drop"><img src="img/in.png">カレンダーに入れる</div>
-					</div>
 				</div>
 			</div>
 		</div>

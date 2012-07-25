@@ -1,18 +1,16 @@
-<div class="summary">
-	<div class="picture">
-		<img src="<%= personalDatas.iconSet.icon %>" width="128" height="128">
+<div class="picture">
+	<img src="<%= Assetics.asset(personalDatas.iconSet.icon) %>" width="128" height="128">
+</div>
+<div class="title_names">
+	<h1 class="ellipsis"><%= personalDatas.displayedName %></h1>
+	<span class="username ellipsis">(&gt;<%= username %>)</span>
+	<% if(personalDatas.introduction) { %>
+       	<div class="introduce ellipsis"><%= personalDatas.introduction %></div>
+       <% } %>
+	<% if(id != appUser.id) { %>
+	<div class="button_small drop drop_button button dropping <%= dropped ? 'dropping' : '' %>">
+		<img src="<%= Assetics.staticAsset('img/' + (dropped ? 'check.png' : 'drop.png')) %>">
+		<span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop'))%></span>
 	</div>
-	<div class="title_names">
-		<h1 class="ellipsis"><%= personalDatas.displayedName %></h1>
-		<span class="username ellipsis">(&gt;<%= username %>)</span>
-		<% if(personalDatas.introduction) { %>
-        	<div class="introduce ellipsis"><%= personalDatas.introduction %></div>
-        <% } %>
-		<% if(id != appUser.id) { %>
-		<div class="button_small drop drop_button button dropping <%= dropped ? 'dropping' : '' %>">
-			<img src="<%= Assetics.staticAsset('img/' + (dropped ? 'check.png' : 'drop.png')) %>">
-			<span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop'))%></span>
-		</div>
-		<% } %>		
-	</div>
+	<% } %>		
 </div>

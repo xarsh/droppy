@@ -12,6 +12,7 @@
         <parameter key="droppy_main.smallicon_file_name">icon_small</parameter>
         <parameter key="droppy_main.bin_path">/usr/bin</parameter>
         <parameter key="droppy_main.api_settings.file_path">Resources/config/api_settings.xml</parameter>
+        <parameter key="droppy_main.redirector.url">http://droppy-crawler-amazon.herokuapp.com/r/</parameter>
     </parameters>
 
     <services>

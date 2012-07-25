@@ -103,6 +103,11 @@ class IndexController extends ContainerAware
         return false;
     }
     
+    public function redirectAction($id)
+    {
+    	return new RedirectResponse($this->container->getParameter('droppy_main.redirector.url') . $id);
+    }
+    
     protected function authenticateUser(UserInterface $user)
     {
         try {
