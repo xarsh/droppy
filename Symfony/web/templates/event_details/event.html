@@ -1,30 +1,27 @@
-<div class="buttons">
-	<span class="button_big white">戻る</span>
-</div>
 <div class="summary">
 	<div class="picture">
-		<img src="https://s3-ap-northeast-1.amazonaws.com/droppy-image/user/1/icon_small_1341038950.png" width="128" height="128">
+		<img src="<%= iconSet.icon %>" width="128" height="128">
 	</div>
 	<div class="title_names">
-		<h1 class="ellipsis">すごいイベント</h1>
+		<h1 class="ellipsis"><%= name %></h1>
 		<div class="names">
-			<span class="display_name ellipsis">ないとー</span>
-			<span class="username ellipsis">(&gt;xarsh)</span>
+			<span class="display_name ellipsis"><%= creator.personalDatas.displayedName %></span>
+			<span class="username ellipsis">(&gt;<%= creator.username %>)</span>
 		</div>
 		<div class="button in"><img src="img/check.png">カレンダーに追加済み</div>
 	</div>
 </div>
 <div class="details">
 	<dl>
-		<dt>日時：</dt>
+		<dt><%= ExposeTranslation.get('event.datetime.label') %>:</dt>
 		<dd>2012年7月12日</dd>
 	</dl>
 	<dl>
-		<dt>場所：</dt>
+		<dt><%= ExposeTranslation.get('event.place') %>:</dt>
 		<dd>モンマルトル</dd>
 	</dl>
 </div>
 <hr>
 <div class="description">
-	<p>イベント詳細欄</p>
+	<p><%= ExposeTranslation.get('event.details_long') %></p>
 </div>
