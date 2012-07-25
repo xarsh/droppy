@@ -45,7 +45,7 @@ define([
 			'click div.recommend a' : 'recommendations',
 			'click div.pulldown' : 'showMenu',
 			'keyup input.search_txt' : 'makeSearch',
-			'click #user_profile' : 'showUser'
+			'click #account_info' : 'showUser'
 		},
 		
 		isLoading : function() {
@@ -150,7 +150,7 @@ define([
                     return false;
                 }
             });
-            $('#user_details').height(windowHeight - 35);
+            $('#user').height(windowHeight - 35);
             $('div.search').height(windowHeight - 35);
             Dispatcher.trigger('resize');
 		}

@@ -16,7 +16,7 @@ define([
 		},
 		
 		events : {
-			'click p.title' : 'showEvent',
+			'click div.title' : 'showEvent',
 			'click span.edit' : 'editEvent',
 			'click span.delete' : 'deleteEvent',
 			'click span.drop' : 'toggleDrop',

@@ -18,7 +18,7 @@ define([
 		events : {
 			'click div.event' : 'showDetails',
 			'click a.close' : 'closeEvent',
-			'click p.user_name span' : 'showProfile',
+			'click div.info div.display_name' : 'showProfile',
 			'mouseenter div.event' : 'showClose',
 			'mouseleave div.event' : 'hideClose'
 		},

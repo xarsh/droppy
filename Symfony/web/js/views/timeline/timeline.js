@@ -63,7 +63,7 @@ define([
 					var prevId = this.timeline.at(options.index - 1).get('id');
 					var prev = div.find('div[event-id="' + prevId + '"]').parent();
 					if(prev.length === 0) {
-						div.children('p').after(html);
+						div.children().after(html);
 					} else {
 						prev.after(html);
 					}

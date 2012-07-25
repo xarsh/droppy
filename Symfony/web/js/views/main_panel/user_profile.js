@@ -20,6 +20,10 @@ define([
 				this.loaded = false;
 			},
 			
+			el : 'div#user',
+			
+			template : _.template(templateManager.getUserProfileTemplate()),
+			
 			initCreatedEvents : function() {
 				this.eventList = new EventList;
 				_.extend(this.eventList, {
@@ -33,50 +37,41 @@ define([
 				new EventListView({
 					eventList : this.eventList,
 					templateName : 'single_event', 
-					el : 'div#event_tab',
+					el : 'div#created > div.eventlist',
 					showCreator : false
 				});
 			},
 			
-			initUserList : function(list, readRoute, comparatorParam, el) {
-				_.extend(list, {
+			initDroppings : function() {
+				this.droppings = new UserList;
+				_.extend(this.droppings, {
 					routeList : {
-						'read' : readRoute
+						'read' : 'droppy_user_ajax_dropping_users'
 					},
 					params : {
 						user_id : this.model.get('id')
 					},
 					comparator : function(user) {
-						return user.get(comparatorParam);
+						return user.get('droppingUsersNumber');
 					}
 				});
 				new UserListView({
-					userList : list,
+					userList : this.droppings,
 					templateName : 'single_user',
-					el : el 					
+					el : 'div#dropping > div.userlist'			
 				});
 			},
 			
-			initDroppers : function() {
-				this.droppers = new UserList;
-				this.initUserList(this.droppers, 'droppy_user_ajax_droppers', 
-						'droppingUsersNumber', 'div#droppers_tab');
-			},
-			
-			initDroppings : function() {
-				this.droppings = new UserList;
-				this.initUserList(this.droppings, 'droppy_user_ajax_dropping_users', 
-						'droppingUsersNumber', 'div#droppings_tab');
+			render : function() {
+				this.$('div.summary').html(this.template(Assetics.wrapAssetics(
+						_.extend({ appUser : appUser.toJSON() }, this.model.toJSON()))
+				));
+				return this;
 			},
 			
 			initElements : function() {
-				this.$tabs = this.$('#user_relations_list').tabs({ 
-					fx: { 
-							opacity: 'toggle', 
-							duration: 'fast'  
-					}
-				});
-				this.$('.scrollable').jScrollPane({
+				this.$tabs = this.$('div#tabs').tabs(); 
+				this.$el.jScrollPane({
 					verticalGutter:0, 
 					autoReinitialise:true,
 					contentWidth: '0px'
@@ -84,11 +79,11 @@ define([
 			},
 
 			events : {
-				'click button.button_big' : 'back',
+				'click .button_big' : 'back',
 				'focus div#user_details' : 'blur',
-				'click p.drop_button > span' : 'toggleDrop',
-				'click div.user_profile p.description a' : 'openLink',
-				'jsp-scroll-y .scrollable' : 'loadMore'
+				'click div.title_names div.button.drop' : 'toggleDrop',
+				'click div.title_names div.introduce' : 'openLink',
+				'jsp-scroll-y' : 'loadMore'
 			},
 			
 			openLink : function(e) {
@@ -100,7 +95,7 @@ define([
 			loadMore : function(e, scrollPositionY, isAtTop, isAtBottom) {
 				if(isAtBottom) {
 					var selected = this.$tabs.tabs('option', 'selected');
-					var collections = [this.eventList, this.droppings, this.droppers];
+					var collections = [this.droppings, this.eventList];
 					collections[selected].loadMore();
 				}
 			},
@@ -129,7 +124,6 @@ define([
 					success : function(model, response) {
 						Dispatcher.trigger('endLoading');
 						Dispatcher.trigger('loaded', container);
-						container.initDroppers();
 						container.initDroppings();
 						container.initCreatedEvents();
 					}
@@ -141,14 +135,6 @@ define([
 				this.$el.show();
 				this.initElements();
 				this.loaded = true;
-			},
-
-			template : _.template(templateManager.getUserProfileTemplate()),
-
-			render : function() {
-				this.$el.html(this.template(Assetics.wrapAssetics(_.extend({}, 
-						{ appUser : appUser }, this.model.toJSON()))));
-				return this;
 			},
 
 			back : function() {

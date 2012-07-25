@@ -61,7 +61,7 @@ define([
 		},
 		
 		initElements : function() {
-			this.$('.scrollable').jScrollPane({
+			this.$el.jScrollPane({
 				verticalGutter:0, 
 				autoReinitialise:true
 			});
