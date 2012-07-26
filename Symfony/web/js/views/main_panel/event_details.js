@@ -12,15 +12,17 @@ define([
 			initialize : function() {
 				this.model = new Event;
 				this.loaded = false;
-			},		
+			},
+			
+			el : 'div#event',
 
 			events : {
 				'click div.event_username' : 'showUserDetails',
-				'click button.button_big' : 'back',
+				'click .button_big' : 'back',
 				'click span.button_small.edit' : 'editEvent',
 				'click span.button_small.delete' : 'deleteEvent',
 				'click span.button_small.drop' : 'toggleDrop',
-				'click div.event_details a' : 'openLink'
+				'click div.event_description a' : 'openLink'
 			},
 			
 			update : function(id) {
@@ -65,7 +67,7 @@ define([
 			template : _.template(templateManager.getEventDetailsTemplate()),
 
 			render : function() {
-				this.$el.html(this.template(Assetics.wrapAssetics(this.model.display())));
+				this.$('div.event_details').html(this.template(Assetics.wrapAssetics(this.model.display())));
 				return this;
 			},
 			

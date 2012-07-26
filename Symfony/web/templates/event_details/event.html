@@ -1,6 +1,6 @@
 <div class="summary">
 	<div class="picture">
-		<img src="<%= iconSet.icon %>" width="128" height="128">
+		<img src="<%= Assetics.asset(iconSet.icon) %>" width="128" height="128">
 	</div>
 	<div class="title_names">
 		<h1 class="ellipsis"><%= name %></h1>
@@ -8,20 +8,37 @@
 			<span class="display_name ellipsis"><%= creator.personalDatas.displayedName %></span>
 			<span class="username ellipsis">(&gt;<%= creator.username %>)</span>
 		</div>
-		<div class="button in"><img src="img/check.png">カレンダーに追加済み</div>
+		<% if(!isCreator) { %>
+			<% if(dropped) { %>
+				<div class="button in"><img src="<%= Assetics.staticAsset(img/check.png) %>">
+					<%= ExposeTranslation.get('event.drop.added') %>
+				</div>
+			<% } else { %>
+				<div class="button in"><img src="<%= Assetics.staticAsset(img/drop.png) %>">
+					<%= ExposeTranslation.get('event.drop.add') %>
+				</div>
+			<% } %>
+		<% } %>
 	</div>
 </div>
 <div class="details">
 	<dl>
 		<dt><%= ExposeTranslation.get('event.datetime.label') %>:</dt>
-		<dd>2012年7月12日</dd>
+		<dd><%= date %></dd>
 	</dl>
+	<% if(typeof location !== 'undefined' && location.place) { %>
 	<dl>
 		<dt><%= ExposeTranslation.get('event.place') %>:</dt>
-		<dd>モンマルトル</dd>
+		<dd><%= location.place %></dd>
 	</dl>
+	<% } %>
 </div>
 <hr>
+<% if(typeof details !== 'undefined' && details) { %>
 <div class="description">
 	<p><%= ExposeTranslation.get('event.details_long') %></p>
+	<div id="event_description">
+		<%= details %>
+	</div>
 </div>
+<% } %>

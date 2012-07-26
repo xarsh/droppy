@@ -11,15 +11,15 @@
 \renewcommand{\arraystretch}{1.5}
 \begin{document}
       
-  \subsection*{GET {\tt /event/public-api/latest-events}}
-  Descprition
+  \subsection*{GET {\tt /event/api/latest-events}}
+  Description
   \begin{itemize}
-  \item Requires authentification: no
+  \item Requires authentification: yes
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/event/public-api/latest-events}
+  \url{http://droppy.jp/event/api/latest-events}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -44,15 +44,110 @@
       \newpage
       
       
-  \subsection*{GET {\tt /event/api/dropped-events}}
-  Descprition
+  \subsection*{GET {\tt /event/api/search}}
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/event/api/dropped-events}
+  \url{http://droppy.jp/event/api/search}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{keywords} & \content{Description. }
+      \\
+      Optional & No default value.\\
+      \hline
+      \textbf{places} & \content{Description. }
+      \\
+      Optional & No default value.\\
+      \hline
+      \textbf{start} & \content{Description. }
+      \\
+      Optional & No default value.\\
+      \hline
+      \textbf{end} & \content{Description. }
+      \\
+      Optional & No default value.\\
+      \hline
+      \textbf{offset} & \content{Description. }
+      \\
+      Optional & Defaults to 0\\
+      \hline
+      \textbf{max\_results} & \content{Description. max: 50, min: 3}
+      \\
+      Optional & Defaults to 20\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /event/api/get-event}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/event/api/get-event}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{event\_id} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /event/api/event-and-relation}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/event/api/event-and-relation}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{event\_id} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /event/api/dropped-events}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/event/api/dropped-events}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -82,14 +177,14 @@
       
       
   \subsection*{GET {\tt /event/api/created-events}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/event/api/created-events}
+  \url{http://droppy.jp/event/api/created-events}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -115,14 +210,14 @@
       
       
   \subsection*{GET {\tt /event/api/in-interval}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/event/api/in-interval}
+  \url{http://droppy.jp/event/api/in-interval}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -140,10 +235,6 @@
       \\
        & No default value.\\
       \hline
-      \textbf{max\_results} & \content{Description. max: 200, min: 3}
-      \\
-      Optional & Defaults to 100\\
-      \hline
       \end{tabular}
     \end{center}
   \end{table}
@@ -152,20 +243,28 @@
       
       
   \subsection*{POST {\tt /event/api/update-event}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: POST
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/event/api/update-event}
+  \url{http://droppy.jp/event/api/update-event}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
       \begin{tabular}{l l}
         \hline 
-      \textbf{event\_datas} & \content{Description. }
+      \textbf{id} & \content{Description. }
+      \\
+      Optional & No default value.\\
+      \hline
+      \textbf{name} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \textbf{start\_date\_time} & \content{Description. }
       \\
        & No default value.\\
       \hline
@@ -177,14 +276,14 @@
       
       
   \subsection*{GET {\tt /event/api/timeline}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/event/api/timeline}
+  \url{http://droppy.jp/event/api/timeline}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -218,14 +317,14 @@
       
       
   \subsection*{POST {\tt /event/api/remove-event}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: POST
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/event/api/remove-event}
+  \url{http://droppy.jp/event/api/remove-event}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -243,14 +342,14 @@
       
       
   \subsection*{POST {\tt /event/api/event-in}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: POST
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/event/api/event-in}
+  \url{http://droppy.jp/event/api/event-in}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -268,14 +367,64 @@
       
       
   \subsection*{POST {\tt /event/api/event-out}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: POST
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/event/api/event-out}
+  \url{http://droppy.jp/event/api/event-out}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{event\_id} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{POST {\tt /event/api/drop}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: POST
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/event/api/drop}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{event\_id} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{POST {\tt /event/api/undrop}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: POST
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/event/api/undrop}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}

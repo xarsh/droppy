@@ -2,7 +2,7 @@ define([
 'text!templates/calendar/calendar.html',
 'text!templates/event_creation_popup.html',
 'text!templates/event_creation.html',
-'text!templates/event_details.html',
+'text!templates/event_details/event.html',
 'text!templates/timeline/timeline_event.html',
 'text!templates/timeline/timeline.html',
 'text!templates/includes/single_user.html',

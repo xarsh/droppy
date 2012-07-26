@@ -4,7 +4,7 @@ import xml.etree.ElementTree as etree
 import sys, os, os.path
 import subprocess
 
-url = 'http://beta.droppy.jp'
+url = 'http://droppy.jp'
 
 def usage():
   print('./generate_doc.py file.xml')
@@ -25,7 +25,7 @@ def parse_setting(treeSetting):
 def get_setting_output(setting):
   output = """
   \subsection*{{{0} {{\\tt {1}}}}}
-  Descprition
+  Description
   \\begin{{itemize}}
   \item Requires authentification: {2}
   \item HTTP method: {0}

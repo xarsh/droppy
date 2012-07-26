@@ -12,14 +12,14 @@
 \begin{document}
       
   \subsection*{GET {\tt /user/public-api/get-public-key}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: no
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/user/public-api/get-public-key}
+  \url{http://droppy.jp/user/public-api/get-public-key}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -37,14 +37,14 @@
       
       
   \subsection*{POST {\tt /user/public-api/create-user}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: no
   \item HTTP method: POST
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/user/public-api/create-user}
+  \url{http://droppy.jp/user/public-api/create-user}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -58,7 +58,7 @@
       \\
        & No default value.\\
       \hline
-      \textbf{plain\_password} & \content{Description. }
+      \textbf{encrypted\_password} & \content{Description. }
       \\
        & No default value.\\
       \hline
@@ -78,14 +78,72 @@
       
       
   \subsection*{GET {\tt /user/api/recommended-users}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/user/api/recommended-users}
+  \url{http://droppy.jp/user/api/recommended-users}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{offset} & \content{Description. }
+      \\
+      Optional & Defaults to 0\\
+      \hline
+      \textbf{max\_results} & \content{Description. }
+      \\
+      Optional & Defaults to 20\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /user/api/aetel-recommended-users}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/user/api/aetel-recommended-users}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{offset} & \content{Description. }
+      \\
+      Optional & Defaults to 0\\
+      \hline
+      \textbf{max\_results} & \content{Description. }
+      \\
+      Optional & Defaults to 20\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /user/api/selected-users}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/user/api/selected-users}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -107,14 +165,14 @@
       
       
   \subsection*{POST {\tt /user/api/drop}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: POST
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/user/api/drop}
+  \url{http://droppy.jp/user/api/drop}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -132,14 +190,14 @@
       
       
   \subsection*{POST {\tt /user/api/undrop}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: POST
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/user/api/undrop}
+  \url{http://droppy.jp/user/api/undrop}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -157,14 +215,14 @@
       
       
   \subsection*{GET {\tt /user/api/get-user}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/user/api/get-user}
+  \url{http://droppy.jp/user/api/get-user}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -172,7 +230,32 @@
         \hline 
       \textbf{user\_id} & \content{Description. }
       \\
-       & No default value.\\
+      Optional & Defaults to \_current\_user\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /user/api/get-by-username}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/user/api/get-by-username}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{username} & \content{Description. }
+      \\
+      Optional & Defaults to \_current\_user\\
       \hline
       \end{tabular}
     \end{center}
@@ -182,14 +265,14 @@
       
       
   \subsection*{GET {\tt /user/public-api/get-salt}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: no
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/user/public-api/get-salt}
+  \url{http://droppy.jp/user/public-api/get-salt}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -207,14 +290,14 @@
       
       
   \subsection*{GET {\tt /user/api/dropping-users}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/user/api/dropping-users}
+  \url{http://droppy.jp/user/api/dropping-users}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
@@ -222,7 +305,7 @@
         \hline 
       \textbf{user\_id} & \content{Description. }
       \\
-      Optional & No default value.\\
+      Optional & Defaults to \_current\_user\\
       \hline
       \textbf{offset} & \content{Description. }
       \\
@@ -240,20 +323,103 @@
       
       
   \subsection*{GET {\tt /user/api/droppers}}
-  Descprition
+  Description
   \begin{itemize}
   \item Requires authentification: yes
   \item HTTP method: GET
   \item Return format: json, xml
   \end{itemize}
   \subsubsection*{Resource URL}
-  \url{http://beta.droppy.jp/user/api/droppers}
+  \url{http://droppy.jp/user/api/droppers}
   \subsubsection*{Parameters}
   \begin{table}[h]
     \begin{center}
       \begin{tabular}{l l}
         \hline 
       \textbf{user\_id} & \content{Description. }
+      \\
+      Optional & Defaults to \_current\_user\\
+      \hline
+      \textbf{offset} & \content{Description. }
+      \\
+      Optional & Defaults to 0\\
+      \hline
+      \textbf{max\_results} & \content{Description. }
+      \\
+      Optional & Defaults to 20\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{POST {\tt /user/api/set-started}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: POST
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/user/api/set-started}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{POST {\tt /user/api/lock-user}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: POST
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/user/api/lock-user}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{user\_id} & \content{Description. }
+      \\
+       & No default value.\\
+      \hline
+      \end{tabular}
+    \end{center}
+  \end{table}
+  
+      \newpage
+      
+      
+  \subsection*{GET {\tt /user/api/search}}
+  Description
+  \begin{itemize}
+  \item Requires authentification: yes
+  \item HTTP method: GET
+  \item Return format: json, xml
+  \end{itemize}
+  \subsubsection*{Resource URL}
+  \url{http://droppy.jp/user/api/search}
+  \subsubsection*{Parameters}
+  \begin{table}[h]
+    \begin{center}
+      \begin{tabular}{l l}
+        \hline 
+      \textbf{keywords} & \content{Description. }
+      \\
+      Optional & No default value.\\
+      \hline
+      \textbf{places} & \content{Description. }
       \\
       Optional & No default value.\\
       \hline
