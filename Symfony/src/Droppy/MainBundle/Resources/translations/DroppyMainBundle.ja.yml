@@ -57,10 +57,6 @@ event:
     recommended_events: おすすめイベント
     default_name: 無名のイベント
     caution: 作成したイベントは公開されます。
-    drop:
-      add: 追加する
-      addded: 追加済み
-      remove: 外す
 
 timeline:
     date: 日程順
@@ -212,6 +208,9 @@ button:
     skip: スキップ
     finish: 完了
     close: 閉じる
+    add: 追加する
+    added: 追加済み
+    remove: 外す
 
 common:
     create: 作成

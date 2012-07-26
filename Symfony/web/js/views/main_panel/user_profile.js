@@ -37,7 +37,7 @@ define([
 				new EventListView({
 					eventList : this.eventList,
 					templateName : 'single_event', 
-					el : 'div#created > div.eventlist',
+					el : 'div#created div.eventlist',
 					showCreator : false
 				});
 			},
@@ -58,7 +58,7 @@ define([
 				new UserListView({
 					userList : this.droppings,
 					templateName : 'single_user',
-					el : 'div#dropping > div.userlist'			
+					el : 'div#dropping  div.userlist'			
 				});
 			},
 			
@@ -104,14 +104,18 @@ define([
 				this.$('div#user_details').blur();
 			},
 			
-			toggleDrop : function() {
+			toggleDrop : function(e) {
+				$target = $(e.target);
+				if(!$target.is('div')) {
+					$target = $target.parent();
+				}
 				if(this.model.get('loading')) {
 					return;
 				}
 				if(this.model.get('dropped')) {
-					Dispatcher.trigger('undrop', this.model, this.$('span.button_small'));
+					Dispatcher.trigger('undrop', this.model, $target, true);
 				} else {
-					Dispatcher.trigger('drop', this.model, this.$('span.button_small'));
+					Dispatcher.trigger('drop', this.model, $target, true);
 				}
 			},
 			

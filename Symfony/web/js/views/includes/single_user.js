@@ -16,7 +16,7 @@ define([
 		
 		events : {
 			'click div.names' : 'showUser',
-			'click span.button_small' : 'toggleDrop'
+			'click div.button_small' : 'toggleDrop'
 		},
 
 		render : function() {
@@ -32,14 +32,18 @@ define([
 			});
 		},
 		
-		toggleDrop : function() {
+		toggleDrop : function(e) {
+			$target = $(e.target);
+			if(!$target.is('div')) {
+				$target = $target.parent();
+			}
 			if(this.model.get('loading')) {
 				return;
 			}
 			if(this.model.get('dropped')) {
-				Dispatcher.trigger('undrop', this.model, this.$('span.button_small'), true);
+				Dispatcher.trigger('undrop', this.model, $target, true);
 			} else {
-				Dispatcher.trigger('drop', this.model, this.$('span.button_small'), true);
+				Dispatcher.trigger('drop', this.model, $target, true);
 			}
 		}
 	});

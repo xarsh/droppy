@@ -61,7 +61,7 @@ define([
 		remove : function() {
 			var parent = this.$el.parent('div');
 			this.$el.remove();
-			if(parent.find('div').filter(':visible').length === 0) {
+			if(parent.find('div.timeline_container').length === 0) {
 				parent.hide();
 			}
 		}

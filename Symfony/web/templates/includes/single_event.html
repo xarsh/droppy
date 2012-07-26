@@ -10,8 +10,15 @@
 		</div>
 		<div class="title ellipsis"><%= name %></div>
 	</div>
-	<div class="button_small button drop">
-		<img src="img/in.png">
-		<span>カレンダーに入れる</span>
-	</div>
+	<% if(!isCreator) { %>
+		<% if(dropped) { %>
+			<div class="button_small button drop in"><img src="<%= Assetics.staticAsset('img/check.png') %>">
+				<span><%= ExposeTranslation.get('button.added') %></span>
+			</div>
+		<% } else { %>
+			<div class="button_small button drop"><img src="<%= Assetics.staticAsset('img/drop.png') %>">
+				<span><%= ExposeTranslation.get('button.add') %></span>
+			</div>
+		<% } %>
+	<% } %>
 </div>
