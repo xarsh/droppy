@@ -18,7 +18,7 @@ define([
 		initialize : function(timeline) {
 			this.views = [];
 			
-			this.$el.jScrollPane({
+			this.scrollPane = this.$el.jScrollPane({
 				verticalGutter : 0,
 				autoReinitialise : true,
 				scrollbarMargin: 0
@@ -47,7 +47,7 @@ define([
 			var view = new TimelineEventView({
 				model : event
 			});
-			container = this.$el;
+			container = this.scrollPane;
 			api = container.data('jsp');
 			contentPane = api.getContentPane();
 			var category = event.timelineCategory();
@@ -63,7 +63,7 @@ define([
 					var prevId = this.timeline.at(options.index - 1).get('id');
 					var prev = div.find('div[event-id="' + prevId + '"]').parent();
 					if(prev.length === 0) {
-						div.children().after(html);
+						div.children('.daybar').after(html);
 					} else {
 						prev.after(html);
 					}
@@ -83,5 +83,3 @@ define([
 	});
   return TimelineView;
 });
-
-

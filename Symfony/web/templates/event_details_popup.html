@@ -35,16 +35,16 @@
 </table>
     <div class="buttons">
         <% if(isCreator) { %>
-            <span class="button drop">
+            <span class="button drop button_small edit">
                 <span class="csssprite button_edit">button_edit</span>
                 <span><%= ExposeTranslation.get('button.edit') %></span>
             </span>
-            <span class="button drop">
+            <span class="button drop  button_small delete">
                 <span class="csssprite button_delete">button_delete</span>
                 <span><%= ExposeTranslation.get('button.delete') %></span>
             </span>
         <% } else { %>
-            <span class="button in">
+            <span class="button in toggle_drop">
                 <img src="<%= Assetics.staticAsset('img/check.png') %>"/>
                 <span><%= ExposeTranslation.get('button.delete_from_calendar') %></span>
             </span>
