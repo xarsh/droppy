@@ -48,10 +48,12 @@ a {
 #header .logo {
 	float:left;
 	padding:1px 0 1px 15px;
+	cursor:pointer;
 }
 #header .version {
     vertical-align:bottom;
     display:inline;
+	cursor:pointer;
 }
 #header .tools {
 	float:right;
