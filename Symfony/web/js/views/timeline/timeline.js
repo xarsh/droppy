@@ -18,7 +18,7 @@ define([
 		initialize : function(timeline) {
 			this.views = [];
 			
-			this.$el.jScrollPane({
+			this.scrollPane = this.$el.jScrollPane({
 				verticalGutter : 0,
 				autoReinitialise : true,
 				scrollbarMargin: 0
@@ -47,7 +47,7 @@ define([
 			var view = new TimelineEventView({
 				model : event
 			});
-			container = this.$el;
+			container = this.scrollPane;
 			api = container.data('jsp');
 			contentPane = api.getContentPane();
 			var category = event.timelineCategory();
@@ -83,5 +83,3 @@ define([
 	});
   return TimelineView;
 });
-
-

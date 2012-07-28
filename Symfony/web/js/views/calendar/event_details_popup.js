@@ -26,7 +26,7 @@ define([
 			'click a.setting_details' : 'showEvent',
 			'click span.button_small.edit' : 'editEvent',
 			'click span.button_small.delete' : 'deleteEvent',
-			'click span.button_small.drop' : 'toggleDrop',
+			'click span.button_small.toggle_drop' : 'toggleDrop',
 			'click span.button_small.in' : 'outOfCalendar'
 		},
 		
