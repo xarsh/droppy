@@ -12,9 +12,9 @@
         <% } %>	
 	</div>
 	<% if(id != appUser.id) { %>
-		<div class="button_small drop drop_button button dropping <%= dropped ? 'dropping' : '' %>">
+		<div class="button_small drop drop_button button <%= dropped ? 'dropping' : '' %>">
 			<img src="<%= Assetics.staticAsset('img/' + (dropped ? 'check.png' : 'drop.png')) %>">
-			<span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop'))%></span>
+			<span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop')) %></span>
 		</div>
 	<% } %>		
 </div>

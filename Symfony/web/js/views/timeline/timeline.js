@@ -74,7 +74,7 @@ define([
 
 		addAll : function() {
 			this.$el.find('.loading').remove();
-			this.$el.find('div.timeline_container div').remove();
+			this.$el.find('div.timeline_container div').not('.daybar').remove();
 			this.$el.find('div.timeline_container').hide();
 			for(var i = 0; i < this.timeline.length; i++) {
 				this.addOne(this.timeline.at(i), {}, { append : true });

@@ -65,17 +65,16 @@ define([
 			model.set('loading', true);
 			model.drop({
 				success : function(response) {
-					button.addClass('dropping');
+					button.addClass(user ? 'dropping' : 'in');
 					button.children('img').attr('src', Assetics.staticAsset('img/check.png'));
-					button.children('span').text(ExposeTranslation.get(user ? 'button.dropping' : 'button.delete_from_calendar'));
+					button.children('span').text(ExposeTranslation.get(user ? 'button.dropping' : 'button.added'));
 					model.set('dropped', true);
 					model.set('loading', false);
-					var events = EventList.fromJSON(response);
-					Dispatcher.trigger('timelineAdd', events);
-					Dispatcher.trigger('calendarAdd', events);
-					/*self.timeline.params = {};
-					self.timeline.fetch();
-					Dispatcher.trigger('calendarUpdate');*/
+					if(Array.isArray(response)) {
+						var events = EventList.fromJSON(response);
+						Dispatcher.trigger('timelineAdd', events);
+						Dispatcher.trigger('calendarAdd', events);
+					}
 				}
 			});
 		},
@@ -86,19 +85,16 @@ define([
 			model.set('loading', true);
 			model.undrop({
 				success : function(response) {
-					button.removeClass('dropping');
+					button.removeClass(user ? 'dropping' : 'in');
 					button.children('img').attr('src', Assetics.staticAsset('img/drop.png'));
-					button.children('span').text(ExposeTranslation.get(user ? 'button.drop' : 'button.add_into_calendar'));
+					button.children('span').text(ExposeTranslation.get(user ? 'button.drop' : 'button.add'));
 					model.set('dropped', false);
 					model.set('loading', false);
-					var events = EventList.fromJSON(response);
-					Dispatcher.trigger('outOfCalendar', events);
-					Dispatcher.trigger('outOfTimeline', events);
-					/*self.timeline.params = {};
-					self.timeline.fetch();
-					
-					console.log(events);
-					Dispatcher.trigger('calendarReset');*/
+					if(Array.isArray(response)) {
+						var events = EventList.fromJSON(response);
+						Dispatcher.trigger('outOfCalendar', events);
+						Dispatcher.trigger('outOfTimeline', events);
+					} 
 				}
 			});
 		}

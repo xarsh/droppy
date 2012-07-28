@@ -20,7 +20,7 @@ define([
 		    	this.$('#ewp').remove();
 		    	var lastPopup = this.$('.popup').last();
 		    	lastPopup.find('.next').remove();
-		    	lastPopup.find('.finish').text(ExposeTranslation('button.close'));
+		    	lastPopup.find('.finish').text(ExposeTranslation.get('button.close'));
 		    } else {
 		    	var offset = today.offset();
 		    

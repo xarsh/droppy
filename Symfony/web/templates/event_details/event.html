@@ -11,11 +11,11 @@
 		<% if(!isCreator) { %>
 			<% if(dropped) { %>
 				<div class="button in"><img src="<%= Assetics.staticAsset(img/check.png) %>">
-					<%= ExposeTranslation.get('event.drop.added') %>
+					<%= ExposeTranslation.get('button.added') %>
 				</div>
 			<% } else { %>
-				<div class="button in"><img src="<%= Assetics.staticAsset(img/drop.png) %>">
-					<%= ExposeTranslation.get('event.drop.add') %>
+				<div class="button out"><img src="<%= Assetics.staticAsset(img/drop.png) %>">
+					<%= ExposeTranslation.get('button.add') %>
 				</div>
 			<% } %>
 		<% } %>
