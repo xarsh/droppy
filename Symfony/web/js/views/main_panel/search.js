@@ -8,9 +8,10 @@ define([
   'collections/event_list',
   'views/general/event_list',
   'helpers/template_manager',
-  'helpers/assets'
-], 	function($, _, Backbone, RecommendationsView, 
-		UserList, UserListView, EventList, EventListView, templateManager, Assetics) {
+  'helpers/assets',
+  'event_manager'
+], 	function($, _, Backbone, RecommendationsView, UserList, UserListView, 
+		EventList, EventListView, templateManager, Assetics, Dispatcher) {
 	var SearchView = Backbone.View.extend({
 		
 		initialize : function() {
@@ -19,6 +20,10 @@ define([
 		},
 		
 		el : 'div#search',
+		
+		events : {
+			'click .button_big' : 'back',
+		},
 		
 		makeSearch : function() {
 			this.userList.params = this.userParams;
@@ -73,6 +78,10 @@ define([
 			this.initElements();
 			this.initUserList();
 			this.loaded = true;
+		},
+		
+		back : function() {
+			Dispatcher.trigger('back');
 		}
 	});
 	
