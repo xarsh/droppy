@@ -65,7 +65,7 @@ class EventBaseNormalizer implements NormalizerInterface
 		$data['address'] = $event->getAddress();
 		$data['color'] = $this->colorNormalizer->normalize($event->getColor());
 		$data['details'] = $event->getDetails();
-		$data['icon_set'] = $this->iconSetNormalizer->normalize($event->getCreator()->getIconSet());
+		$data['icon_set'] = $this->iconSetNormalizer->normalize($event->getCreator()->getPersonalDatas()->getIconSet());
 		$data['dropping_users_number'] = $event->getDroppingUsersNumber();
 		$data['liking_users_number'] = $event->getLikingUsersNumber();
 		$data['participating_users_number'] = $event->getParticipatingUsersNumber();
