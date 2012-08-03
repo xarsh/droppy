@@ -50,7 +50,7 @@ class EventMinimalNormalizer implements NormalizerInterface
 			$data['location'] = $this->locationNormalizer->normalize($event->getLocation());
 		}
 		$data['color'] = $this->colorNormalizer->normalize($event->getColor());
-		$data['icon_set'] = $this->iconSetNormalizer->normalize($event->getCreator()->getIconSet());
+		$data['icon_set'] = $this->iconSetNormalizer->normalize($event->getIconSet());
 		return $data;
 	}
 	
