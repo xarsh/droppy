@@ -100,6 +100,11 @@ class PersonalDatas
 	 */
 	public function setDisplayedName($displayedName)
 	{
+		if(strstr($user->getUsername(), 'preorder') || strstr($user->getUsername(), 'atnd'))
+		{
+			throw new \Exception('Username is invalid.');
+		}
+
 		$this->displayedName = $displayedName;
 	}
 
