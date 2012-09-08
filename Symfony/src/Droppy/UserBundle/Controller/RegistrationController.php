@@ -27,7 +27,11 @@ class RegistrationController extends BaseController
     
         $process = $formHandler->process($confirmationEnabled);
         if ($process) {
-            $user = $form->getData();
+			$user = $form->getData();
+			if(strstr($user->getUsername(), 'preorder') || strstr($user->getUsername(), 'atnd'))
+			{
+				throw new \Exception('Username is invalid.');
+			}
             if ($confirmationEnabled) {
                 $this->container->get('session')->set('fos_user_send_confirmation_email/email', $user->getEmail());
                 $route = 'fos_user_registration_check_email';
