@@ -1,8 +1,1 @@
-define([
-  'jQuery',  
-  'Underscore',
-  'Backbone'   
-], function($, _, Backbone){
-	var Dispatcher = _.clone(Backbone.Events);
-	return Dispatcher;
-});
+define(["jQuery","Underscore","Backbone"],function(e,t,n){var r=t.clone(n.Events);return r});

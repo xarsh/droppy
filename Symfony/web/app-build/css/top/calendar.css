@@ -195,6 +195,7 @@ div.event_box.passed {
 #event_summary_popup td {
     white-space:nowrap;
     overflow:hidden;
+    font-size:12px;
 }
 #event_summary_popup td.close {
     vertical-align:top;
@@ -202,7 +203,7 @@ div.event_box.passed {
 #event_summary_popup td.title {
     font-weight:bold;
     padding:0 0px 5px;
-    font-size:16px;
+    font-size:15px;
 }
 #event_summary_popup td.picture {
     vertical-align:middle;
@@ -215,7 +216,7 @@ div.event_box.passed {
     padding:3px 0 0 5px;
 }
 #make_event_popup .popup_buttons {
-  margin: 10px 0 0 50px;
+  margin: 10px 0 0 30px;
 }
 #make_event_popup, #event_summary_popup {
   min-width: 300px;
@@ -260,4 +261,5 @@ div.event_box.passed {
   text-decoration: none;
   color: #1212ff;
   font-size: 15px;
+  padding:2px 4px 0 0;
 }

@@ -1,0 +1,44 @@
+<div class="summary">
+	<div class="picture">
+		<img src="<%= Assetics.asset(iconSet.icon) %>" width="128" height="128">
+	</div>
+	<div class="title_names">
+		<h1 class="ellipsis"><%= name %></h1>
+		<div class="names">
+			<span class="display_name ellipsis"><%= creator.personalDatas.displayedName %></span>
+			<span class="username ellipsis">(&gt;<%= creator.username %>)</span>
+		</div>
+		<% if(!isCreator) { %>
+			<% if(dropped) { %>
+				<div class="button in"><img src="<%= Assetics.staticAsset(img/check.png) %>">
+					<%= ExposeTranslation.get('button.added') %>
+				</div>
+			<% } else { %>
+				<div class="button out"><img src="<%= Assetics.staticAsset(img/drop.png) %>">
+					<%= ExposeTranslation.get('button.add') %>
+				</div>
+			<% } %>
+		<% } %>
+	</div>
+</div>
+<div class="details">
+	<dl>
+		<dt><%= ExposeTranslation.get('event.datetime.label') %>:</dt>
+		<dd><%= date %></dd>
+	</dl>
+	<% if(typeof location !== 'undefined' && location.place) { %>
+	<dl>
+		<dt><%= ExposeTranslation.get('event.place') %>:</dt>
+		<dd><%= location.place %></dd>
+	</dl>
+	<% } %>
+</div>
+<hr>
+<% if(typeof details !== 'undefined' && details) { %>
+<div class="description">
+	<p><%= ExposeTranslation.get('event.details_long') %></p>
+	<div id="event_description">
+		<%= details %>
+	</div>
+</div>
+<% } %>

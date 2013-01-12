@@ -1,15 +1,1 @@
-define([
-  'jQuery',  
-  'Underscore',
-], function($, _){
-	var Sync = {};
-	Sync.makeRequest = function(method, params, options) {
-		var type = (method === 'read') ? 'GET' : 'POST';
-		options.type = type;
-		var datas = { data: params };
-		var params = _.extend(datas, options);
-		return $.ajax(params);
-	};
-  return Sync;
-});
-
+define(["jQuery","Underscore"],function(e,t){var n={};return n.makeRequest=function(n,r,i){var s=n==="read"?"GET":"POST";i.type=s;var o={data:r},r=t.extend(o,i);return e.ajax(r)},n});

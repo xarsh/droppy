@@ -1,17 +1,1 @@
-define([
-  'jQuery',  
-  'Underscore',
-  'Backbone',
-  'model/user'
-], function($, _, Backbone, User){
-	var UserList = Backbone.Collection.extend({
-		model : User,
-		
-		sync : function(method, model, options) {
-			var params = ('params' in this) ? this.params : {}; 
-			options.url = Routing.generate(this.routeList[method], params);
-			return Backbone.sync(method, model, options);
-		}
-	});
-  return UserList;
-});
+define(["jQuery","Underscore","Backbone","model/user"],function(e,t,n,r){var i=n.Collection.extend({model:r,initialize:function(){this.allLoaded=!1,this.loading=!1,typeof this.params=="undefined"&&(this.params={})},loadMore:function(){if(this.loading||this.allLoaded)return;t.extend(this.params,{offset:this.length}),this.loading=!0;var e=this;this.fetch({add:!0,success:function(t,n){e.loading=!1,n.length===0&&(e.allLoaded=!0)}})},sync:function(e,t,r){var i="params"in this?this.params:{};return r.url=Routing.generate(this.routeList[e],i),n.sync(e,t,r)}});return i});

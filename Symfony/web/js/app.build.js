@@ -5,7 +5,7 @@
     name: "main",
     paths: {
         order: 'empty:',
-        text: 'empty:',
+        text: 'libs/requirejs-plugins/text',
         jQuery: 'empty:',
         Underscore: 'empty:',
         Backbone: 'empty:',

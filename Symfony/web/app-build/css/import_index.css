@@ -1071,6 +1071,9 @@ span.button_small.drop, span.button_small.dropping {
 	padding:2px 5px 0 3px;
 	width:80px;
 }
+span.button_small.drop.long, span.button_small.dropping.long {
+    width:150px;
+}
 span.button_small.dropping {
 	background: -moz-linear-gradient(
 		top,

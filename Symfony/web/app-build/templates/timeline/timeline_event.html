@@ -1,0 +1,13 @@
+<div class="event clearfix" event-id="<%= id %>">
+    <div class="picture">
+        <img width="48" height="48" src="<%= Assetics.asset(iconSet.thumbnail) %>" alt="">
+    </div>
+    <div class="info">
+        <div class="datetime ellipsis"><%= startDateString %></div>
+        <div class="display_name ellipsis"><%= creator.personalDatas.displayedName %></div>
+        <div class="title ellipsis"><%= name %></div>
+    </div>
+    <% if(!isCreator) { %>
+        <span class="close"><img src="<%= Assetics.staticAsset('img/close.png') %>"></span>
+    <% } %>
+</div>

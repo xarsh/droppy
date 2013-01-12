@@ -718,6 +718,9 @@ span.button_small.drop, span.button_small.dropping {
 	padding:2px 5px 0 3px;
 	width:80px;
 }
+span.button_small.drop.long, span.button_small.dropping.long {
+    width:150px;
+}
 span.button_small.dropping {
 	background: -moz-linear-gradient(
 		top,
@@ -1450,6 +1453,7 @@ div.event_box.passed {
 #event_summary_popup td {
     white-space:nowrap;
     overflow:hidden;
+    font-size:12px;
 }
 #event_summary_popup td.close {
     vertical-align:top;
@@ -1457,7 +1461,7 @@ div.event_box.passed {
 #event_summary_popup td.title {
     font-weight:bold;
     padding:0 0px 5px;
-    font-size:16px;
+    font-size:15px;
 }
 #event_summary_popup td.picture {
     vertical-align:middle;
@@ -1470,7 +1474,7 @@ div.event_box.passed {
     padding:3px 0 0 5px;
 }
 #make_event_popup .popup_buttons {
-  margin: 10px 0 0 50px;
+  margin: 10px 0 0 30px;
 }
 #make_event_popup, #event_summary_popup {
   min-width: 300px;
@@ -1515,6 +1519,7 @@ div.event_box.passed {
   text-decoration: none;
   color: #1212ff;
   font-size: 15px;
+  padding:2px 4px 0 0;
 }
 #event_update {
 	padding-top:20px;
@@ -1779,21 +1784,21 @@ html:not(:target) div.clicked:before { top:-19px; }
 	width:80px;
 }
 #user_relations_list .ym-col2 {
-	width:130px;
 	text-align:right;
+    width:auto;
 }
 #user_relations_list .ym-col2 span.button_small {
-	width:80px;
 	margin-bottom:3px;
 	text-align:center;
 	padding:2px 5px;
 }
 #user_relations_list .ym-col2 div.link.to_details {
-	margin-right:20px;
+	margin-right:-200px;
 	color:#08adfa;
 }
 #user_relations_list .ym-col3 {
 	margin-left:80px;
+    margin-right:-9999px;
 }
 #event_tab, #user_tab {
     border:1px solid #ddd;
@@ -1807,13 +1812,14 @@ li.event_tab.ui-state-default.ui-corner-top.ui-tabs-selected.ui-state-active {
 #event_tab .event .title{
     cursor:pointer;
     text-decoration:none;
+    font-size:16px;
+    margin-top:4px;
 }
 #event_tab .event .title:hover{
     text-decoration:underline;
 }
 #event_tab p.date {
 	font-size:12px;
-    margin:6px 0;
     cursor:default;
 }
 .user_link .user a {
@@ -1850,6 +1856,7 @@ li.event_tab.ui-state-default.ui-corner-top.ui-tabs-selected.ui-state-active {
 }
 #event_details {
 	padding-top:20px;
+    overflow:hidden;
 }
 .event_details_summary .event_title {
 	font-size:20px;
@@ -2005,6 +2012,7 @@ li.event_tab.ui-state-default.ui-corner-top.ui-tabs-selected.ui-state-active {
 #search_result .ym-column {
 	margin-top:5px;
     border-bottom:1px solid #ddd;
+    overflow:hidden;
 }
 #search_result .ym-col1 {
 	width:80px;
@@ -2014,24 +2022,27 @@ li.event_tab.ui-state-default.ui-corner-top.ui-tabs-selected.ui-state-active {
 	text-align:right;
 }
 #search_result .ym-col2 span.button_small {
-	width:80px;
 	margin-bottom:3px;
 	text-align:center;
 	padding:2px 5px;
 }
 #search_result .ym-col2 div.link.to_details {
-	margin-right:20px;
+    margin-right:-200px;
 	color:#08adfa;
 }
 #search_result .ym-col3 {
 	margin-left:80px;
-    width:400px
+    margin-right:-9999px;
+}
+#search_result .ym-col3 .user_link {
+    margin-right:-200px;
 }
 #user_tab .ym-col2 .button_small {
 	margin:10px 0;
 }
 #event_tab p.user a, #user_tab p.user a {
 	color:#08adfa;
+    font-size:15px;
 }
 #event_tab p.user a:hover, #user_tab p.user a:hover {
 	color:#ea3e10;

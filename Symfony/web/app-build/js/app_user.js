@@ -1,11 +1,1 @@
-define([
-  'bootstrap',
-  'model/user'
-], function(bootstrap, User) {
-	var appUser = new User;
-	if(bootstrap.bootstrappedUser) {
-		appUser.setFromJSON(bootstrap.bootstrappedUser);
-	}
-  
-  return appUser;
-});
+define(["bootstrap","model/user"],function(e,t){var n=new t;return e.bootstrappedUser&&n.setFromJSON(e.bootstrappedUser),n});

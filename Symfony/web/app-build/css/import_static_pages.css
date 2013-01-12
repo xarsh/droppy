@@ -546,3 +546,57 @@ div.header_link .csssprite {
 #footer li a { color:#08adfa; font-weight:normal; text-decoration:none; }
 #footer li a:hover,
 #footer li a:active { text-decoration:underline; }
+.csssprite{background-image:url(csssprite.png);background-repeat:no-repeat;display:inline-block;overflow:hidden;text-indent:-9999px;vertical-align:middle}
+.csssprite.arrow_l{background-position:-211px 0;height:8px;width:16px}
+.csssprite.arrow_r{background-position:-163px 0;height:8px;width:16px}
+.csssprite.button_edit{background-position:-53px 0;height:15px;width:15px}
+.csssprite.button_check_g{background-position:-83px 0;height:15px;width:16px}
+.csssprite.button_check_w{background-position:-131px 0;height:13px;width:16px}
+.csssprite.button_delete{background-position:-147px 0;height:16px;width:16px}
+.csssprite.button_drop{background-position:0 0;height:12px;width:12px}
+.csssprite.button_in{background-position:-68px 0;height:16px;width:15px}
+.csssprite.button_like{background-position:-195px 0;height:15px;width:16px}
+.csssprite.button_out{background-position:-38px 0;height:16px;width:15px}
+.csssprite.close{background-position:-12px 0;height:12px;width:13px}
+.csssprite.dummy00_128{background-position:0 -102px;height:128px;width:128px}
+.csssprite.dummy00_32{background-position:0 -22px;height:32px;width:32px}
+.csssprite.dummy00_48{background-position:0 -54px;height:48px;width:48px}
+.csssprite.dummy01_128{background-position:-128px -102px;height:128px;width:128px}
+.csssprite.dummy01_32{background-position:-32px -22px;height:32px;width:32px}
+.csssprite.dummy01_48{background-position:-48px -54px;height:48px;width:48px}
+.csssprite.dummy02_128{background-position:-256px -102px;height:128px;width:128px}
+.csssprite.dummy02_32{background-position:-64px -22px;height:32px;width:32px}
+.csssprite.dummy02_48{background-position:-96px -54px;height:48px;width:48px}
+.csssprite.dummy03_128{background-position:-384px -102px;height:128px;width:128px}
+.csssprite.dummy03_32{background-position:-96px -22px;height:32px;width:32px}
+.csssprite.dummy03_48{background-position:-144px -54px;height:48px;width:48px}
+.csssprite.dummy04_128{background-position:0 -230px;height:128px;width:128px}
+.csssprite.dummy04_32{background-position:-128px -22px;height:32px;width:32px}
+.csssprite.dummy04_48{background-position:-192px -54px;height:48px;width:48px}
+.csssprite.dummy05_128{background-position:-128px -230px;height:128px;width:128px}
+.csssprite.dummy05_32{background-position:-160px -22px;height:32px;width:32px}
+.csssprite.dummy05_48{background-position:-240px -54px;height:48px;width:48px}
+.csssprite.dummy06_128{background-position:-256px -230px;height:128px;width:128px}
+.csssprite.dummy06_32{background-position:-192px -22px;height:32px;width:32px}
+.csssprite.dummy06_48{background-position:-288px -54px;height:48px;width:48px}
+.csssprite.dummy07_128{background-position:-384px -230px;height:128px;width:128px}
+.csssprite.dummy07_32{background-position:-224px -22px;height:32px;width:32px}
+.csssprite.dummy07_48{background-position:-336px -54px;height:48px;width:48px}
+.csssprite.dummy08_128{background-position:0 -358px;height:128px;width:128px}
+.csssprite.dummy08_32{background-position:-256px -22px;height:32px;width:32px}
+.csssprite.dummy08_48{background-position:-384px -54px;height:48px;width:48px}
+.csssprite.dummy09_128{background-position:-128px -358px;height:128px;width:128px}
+.csssprite.dummy09_32{background-position:-288px -22px;height:32px;width:32px}
+.csssprite.dummy09_48{background-position:-432px -54px;height:48px;width:48px}
+.csssprite.dummy10_128{background-position:-256px -358px;height:128px;width:128px}
+.csssprite.dummy10_32{background-position:-320px -22px;height:32px;width:32px}
+.csssprite.dummy10_48{background-position:-480px -54px;height:48px;width:48px}
+.csssprite.header_calendar{background-position:-115px 0;height:16px;width:16px}
+.csssprite.header_home{background-position:-99px 0;height:16px;width:16px}
+.csssprite.header_logo{background-position:-406px 0;height:28px;width:122px}
+.csssprite.header_recommend{background-position:-179px 0;height:16px;width:16px}
+.csssprite.header_setting{background-position:-25px 0;height:13px;width:13px}
+.csssprite.icon_clip{background-position:-270px 0;height:22px;width:19px}
+.csssprite.icon_details{background-position:-248px 0;height:20px;width:22px}
+.csssprite.icon_new{background-position:-289px 0;height:22px;width:22px}
+.csssprite.icon_search{background-position:-227px 0;height:20px;width:21px}

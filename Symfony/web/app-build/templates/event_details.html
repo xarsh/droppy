@@ -39,9 +39,9 @@
 	                </span>
 	            </span>
 		        <% } else { %>
-		            <span class="button_small drop drop_button <%= dropped ? 'dropping' : '' %>">
+		            <span class="button_small drop drop_button long <%= dropped ? 'dropping' : '' %>">
 		                <img src="<%= Assetics.staticAsset('img/' + (dropped ? 'check.png' : 'drop.png')) %>"/>
-		                <span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop'))%></span>
+		                <span><%= ExposeTranslation.get('button.' + (dropped ? 'delete_from_calendar' : 'add_into_calendar'))%></span>
 		            </span>
 		         <% } %> 
             </div>

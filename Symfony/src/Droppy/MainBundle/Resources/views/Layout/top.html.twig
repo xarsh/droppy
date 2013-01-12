@@ -11,10 +11,10 @@ define('config', function() {
 	};
 });
 </script>
-<script type="text/javascript" src="{{ asset('js/main.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/droppy.js') }}"></script>
 {% endblock javascript %}
 
-{% block body %}	
+{% block body %}
 	<div id="wrapper">
 		<div id="top_message_wrapper">
 			<div id="top_message" style="display: none;">
@@ -36,7 +36,7 @@ define('config', function() {
 					{% include 'DroppyEventBundle:Includes:event_details.html.twig' %}
 					<div id="ie_clearing"> &#160; </div>
 				</div>
-			</div>			
+			</div>
 		</div>
 	</div>
 {% endblock body %}

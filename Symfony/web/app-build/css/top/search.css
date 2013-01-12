@@ -102,6 +102,7 @@
 #search_result .ym-column {
 	margin-top:5px;
     border-bottom:1px solid #ddd;
+    overflow:hidden;
 }
 #search_result .ym-col1 {
 	width:80px;
@@ -111,24 +112,27 @@
 	text-align:right;
 }
 #search_result .ym-col2 span.button_small {
-	width:80px;
 	margin-bottom:3px;
 	text-align:center;
 	padding:2px 5px;
 }
 #search_result .ym-col2 div.link.to_details {
-	margin-right:20px;
+    margin-right:-200px;
 	color:#08adfa;
 }
 #search_result .ym-col3 {
 	margin-left:80px;
-    width:400px
+    margin-right:-9999px;
+}
+#search_result .ym-col3 .user_link {
+    margin-right:-200px;
 }
 #user_tab .ym-col2 .button_small {
 	margin:10px 0;
 }
 #event_tab p.user a, #user_tab p.user a {
 	color:#08adfa;
+    font-size:15px;
 }
 #event_tab p.user a:hover, #user_tab p.user a:hover {
 	color:#ea3e10;

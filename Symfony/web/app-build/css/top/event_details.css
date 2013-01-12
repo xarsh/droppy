@@ -19,6 +19,7 @@
 }
 #event_details {
 	padding-top:20px;
+    overflow:hidden;
 }
 .event_details_summary .event_title {
 	font-size:20px;

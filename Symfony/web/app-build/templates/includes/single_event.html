@@ -1,0 +1,24 @@
+<div class="event">
+	<div class="picture">
+		<img src="<%= Assetics.asset(iconSet.icon) %>" width="64" height="64">
+	</div>
+	<div class="center_column">
+		<div class="datetime"><%= date %></div>
+		<div class="names">
+			<span class="display_name ellipsis"><%= creator.personalDatas.displayedName %></span>
+			<span class="username ellipsis">(&gt;<%= creator.username %>)</span>
+		</div>
+		<div class="title ellipsis"><%= name %></div>
+	</div>
+	<% if(!isCreator) { %>
+		<% if(dropped) { %>
+			<div class="button_small button drop in"><img src="<%= Assetics.staticAsset('img/check.png') %>">
+				<span><%= ExposeTranslation.get('button.added') %></span>
+			</div>
+		<% } else { %>
+			<div class="button_small button drop"><img src="<%= Assetics.staticAsset('img/drop.png') %>">
+				<span><%= ExposeTranslation.get('button.add') %></span>
+			</div>
+		<% } %>
+	<% } %>
+</div>

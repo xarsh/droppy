@@ -1,14 +1,1 @@
-define([
-  'jQuery',
-  'Underscore',
-  'config'
-], function($, _, config) {
-
-  var bootstrap = {
-  };
-  for(var i in config) {
-	  config[i] = JSON.parse(config[i]); 
-  }
-  _.extend(bootstrap, config);
-  return bootstrap;
-});
+define(["jQuery","Underscore","config"],function(e,t,n){var r={};for(var i in n)n[i]=JSON.parse(n[i]);return t.extend(r,n),r});

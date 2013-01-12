@@ -1,0 +1,12 @@
+<div class="user clearfix">
+    <div class="picture">
+        <img width="32" height="32" src="<%= Assetics.asset(personalDatas.iconSet.thumbnail) %>" alt="">
+    </div>
+    <div class="info">
+        <div class="display_name ellipsis"><%= personalDatas.displayedName %></div>
+        <div class="button_small button drop <%= dropped ? 'dropping' : '' %>">
+            <img src="<%= Assetics.staticAsset(dropped ? 'img/check.png' : 'img/drop.png') %>"/>
+            <span><%= ExposeTranslation.get('button.' + (dropped ? 'dropping' : 'drop')) %></span>
+        </div>
+    </div>
+</div>
