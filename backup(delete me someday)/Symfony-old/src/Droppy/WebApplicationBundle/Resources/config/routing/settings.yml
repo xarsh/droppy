@@ -1,3 +1,0 @@
-droppy_webapp_settings_personal:
-    pattern: /personal
-    defaults: { _controller: DroppyWebApplicationBundle:Settings:changePersonalSettings }
